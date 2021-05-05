@@ -1,0 +1,1700 @@
+[37m[2021/03/06 00:05:25][CONFIG][initService]  Starting service...
+[37m[2021/03/06 00:05:25][CONFIG][currentConfigs]  Scheme: http://
+[37m[2021/03/06 00:05:25][CONFIG][currentConfigs]  Hostname: 127.0.0.1
+[37m[2021/03/06 00:05:25][CONFIG][currentConfigs]  Port: 12347
+[37m[2021/03/06 00:05:25][CONFIG][currentConfigs]  Path: /api/movies
+[37m[2021/03/06 00:05:25][CONFIG][currentConfigs]  Logger output directory: logs/
+[37m[2021/03/06 00:05:25][CONFIG][currentConfigs]  Database hostname: localhost
+[37m[2021/03/06 00:05:25][CONFIG][currentConfigs]  Database port: 3307
+[37m[2021/03/06 00:05:25][CONFIG][currentConfigs]  Database username: CS122B_074
+[37m[2021/03/06 00:05:25][CONFIG][currentConfigs]  Database password provided? true
+[37m[2021/03/06 00:05:25][CONFIG][currentConfigs]  Database name: CS122B_074
+[37m[2021/03/06 00:05:25][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[37m[2021/03/06 00:05:25][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[37m[2021/03/06 00:05:25][CONFIG][currentConfigs]  IDM Scheme: http://
+[37m[2021/03/06 00:05:25][CONFIG][currentConfigs]  IDM Hostname: 127.0.0.1
+[37m[2021/03/06 00:05:25][CONFIG][currentConfigs]  IDM Port: 12346
+[37m[2021/03/06 00:05:25][CONFIG][currentConfigs]  IDM Path: /api/idm
+[37m[2021/03/06 00:05:25][CONFIG][currentConfigs]  IDM Privilege Path: /privilege
+[37m[2021/03/06 00:05:25][CONFIG][connectToDatabase]  Connecting to database...
+[37m[2021/03/06 00:05:25][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://localhost:3307/CS122B_074?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[37m[2021/03/06 00:05:26][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://localhost:3307/CS122B_074?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[37m[2021/03/06 00:05:26][CONFIG][initHTTPServer]  Initializing HTTP server...
+[37m[2021/03/06 00:05:26][CONFIG][initHTTPServer]  Building URI from configs...
+[37m[2021/03/06 00:05:26][CONFIG][initHTTPServer]  Final URI: http://127.0.0.1:12347/api/movies
+[37m[2021/03/06 00:05:26][CONFIG][initHTTPServer]  Set Jersey resources.
+[37m[2021/03/06 00:05:26][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[37m[2021/03/06 00:05:26][CONFIG][initHTTPServer]  Starting HTTP server...
+[37m[2021/03/06 00:05:27][CONFIG][initHTTPServer]  HTTP server started.
+[37m[2021/03/06 00:05:27][CONFIG][initService]  Service initialized.
+[32m[2021/03/06 00:05:42][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:05:42][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:05:42][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:05:42][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:05:42][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:05:42][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:05:42][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@1d5ea376, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:05:42][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:05:42][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:05:42][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:05:42][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:05:42][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:05:42][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:05:42][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%2019%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:05:42][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:05:42][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 00:05:42][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 00:05:42][INFO][buildResponse]  211
+[32m[2021/03/06 00:05:42][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:05:42][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:05:42][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:05:42][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:05:42][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:05:42][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:05:42][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@54f1bb3b, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:05:43][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:05:43][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:05:43][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:05:43][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:05:43][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:05:43][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:05:43][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%2019%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:05:43][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:05:43][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 00:05:43][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 00:05:43][INFO][buildResponse]  211
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@3455d7e4, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:05:53][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:05:53][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:05:53][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:05:53][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:05:53][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%2019%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:05:53][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:05:53][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 00:05:53][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 00:05:53][INFO][buildResponse]  211
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@7ffc8b80, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:05:53][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:05:53][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:05:53][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:05:53][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:05:53][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:05:53][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%2019%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:05:53][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:05:53][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 00:05:53][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 00:05:53][INFO][buildResponse]  211
+[32m[2021/03/06 00:05:59][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:05:59][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:05:59][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:05:59][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:05:59][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:05:59][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:05:59][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@5ecb8fa6, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:05:59][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:05:59][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:05:59][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:05:59][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:05:59][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:05:59][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:05:59][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%2019%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:05:59][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:05:59][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 00:05:59][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 00:05:59][INFO][buildResponse]  211
+[32m[2021/03/06 00:05:59][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:05:59][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:05:59][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:05:59][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:05:59][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:05:59][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:05:59][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@1d1b331c, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:06:00][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:06:00][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:06:00][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:06:00][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:06:00][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%2019%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:06:00][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:06:00][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 00:06:00][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 00:06:00][INFO][buildResponse]  211
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@38f4f51d, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:06:00][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:06:00][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:06:00][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:06:00][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:06:00][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%2019%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:06:00][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:06:00][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 00:06:00][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 00:06:00][INFO][buildResponse]  211
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@80f5127, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:06:00][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:06:00][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:06:00][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:06:00][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:06:00][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%2019%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:06:00][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:06:00][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 00:06:00][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 00:06:00][INFO][buildResponse]  211
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@b69922f, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:06:00][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:06:00][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:06:00][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:06:00][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:06:00][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:06:00][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%2019%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:06:00][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:06:00][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 00:06:00][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 00:06:00][INFO][buildResponse]  211
+[32m[2021/03/06 00:06:29][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:06:29][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:06:29][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:06:29][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:06:29][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:06:29][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:06:29][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@683ae9ee, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:06:29][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:06:29][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:06:29][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:06:29][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:06:29][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:06:29][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:06:29][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%av%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:06:29][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:06:29][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:06:29][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:06:29][INFO][buildResponse]  210
+[32m[2021/03/06 00:06:33][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:06:33][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:06:33][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:06:33][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:06:33][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:06:33][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:06:33][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@604c09ca, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:06:33][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:06:33][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:06:33][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:06:33][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:06:33][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:06:33][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:06:33][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%av%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:06:33][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:06:33][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:06:33][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:06:33][INFO][buildResponse]  210
+[32m[2021/03/06 00:06:34][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 00:06:34][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt2024544'
+OR movie_id = 'tt0157262'
+OR movie_id = 'tt0018379'
+OR movie_id = 'tt4337690'
+OR movie_id = 'tt7040874'
+OR movie_id = 'tt0155463'
+OR movie_id = 'tt0096787'
+OR movie_id = 'tt0115509'
+OR movie_id = 'tt0047811'
+OR movie_id = 'tt3077108'
+ORDER BY movie_id
+
+[32m[2021/03/06 00:06:34][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:06:34][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:06:34][INFO][buildResponse]  210
+[32m[2021/03/06 00:06:56][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:06:56][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:06:56][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:06:56][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:06:56][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:06:56][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:06:56][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@7deba8ba, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:06:56][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:06:56][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:06:56][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:06:56][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:06:56][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:06:56][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:06:56][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%avangers%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:06:56][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:06:56][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 00:06:56][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 00:06:56][INFO][buildResponse]  211
+[32m[2021/03/06 00:06:57][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 00:06:57][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt2024544'
+OR movie_id = 'tt0157262'
+OR movie_id = 'tt0018379'
+OR movie_id = 'tt4337690'
+OR movie_id = 'tt7040874'
+OR movie_id = 'tt0155463'
+OR movie_id = 'tt0096787'
+OR movie_id = 'tt0115509'
+OR movie_id = 'tt0047811'
+OR movie_id = 'tt3077108'
+ORDER BY movie_id
+
+[32m[2021/03/06 00:06:57][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:06:57][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:06:57][INFO][buildResponse]  210
+[32m[2021/03/06 00:07:03][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:07:03][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:07:03][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:07:03][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:07:03][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:07:03][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:07:03][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@56b9d91e, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:07:03][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:07:03][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:07:03][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:07:03][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:07:03][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:07:03][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:07:03][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%avangers%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:07:03][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:07:03][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 00:07:03][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 00:07:03][INFO][buildResponse]  211
+[32m[2021/03/06 00:07:13][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:07:13][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:07:13][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:07:13][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:07:13][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:07:13][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:07:13][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@a952005, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:07:13][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:07:13][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:07:13][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:07:13][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:07:13][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:07:13][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:07:13][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%harry%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:07:13][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:07:13][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:07:13][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:07:13][INFO][buildResponse]  210
+[32m[2021/03/06 00:07:21][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:07:21][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:07:21][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:07:21][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:07:21][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:07:21][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:07:21][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@1a8fac48, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:07:21][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:07:21][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:07:21][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:07:21][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:07:21][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:07:21][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:07:21][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%harry%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:07:21][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:07:21][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:07:21][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:07:21][INFO][buildResponse]  210
+[32m[2021/03/06 00:07:21][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 00:07:21][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt0118954'
+OR movie_id = 'tt0329028'
+OR movie_id = 'tt0093148'
+OR movie_id = 'tt0071598'
+OR movie_id = 'tt1289406'
+OR movie_id = 'tt0926084'
+OR movie_id = 'tt1201607'
+OR movie_id = 'tt0417741'
+OR movie_id = 'tt0241527'
+OR movie_id = 'tt0048750'
+ORDER BY movie_id
+
+[32m[2021/03/06 00:07:21][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:07:21][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:07:21][INFO][buildResponse]  210
+[32m[2021/03/06 00:07:33][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:07:33][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:07:33][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:07:33][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:07:33][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:07:33][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:07:33][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@55545cf0, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:07:33][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:07:33][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:07:33][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:07:33][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:07:33][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:07:33][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:07:33][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.year = 2019 AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:07:33][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:07:33][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:07:33][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:07:33][INFO][buildResponse]  210
+[32m[2021/03/06 00:07:33][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 00:07:33][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt0118954'
+OR movie_id = 'tt0329028'
+OR movie_id = 'tt0093148'
+OR movie_id = 'tt0071598'
+OR movie_id = 'tt1289406'
+OR movie_id = 'tt0926084'
+OR movie_id = 'tt1201607'
+OR movie_id = 'tt0417741'
+OR movie_id = 'tt0241527'
+OR movie_id = 'tt0048750'
+ORDER BY movie_id
+
+[32m[2021/03/06 00:07:33][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:07:33][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:07:33][INFO][buildResponse]  210
+[32m[2021/03/06 00:07:46][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:07:46][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:07:46][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:07:46][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:07:46][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:07:46][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:07:46][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@c9829f2, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:07:46][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:07:46][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:07:46][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:07:46][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:07:46][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:07:46][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:07:46][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.year = 2019 AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:07:46][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:07:46][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:07:46][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:07:46][INFO][buildResponse]  210
+[32m[2021/03/06 00:07:47][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 00:07:47][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt7054636'
+OR movie_id = 'tt6211976'
+OR movie_id = 'tt5215088'
+OR movie_id = 'tt9562694'
+OR movie_id = 'tt0437086'
+OR movie_id = 'tt9770590'
+OR movie_id = 'tt9817308'
+OR movie_id = 'tt4154796'
+OR movie_id = 'tt7208564'
+OR movie_id = 'tt8425058'
+ORDER BY movie_id
+
+[32m[2021/03/06 00:07:47][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:07:47][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:07:47][INFO][buildResponse]  210
+[32m[2021/03/06 00:10:02][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:10:02][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:10:02][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:10:02][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:10:02][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:10:02][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:10:02][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@440f4fd4, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:10:02][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:10:02][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:10:02][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:10:02][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:10:02][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:10:02][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:10:02][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%av%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:10:02][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:10:02][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:10:02][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:10:02][INFO][buildResponse]  210
+[32m[2021/03/06 00:12:24][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:12:24][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:12:24][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:12:24][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:12:24][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:12:24][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:12:24][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@5095f805, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:12:24][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:12:24][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:12:24][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:12:24][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:12:24][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:12:24][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:12:24][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:12:24][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:12:24][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:12:24][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:12:24][INFO][buildResponse]  210
+[32m[2021/03/06 00:19:41][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:19:41][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:19:41][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:19:41][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:19:41][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:19:41][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:19:41][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@6c51496b, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:19:41][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:19:41][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:19:41][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:19:41][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:19:41][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:19:41][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:19:41][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:19:41][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:19:41][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:19:41][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:19:41][INFO][buildResponse]  210
+[32m[2021/03/06 00:20:27][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:20:27][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:20:27][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:20:27][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:20:27][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:20:27][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:20:27][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@168006b7, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:20:28][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:20:28][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:20:28][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:20:28][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:20:28][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:20:28][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:20:28][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:20:28][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:20:28][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:20:28][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:20:28][INFO][buildResponse]  210
+[32m[2021/03/06 00:21:41][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:21:41][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:21:41][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:21:41][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:21:41][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:21:41][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:21:41][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@149aa1e6, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:21:41][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:21:41][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:21:41][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:21:41][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:21:41][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:21:41][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:21:41][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%av%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:21:41][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:21:41][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:21:41][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:21:41][INFO][buildResponse]  210
+[32m[2021/03/06 00:21:42][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 00:21:42][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt0090383'
+OR movie_id = 'tt2322683'
+OR movie_id = 'tt1637976'
+OR movie_id = 'tt3526286'
+OR movie_id = 'tt6119504'
+OR movie_id = 'tt1024733'
+OR movie_id = 'tt0790799'
+OR movie_id = 'tt2614684'
+OR movie_id = 'tt1022603'
+OR movie_id = 'tt2630898'
+ORDER BY movie_id
+
+[32m[2021/03/06 00:21:42][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:21:42][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:21:42][INFO][buildResponse]  210
+[32m[2021/03/06 00:22:36][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:22:36][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:22:36][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:22:36][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:22:36][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:22:36][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:22:36][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@61121ce1, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:22:36][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:22:36][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:22:36][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:22:36][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:22:36][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:22:36][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:22:36][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%harry%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:22:36][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:22:36][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:22:36][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:22:36][INFO][buildResponse]  210
+[32m[2021/03/06 00:22:37][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 00:22:37][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt2024544'
+OR movie_id = 'tt0157262'
+OR movie_id = 'tt0018379'
+OR movie_id = 'tt4337690'
+OR movie_id = 'tt7040874'
+OR movie_id = 'tt0155463'
+OR movie_id = 'tt0096787'
+OR movie_id = 'tt0115509'
+OR movie_id = 'tt0047811'
+OR movie_id = 'tt3077108'
+ORDER BY movie_id
+
+[32m[2021/03/06 00:22:37][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:22:37][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:22:37][INFO][buildResponse]  210
+[32m[2021/03/06 00:23:04][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:23:04][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:23:04][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:23:04][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:23:04][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:23:04][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:23:04][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@31123ace, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:23:04][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:23:04][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:23:04][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:23:04][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:23:04][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:23:04][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:23:04][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%harry%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:23:04][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:23:04][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:23:04][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:23:04][INFO][buildResponse]  210
+[32m[2021/03/06 00:25:01][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:25:01][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:25:01][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:25:01][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:25:01][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:25:01][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:25:01][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@26abc491, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:25:01][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:25:01][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:25:01][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:25:01][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:25:01][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:25:01][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:25:01][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:25:01][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:25:01][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:25:01][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:25:01][INFO][buildResponse]  210
+[32m[2021/03/06 00:38:53][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:38:53][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:38:53][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:38:53][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:38:53][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:38:53][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:38:53][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@3e36052c, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:38:53][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:38:53][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:38:53][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:38:53][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:38:53][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:38:53][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:38:53][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:38:53][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:38:53][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:38:53][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:38:53][INFO][buildResponse]  210
+[32m[2021/03/06 00:52:25][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:52:25][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:52:25][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:52:25][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:52:25][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:52:25][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:52:25][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@1b821551, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:52:26][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:52:26][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:52:26][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:52:26][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:52:26][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:52:26][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:52:26][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:52:26][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:52:26][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:52:26][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:52:26][INFO][buildResponse]  210
+[32m[2021/03/06 00:54:33][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:54:33][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:54:33][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:54:33][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:54:33][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:54:33][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:54:33][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@f258e0c, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:54:33][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:54:33][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:54:33][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:54:33][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:54:33][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:54:33][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:54:33][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:54:33][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:54:33][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:54:33][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:54:33][INFO][buildResponse]  210
+[32m[2021/03/06 00:54:34][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 00:54:34][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt1602472'
+OR movie_id = 'tt1287875'
+OR movie_id = 'tt0067482'
+OR movie_id = 'tt1930546'
+OR movie_id = 'tt0174480'
+OR movie_id = 'tt0408524'
+OR movie_id = 'tt3995006'
+OR movie_id = 'tt3576728'
+OR movie_id = 'tt1621444'
+OR movie_id = 'tt0092699'
+ORDER BY movie_id
+
+[32m[2021/03/06 00:54:34][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:54:34][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:54:34][INFO][buildResponse]  210
+[32m[2021/03/06 00:55:04][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:55:04][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:55:04][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:55:04][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:55:04][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:55:04][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:55:04][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@669251fd, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:55:04][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:55:04][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:55:04][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:55:04][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:55:04][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:55:04][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:55:04][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:55:04][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:55:04][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:55:04][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:55:04][INFO][buildResponse]  210
+[32m[2021/03/06 00:55:57][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 00:55:57][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 00:55:57][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 00:55:57][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 00:55:57][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 00:55:57][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 00:55:57][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@459f37fb, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 00:55:57][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 00:55:57][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 00:55:57][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 00:55:57][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 00:55:57][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 00:55:57][INFO][search]  Sanitize input 
+[32m[2021/03/06 00:55:57][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 00:55:57][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 00:55:57][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 00:55:57][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 00:55:57][INFO][buildResponse]  210
+[32m[2021/03/06 01:00:29][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:00:29][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:00:29][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:00:29][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:00:29][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:00:29][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:00:29][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@4e616f4a, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:00:30][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:00:30][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:00:30][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:00:30][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:00:30][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:00:30][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:00:30][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:00:30][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:00:30][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:00:30][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:00:30][INFO][buildResponse]  210
+[32m[2021/03/06 01:01:50][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:01:50][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:01:50][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:01:50][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:01:50][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:01:50][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:01:50][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@753acabd, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:01:50][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:01:50][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:01:50][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:01:50][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:01:50][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:01:50][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:01:50][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:01:50][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:01:50][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:01:50][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:01:50][INFO][buildResponse]  210
+[32m[2021/03/06 01:01:52][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:01:52][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt1602472'
+OR movie_id = 'tt1287875'
+OR movie_id = 'tt0067482'
+OR movie_id = 'tt1930546'
+OR movie_id = 'tt0174480'
+OR movie_id = 'tt0408524'
+OR movie_id = 'tt3995006'
+OR movie_id = 'tt3576728'
+OR movie_id = 'tt1621444'
+OR movie_id = 'tt0092699'
+ORDER BY movie_id
+
+[32m[2021/03/06 01:01:52][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:01:52][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:01:52][INFO][buildResponse]  210
+[32m[2021/03/06 01:08:42][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:08:42][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:08:42][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:08:42][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:08:42][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:08:42][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:08:42][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@f29fc2, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:08:42][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:08:42][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:08:42][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:08:42][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:08:42][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:08:45][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:08:45][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:08:45][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:08:45][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:08:45][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:08:45][INFO][buildResponse]  210
+[32m[2021/03/06 01:15:00][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:15:00][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:15:00][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:15:00][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:15:00][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:15:00][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:15:00][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@76f12e5e, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:15:00][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:15:00][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:15:00][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:15:00][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:15:00][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:15:00][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:15:00][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:15:00][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:15:00][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:15:00][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:15:00][INFO][buildResponse]  210
+[32m[2021/03/06 01:15:36][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:15:36][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:15:36][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:15:36][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:15:36][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:15:36][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:15:36][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@69246664, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:15:36][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:15:36][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:15:36][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:15:36][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:15:36][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:15:36][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:15:36][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:15:36][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:15:36][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:15:36][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:15:36][INFO][buildResponse]  210
+[32m[2021/03/06 01:16:24][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:16:24][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:16:24][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:16:24][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:16:24][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:16:24][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:16:24][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@5aebe15d, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:16:24][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:16:24][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:16:24][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:16:24][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:16:24][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:16:24][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:16:24][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:16:24][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:16:24][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:16:24][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:16:24][INFO][buildResponse]  210
+[32m[2021/03/06 01:16:25][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:16:25][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:16:25][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:16:25][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:16:25][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:16:25][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:16:25][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@42febe3c, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:16:25][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:16:25][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:16:25][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:16:25][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:16:25][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:16:25][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:16:25][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:16:25][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:16:25][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:16:25][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:16:25][INFO][buildResponse]  210
+[32m[2021/03/06 01:16:27][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:16:27][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:16:27][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:16:27][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:16:27][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:16:27][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:16:27][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@1c7b5958, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:16:27][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:16:27][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:16:27][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:16:27][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:16:27][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:16:27][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:16:27][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:16:27][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:16:27][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:16:27][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:16:27][INFO][buildResponse]  210
+[32m[2021/03/06 01:16:36][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:16:36][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:16:36][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:16:36][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:16:36][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:16:36][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:16:36][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@61714b8b, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:16:36][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:16:36][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:16:36][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:16:36][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:16:36][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:16:36][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:16:36][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:16:36][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:16:36][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:16:36][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:16:36][INFO][buildResponse]  210
+[32m[2021/03/06 01:16:48][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:16:48][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:16:48][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:16:48][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:16:48][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:16:48][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:16:48][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@5ddb33b2, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:16:48][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:16:48][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:16:48][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:16:48][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:16:48][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:16:48][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:16:48][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%ne%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:16:48][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:16:48][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:16:48][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:16:48][INFO][buildResponse]  210
+[32m[2021/03/06 01:17:42][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:17:42][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:17:42][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:17:42][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:17:42][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:17:42][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:17:42][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@71c79658, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:17:42][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:17:42][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:17:42][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:17:42][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:17:42][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:17:42][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:17:42][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%neasdsadgfgaasgfd%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:17:42][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:17:42][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 01:17:42][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 01:17:42][INFO][buildResponse]  211
+[32m[2021/03/06 01:17:57][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:17:57][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:17:57][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:17:57][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:17:57][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:17:57][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:17:57][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@e76f7e9, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:17:57][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:17:57][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:17:57][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:17:57][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:17:57][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:17:57][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:17:57][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:17:57][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:17:57][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:17:57][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:17:57][INFO][buildResponse]  210
+[32m[2021/03/06 01:19:48][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:19:48][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:19:48][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:19:48][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:19:48][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:19:48][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:19:48][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@36c189cc, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:19:48][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:19:48][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:19:48][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:19:48][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:19:48][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:19:48][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:19:48][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:19:48][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:19:48][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:19:48][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:19:48][INFO][buildResponse]  210
+[32m[2021/03/06 01:19:49][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:19:49][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = null
+ORDER BY movie_id
+
+[32m[2021/03/06 01:19:49][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 01:19:49][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 01:19:49][INFO][buildResponse]  211
+[32m[2021/03/06 01:21:34][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:21:34][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:21:34][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:21:34][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:21:34][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:21:34][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:21:34][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@acfe413, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:21:34][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:21:34][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:21:34][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:21:34][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:21:34][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:21:34][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:21:34][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:21:34][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:21:34][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:21:34][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:21:34][INFO][buildResponse]  210
+[32m[2021/03/06 01:21:34][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:21:34][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = null
+ORDER BY movie_id
+
+[32m[2021/03/06 01:21:34][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 01:21:34][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 01:21:34][INFO][buildResponse]  211
+[32m[2021/03/06 01:22:03][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:22:03][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:22:03][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:22:03][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:22:03][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:22:03][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:22:03][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@6b6b2745, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:22:03][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:22:03][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:22:03][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:22:03][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:22:03][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:22:03][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:22:03][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:22:03][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:22:03][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:22:03][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:22:03][INFO][buildResponse]  210
+[32m[2021/03/06 01:22:04][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:22:04][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = null
+ORDER BY movie_id
+
+[32m[2021/03/06 01:22:04][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 01:22:04][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 01:22:04][INFO][buildResponse]  211
+[32m[2021/03/06 01:22:08][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:22:08][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:22:08][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:22:08][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:22:08][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:22:08][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:22:08][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@3ce99dfa, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:22:08][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:22:08][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:22:08][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:22:08][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:22:08][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:22:08][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:22:08][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:22:08][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:22:08][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:22:08][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:22:08][INFO][buildResponse]  210
+[32m[2021/03/06 01:22:09][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:22:09][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = null
+ORDER BY movie_id
+
+[32m[2021/03/06 01:22:09][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 01:22:09][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 01:22:09][INFO][buildResponse]  211
+[32m[2021/03/06 01:22:41][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:22:41][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:22:41][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:22:41][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:22:41][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:22:41][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:22:41][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@2ad8b967, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:22:41][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:22:41][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:22:41][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:22:41][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:22:41][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:22:41][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:22:41][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:22:42][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:22:42][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:22:42][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:22:42][INFO][buildResponse]  210
+[32m[2021/03/06 01:22:42][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:22:42][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = null
+ORDER BY movie_id
+
+[32m[2021/03/06 01:22:42][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 01:22:42][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 01:22:42][INFO][buildResponse]  211
+[32m[2021/03/06 01:22:48][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:22:48][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:22:48][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:22:48][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:22:48][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:22:48][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:22:48][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@243850d8, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:22:48][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:22:48][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:22:48][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:22:48][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:22:48][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:22:48][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:22:48][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:22:48][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:22:48][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:22:48][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:22:48][INFO][buildResponse]  210
+[32m[2021/03/06 01:22:49][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:22:49][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = null
+ORDER BY movie_id
+
+[32m[2021/03/06 01:22:49][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 01:22:49][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 01:22:49][INFO][buildResponse]  211
+[32m[2021/03/06 01:24:28][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:24:28][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:24:28][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:24:28][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:24:28][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:24:28][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:24:28][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@6b84bee6, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:24:28][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:24:28][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:24:28][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:24:28][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:24:28][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:24:28][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:24:28][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:24:28][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:24:28][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:24:28][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:24:28][INFO][buildResponse]  210
+[32m[2021/03/06 01:24:29][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:24:29][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = null
+ORDER BY movie_id
+
+[32m[2021/03/06 01:24:29][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 01:24:29][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 01:24:29][INFO][buildResponse]  211
+[32m[2021/03/06 01:32:51][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:32:51][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = null
+ORDER BY movie_id
+
+[32m[2021/03/06 01:32:51][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 01:32:51][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 01:32:51][INFO][buildResponse]  211
+[32m[2021/03/06 01:32:57][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:32:57][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = null
+ORDER BY movie_id
+
+[32m[2021/03/06 01:32:57][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 01:32:57][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 01:32:57][INFO][buildResponse]  211
+[32m[2021/03/06 01:33:35][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:33:35][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:33:35][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:33:35][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:33:35][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:33:35][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:33:35][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@229d73f9, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:33:35][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:33:35][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:33:35][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:33:35][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:33:35][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:33:35][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:33:36][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:33:36][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:33:36][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:33:36][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:33:36][INFO][buildResponse]  210
+[32m[2021/03/06 01:33:38][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:33:38][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt1602472'
+OR movie_id = 'tt1287875'
+OR movie_id = 'tt0067482'
+OR movie_id = 'tt1930546'
+OR movie_id = 'tt0174480'
+OR movie_id = 'tt0408524'
+OR movie_id = 'tt3995006'
+OR movie_id = 'tt3576728'
+OR movie_id = 'tt1621444'
+OR movie_id = 'tt0092699'
+ORDER BY movie_id
+
+[32m[2021/03/06 01:33:38][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:33:38][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:33:38][INFO][buildResponse]  210
+[32m[2021/03/06 01:35:28][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:35:28][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:35:28][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:35:28][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:35:28][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:35:28][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:35:28][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@5a445fd1, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:35:28][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:35:28][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:35:28][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:35:28][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:35:28][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:35:28][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:35:28][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%new%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:35:28][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:35:28][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:35:28][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:35:28][INFO][buildResponse]  210
+[32m[2021/03/06 01:35:29][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:35:29][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt1602472'
+OR movie_id = 'tt1287875'
+OR movie_id = 'tt0067482'
+OR movie_id = 'tt1930546'
+OR movie_id = 'tt0174480'
+OR movie_id = 'tt0408524'
+OR movie_id = 'tt3995006'
+OR movie_id = 'tt3576728'
+OR movie_id = 'tt1621444'
+OR movie_id = 'tt0092699'
+ORDER BY movie_id
+
+[32m[2021/03/06 01:35:29][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:35:29][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:35:29][INFO][buildResponse]  210
+[32m[2021/03/06 01:36:30][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:36:30][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:36:30][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:36:30][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:36:30][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:36:30][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:36:30][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@7268b8ba, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:36:30][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:36:30][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:36:30][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:36:30][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:36:30][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:36:30][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:36:30][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:36:30][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:36:30][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:36:30][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:36:30][INFO][buildResponse]  210
+[32m[2021/03/06 01:36:31][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:36:31][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt0090383'
+OR movie_id = 'tt2322683'
+OR movie_id = 'tt1637976'
+OR movie_id = 'tt3526286'
+OR movie_id = 'tt6119504'
+OR movie_id = 'tt1024733'
+OR movie_id = 'tt0790799'
+OR movie_id = 'tt2614684'
+OR movie_id = 'tt1022603'
+OR movie_id = 'tt2630898'
+ORDER BY movie_id
+
+[32m[2021/03/06 01:36:31][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:36:31][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:36:31][INFO][buildResponse]  210
+[32m[2021/03/06 01:37:30][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:37:30][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:37:30][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:37:30][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:37:30][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:37:30][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:37:30][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@4ef765a4, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:37:30][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:37:30][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:37:30][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:37:30][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:37:30][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:37:30][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:37:30][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:37:30][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:37:30][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:37:31][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:37:31][INFO][buildResponse]  210
+[32m[2021/03/06 01:37:31][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:37:31][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt0090383'
+OR movie_id = 'tt2322683'
+OR movie_id = 'tt1637976'
+OR movie_id = 'tt3526286'
+OR movie_id = 'tt6119504'
+OR movie_id = 'tt1024733'
+OR movie_id = 'tt0790799'
+OR movie_id = 'tt2614684'
+OR movie_id = 'tt1022603'
+OR movie_id = 'tt2630898'
+ORDER BY movie_id
+
+[32m[2021/03/06 01:37:31][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:37:31][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:37:31][INFO][buildResponse]  210
+[32m[2021/03/06 01:37:54][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:37:54][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:37:54][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:37:54][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:37:54][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:37:54][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:37:54][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@123d04a1, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:37:54][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:37:54][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:37:54][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:37:54][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:37:54][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:37:54][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:37:54][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%avenger%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:37:54][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:37:54][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:37:54][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:37:54][INFO][buildResponse]  210
+[32m[2021/03/06 01:37:55][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:37:55][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt4296026'
+OR movie_id = 'tt4154796'
+OR movie_id = 'tt4154756'
+OR movie_id = 'tt0212879'
+OR movie_id = 'tt1259998'
+OR movie_id = 'tt0098503'
+OR movie_id = 'tt0098502'
+OR movie_id = 'tt0491703'
+OR movie_id = 'tt0803093'
+ORDER BY movie_id
+
+[32m[2021/03/06 01:37:55][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:37:55][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:37:55][INFO][buildResponse]  210
+[32m[2021/03/06 01:39:52][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:39:52][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:39:52][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:39:52][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:39:52][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:39:52][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:39:52][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@bb60f6b, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:39:52][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:39:52][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:39:52][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:39:52][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:39:52][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:39:52][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:39:52][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:39:52][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:39:52][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:39:52][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:39:52][INFO][buildResponse]  210
+[32m[2021/03/06 01:39:53][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:39:53][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt0090383'
+OR movie_id = 'tt2322683'
+OR movie_id = 'tt1637976'
+OR movie_id = 'tt3526286'
+OR movie_id = 'tt6119504'
+OR movie_id = 'tt1024733'
+OR movie_id = 'tt0790799'
+OR movie_id = 'tt2614684'
+OR movie_id = 'tt1022603'
+OR movie_id = 'tt2630898'
+ORDER BY movie_id
+
+[32m[2021/03/06 01:39:53][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:39:53][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:39:53][INFO][buildResponse]  210
+[32m[2021/03/06 01:39:57][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:39:57][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:39:57][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:39:57][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:39:57][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:39:57][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:39:57][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@4cc6b24a, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:39:57][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:39:57][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:39:57][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:39:57][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:39:57][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:39:57][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:39:57][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:39:57][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:39:57][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:39:57][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:39:57][INFO][buildResponse]  210
+[32m[2021/03/06 01:39:59][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:39:59][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt0090383'
+OR movie_id = 'tt2322683'
+OR movie_id = 'tt1637976'
+OR movie_id = 'tt3526286'
+OR movie_id = 'tt6119504'
+OR movie_id = 'tt1024733'
+OR movie_id = 'tt0790799'
+OR movie_id = 'tt2614684'
+OR movie_id = 'tt1022603'
+OR movie_id = 'tt2630898'
+ORDER BY movie_id
+
+[32m[2021/03/06 01:39:59][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:39:59][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:39:59][INFO][buildResponse]  210
+[32m[2021/03/06 01:39:59][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:39:59][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:39:59][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:39:59][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:39:59][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:39:59][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:39:59][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@10ea33ba, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:39:59][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:39:59][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:39:59][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:39:59][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:39:59][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:39:59][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:39:59][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:39:59][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:39:59][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:39:59][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:39:59][INFO][buildResponse]  210
+[32m[2021/03/06 01:40:00][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:40:00][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt0090383'
+OR movie_id = 'tt2322683'
+OR movie_id = 'tt1637976'
+OR movie_id = 'tt3526286'
+OR movie_id = 'tt6119504'
+OR movie_id = 'tt1024733'
+OR movie_id = 'tt0790799'
+OR movie_id = 'tt2614684'
+OR movie_id = 'tt1022603'
+OR movie_id = 'tt2630898'
+ORDER BY movie_id
+
+[32m[2021/03/06 01:40:00][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:40:00][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:40:00][INFO][buildResponse]  210
+[32m[2021/03/06 01:40:38][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:40:38][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:40:38][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:40:38][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:40:38][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:40:38][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:40:38][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@1ea4b147, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:40:38][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:40:38][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:40:38][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:40:38][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:40:38][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:40:38][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:40:38][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%avenger%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:40:38][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:40:38][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:40:38][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:40:38][INFO][buildResponse]  210
+[32m[2021/03/06 01:40:39][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:40:39][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt4296026'
+OR movie_id = 'tt4154796'
+OR movie_id = 'tt4154756'
+OR movie_id = 'tt0212879'
+OR movie_id = 'tt1259998'
+OR movie_id = 'tt0098503'
+OR movie_id = 'tt0098502'
+OR movie_id = 'tt0491703'
+OR movie_id = 'tt0803093'
+ORDER BY movie_id
+
+[32m[2021/03/06 01:40:39][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:40:39][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:40:39][INFO][buildResponse]  210
+[32m[2021/03/06 01:40:48][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:40:48][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:40:48][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:40:48][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:40:48][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:40:48][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:40:48][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@45bc3548, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:40:48][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:40:48][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:40:48][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:40:48][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:40:48][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:40:48][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:40:48][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND p.name LIKE '%avenger%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:40:48][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:40:48][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 01:40:48][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 01:40:48][INFO][buildResponse]  211
+[32m[2021/03/06 01:42:42][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:42:42][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:42:42][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:42:42][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:42:42][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:42:42][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:42:42][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@65e1d006, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:42:42][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:42:42][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:42:42][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:42:42][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:42:42][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:42:42][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:42:42][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND p.name LIKE '%avenger%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:42:42][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:42:42][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 01:42:42][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 01:42:42][INFO][buildResponse]  211
+[32m[2021/03/06 01:42:47][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:42:47][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:42:47][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:42:47][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:42:47][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:42:47][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:42:47][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@765e6f29, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:42:47][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:42:47][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:42:47][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:42:47][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:42:47][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:42:47][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:42:47][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%avenger%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:42:47][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:42:47][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:42:47][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:42:47][INFO][buildResponse]  210
+[32m[2021/03/06 01:42:48][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:42:48][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt4296026'
+OR movie_id = 'tt4154796'
+OR movie_id = 'tt4154756'
+OR movie_id = 'tt0212879'
+OR movie_id = 'tt1259998'
+OR movie_id = 'tt0098503'
+OR movie_id = 'tt0098502'
+OR movie_id = 'tt0491703'
+OR movie_id = 'tt0803093'
+ORDER BY movie_id
+
+[32m[2021/03/06 01:42:48][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:42:48][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:42:48][INFO][buildResponse]  210
+[32m[2021/03/06 01:42:51][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:42:51][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:42:51][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:42:51][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:42:51][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:42:51][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:42:51][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@1c321ca0, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:42:51][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:42:51][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:42:51][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:42:51][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:42:51][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:42:51][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:42:51][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND p.name LIKE '%avenger%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:42:51][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:42:51][INFO][buildResponse]  Response being built with Result: NO_MOVIE_FOUND
+[32m[2021/03/06 01:42:52][INFO][buildResponse]  No movies found with search parameters.
+[32m[2021/03/06 01:42:52][INFO][buildResponse]  211
+[32m[2021/03/06 01:52:34][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 01:52:34][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 01:52:34][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 01:52:34][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 01:52:34][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 01:52:34][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 01:52:34][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@23f2f2e0, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 01:52:34][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 01:52:34][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 01:52:34][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 01:52:34][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 01:52:34][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 01:52:34][INFO][search]  Sanitize input 
+[32m[2021/03/06 01:52:34][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND p.name LIKE '%wen%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 10 OFFSET 0 
+[32m[2021/03/06 01:52:34][INFO][resposeAfterQuery]  Receive result set
+[32m[2021/03/06 01:52:34][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:52:34][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:52:34][INFO][buildResponse]  210
+[32m[2021/03/06 01:52:34][INFO][thumbnail]  Execute SQL query
+[33m[2021/03/06 01:52:34][WARNING][thumbnail]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT movie_id, title, backdrop_path, poster_path
+FROM movie
+WHERE false
+OR movie_id = 'tt3410834'
+OR movie_id = 'tt0313255'
+OR movie_id = 'tt0288441'
+OR movie_id = 'tt2630134'
+OR movie_id = 'tt0383206'
+OR movie_id = 'tt7208564'
+OR movie_id = 'tt0186508'
+OR movie_id = 'tt0284946'
+OR movie_id = 'tt0377800'
+OR movie_id = 'tt2065968'
+ORDER BY movie_id
+
+[32m[2021/03/06 01:52:34][INFO][buildResponse]  Response being built with Result: FOUND_MOVIE
+[32m[2021/03/06 01:52:34][INFO][buildResponse]  Found movie(s) with search parameters.
+[32m[2021/03/06 01:52:34][INFO][buildResponse]  210
+[32m[2021/03/06 16:58:27][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 16:58:27][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 16:58:27][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 16:58:27][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 16:58:27][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 16:58:27][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 16:58:27][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@6f654bea, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 16:58:27][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 16:58:27][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 16:58:27][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 16:58:27][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 16:58:27][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 16:58:29][INFO][search]  Sanitize input 
+[32m[2021/03/06 16:58:29][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%av%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 100 OFFSET 0 
+[31m[2021/03/06 16:58:30][SEVERE][toResponse]  SQL exception
+[32m[2021/03/06 16:58:31][INFO][buildResponse]  Response being built with Result: INTERNAL_SERVER_ERROR
+[32m[2021/03/06 16:58:31][INFO][buildResponse]  Internal server error.
+[32m[2021/03/06 16:58:31][INFO][buildResponse]  -1
+[32m[2021/03/06 16:58:43][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 16:58:43][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 16:58:43][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 16:58:43][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 16:58:43][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 16:58:43][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 16:58:43][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@4de4ce44, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 16:58:43][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 16:58:43][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 16:58:43][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 16:58:43][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 16:58:43][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 16:58:43][INFO][search]  Sanitize input 
+[32m[2021/03/06 16:58:43][INFO][resposeAfterQuery]  SQL Query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movie.movie_id,title,year,p.name as director,rating,backdrop_path,poster_path,hidden FROM movie LEFT JOIN person p ON p.person_id = movie.director_id LEFT JOIN genre_in_movie gim ON movie.movie_id = gim.movie_id LEFT JOIN genre g ON g.genre_id = gim.genre_id Where 1=1 AND movie.title LIKE '%av%' AND movie.hidden = 0 ORDER BY title asc, rating desc LIMIT 100 OFFSET 0 
+[31m[2021/03/06 16:58:47][SEVERE][toResponse]  SQL exception
+[32m[2021/03/06 16:58:47][INFO][buildResponse]  Response being built with Result: INTERNAL_SERVER_ERROR
+[32m[2021/03/06 16:58:47][INFO][buildResponse]  Internal server error.
+[32m[2021/03/06 16:58:47][INFO][buildResponse]  -1
+[32m[2021/03/06 16:59:11][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 16:59:11][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 16:59:11][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 16:59:11][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 16:59:11][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 16:59:11][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 16:59:11][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@6412f52c, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 16:59:11][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 16:59:11][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 16:59:11][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 16:59:11][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 16:59:11][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 16:59:11][INFO][search]  Sanitize input 
+[31m[2021/03/06 16:59:11][SEVERE][toResponse]  SQL exception
+[32m[2021/03/06 16:59:11][INFO][buildResponse]  Response being built with Result: INTERNAL_SERVER_ERROR
+[32m[2021/03/06 16:59:11][INFO][buildResponse]  Internal server error.
+[32m[2021/03/06 16:59:11][INFO][buildResponse]  -1
+[32m[2021/03/06 16:59:22][INFO][sendIDMRequest]  Send request to IDM Privilege
+[32m[2021/03/06 16:59:22][INFO][sendIDMRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[32m[2021/03/06 16:59:22][INFO][sendIDMRequest]  Building client...
+[32m[2021/03/06 16:59:22][INFO][sendIDMRequest]  Building WebTarget...
+[32m[2021/03/06 16:59:22][INFO][sendIDMRequest]  Starting invocation builder...
+[32m[2021/03/06 16:59:22][INFO][sendIDMRequest]  Sending request...
+[32m[2021/03/06 16:59:22][INFO][sendIDMRequest]  Entity{entity=edu.uci.ics.jindongy.service.movies.model.Resquest.IDMRequest@67dda02d, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[32m[2021/03/06 16:59:24][INFO][sendIDMRequest]  Request sent.
+[32m[2021/03/06 16:59:24][INFO][sendIDMRequest]  Received status 200
+[32m[2021/03/06 16:59:24][INFO][checkPrivilege]  Reading response
+[32m[2021/03/06 16:59:24][INFO][checkPrivilege]  Received resultCode: 141
+[32m[2021/03/06 16:59:24][INFO][checkPrivilege]  Received Message: User has insufficient privilege level.
+[32m[2021/03/06 16:59:24][INFO][search]  Sanitize input 
+[31m[2021/03/06 16:59:24][SEVERE][toResponse]  SQL exception
+[32m[2021/03/06 16:59:24][INFO][buildResponse]  Response being built with Result: INTERNAL_SERVER_ERROR
+[32m[2021/03/06 16:59:24][INFO][buildResponse]  Internal server error.
+[32m[2021/03/06 16:59:24][INFO][buildResponse]  -1

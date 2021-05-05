@@ -1,0 +1,34 @@
+{
+  "baseURL": "http://192.168.0.175:12345/api/g",
+  "pollLimit": 10,
+  "pollingInterval":500,
+  "gatewayEP": {
+    "report": "/report"
+  },
+  "idmEPs": {
+    "login": "/idm/login",
+    "register": "/idm/register",
+    "session": "/idm/session",
+    "privilege": "/idm/privilege"
+  },
+  "movieEPs": {
+    "search": "/movies/search",
+    "browse": "/movies/browse/",
+    "getMovieID": "/movies/get/",
+    "thumbnail": "/movies/thumbnail",
+    "people":"/movies/people",
+    "peopleSearch": "/movies/people/search",
+    "peopleGetID": "/movies/people/get/"
+  },
+
+  "billingEPs": {
+    "cartInsert": "/billing/cart/insert",
+    "cartUpdate": "/billing/cart/update",
+    "cartDelete": "/billing/cart/delete",
+    "cartRetrieve": "/billing/cart/retrieve",
+    "cartClear": "/billing/cart/clear",
+    "orderPlace": "/billing/order/place",
+    "orderRetrieve": "/billing/order/retrieve",
+    "orderComplete": "/billing/order/complete"
+  }
+}

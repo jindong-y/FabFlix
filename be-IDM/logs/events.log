@@ -1,0 +1,1835 @@
+[37m[2021/03/19 00:16:05][CONFIG][initService]  Starting service...
+[37m[2021/03/19 00:16:05][CONFIG][currentConfigs]  Scheme: http://
+[37m[2021/03/19 00:16:05][CONFIG][currentConfigs]  Hostname: 127.0.0.1
+[37m[2021/03/19 00:16:05][CONFIG][currentConfigs]  Port: 12346
+[37m[2021/03/19 00:16:05][CONFIG][currentConfigs]  Path: /api/idm
+[37m[2021/03/19 00:16:05][CONFIG][currentConfigs]  Logger output directory: logs/
+[37m[2021/03/19 00:16:05][CONFIG][currentConfigs]  dbUsername: root
+[37m[2021/03/19 00:16:05][CONFIG][currentConfigs]  dbPassword: MySQLer4583!
+[37m[2021/03/19 00:16:05][CONFIG][currentConfigs]  dbHostname: localhost
+[37m[2021/03/19 00:16:05][CONFIG][currentConfigs]  dbPort: 3306
+[37m[2021/03/19 00:16:05][CONFIG][currentConfigs]  dbDriver: com.mysql.cj.jdbc.Driver
+[37m[2021/03/19 00:16:05][CONFIG][currentConfigs]  dbName: idm
+[37m[2021/03/19 00:16:05][CONFIG][currentConfigs]  dbSettings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[37m[2021/03/19 00:16:05][CONFIG][currentConfigs]  timeout: 600000
+[37m[2021/03/19 00:16:05][CONFIG][currentConfigs]  expiration: 1800000
+[37m[2021/03/19 00:16:05][CONFIG][connectToDatabase]  Connecting to database...
+[37m[2021/03/19 00:16:05][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://localhost:3306/idm?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[37m[2021/03/19 00:16:06][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://localhost:3306/idm?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[37m[2021/03/19 00:16:06][CONFIG][initHTTPServer]  Initializing HTTP server...
+[37m[2021/03/19 00:16:06][CONFIG][initHTTPServer]  Building URI from configs...
+[37m[2021/03/19 00:16:06][CONFIG][initHTTPServer]  Final URI: http://127.0.0.1:12346/api/idm
+[37m[2021/03/19 00:16:06][CONFIG][initHTTPServer]  Set Jersey resources.
+[37m[2021/03/19 00:16:06][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[37m[2021/03/19 00:16:06][CONFIG][initHTTPServer]  Set session timeout and token expiration.
+[37m[2021/03/19 00:16:06][CONFIG][initHTTPServer]  Starting HTTP server...
+[37m[2021/03/19 00:16:07][CONFIG][initHTTPServer]  HTTP server started.
+[37m[2021/03/19 00:16:07][CONFIG][initService]  Service initialized.
+[32m[2021/03/19 00:42:55][INFO][login]  Received request to login
+[32m[2021/03/19 00:42:55][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 00:42:55][INFO][login]  Trying SELECT:iostest@uci.edu
+[33m[2021/03/19 00:42:55][WARNING][login]  User not found.
+[32m[2021/03/19 00:46:14][INFO][login]  Received request to login
+[32m[2021/03/19 00:46:14][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 00:46:14][INFO][login]  Trying SELECT:iostest@uci.edu
+[33m[2021/03/19 00:46:14][WARNING][login]  User not found.
+[32m[2021/03/19 00:47:08][INFO][register]  Received request to hash and salt and password
+[32m[2021/03/19 00:47:08][INFO][register]  Trying insertion:new usr iostest@uci.edu
+[32m[2021/03/19 00:47:08][INFO][register]  Trying insertion:new usr iostest@uci.edu
+[32m[2021/03/19 00:47:08][INFO][register]  User registered successfully. iostest@uci.edu
+[32m[2021/03/19 01:00:03][INFO][login]  Received request to login
+[32m[2021/03/19 01:00:03][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 01:00:03][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/19 01:00:03][INFO][login]  Authenticating
+[32m[2021/03/19 01:00:03][INFO][login]  Authentication Pass 
+[32m[2021/03/19 01:00:03][INFO][login]  Check if existing an active session
+[32m[2021/03/19 01:00:03][INFO][login]  Create a new session. 
+[32m[2021/03/19 01:00:03][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/19 01:01:10][INFO][login]  Received request to login
+[32m[2021/03/19 01:01:10][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 01:01:10][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/19 01:01:10][INFO][login]  Authenticating
+[32m[2021/03/19 01:01:10][INFO][login]  Authentication Pass 
+[32m[2021/03/19 01:01:10][INFO][login]  Check if existing an active session
+[32m[2021/03/19 01:01:10][INFO][login]  Update session
+[32m[2021/03/19 01:01:10][INFO][login]  Update session succeeded.
+[32m[2021/03/19 01:01:10][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/19 01:02:14][INFO][login]  Received request to login
+[32m[2021/03/19 01:02:14][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 01:02:14][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/19 01:02:14][INFO][login]  Authenticating
+[32m[2021/03/19 01:02:14][INFO][login]  Authentication Pass 
+[32m[2021/03/19 01:02:14][INFO][login]  Check if existing an active session
+[32m[2021/03/19 01:02:14][INFO][login]  Update session
+[32m[2021/03/19 01:02:14][INFO][login]  Update session succeeded.
+[32m[2021/03/19 01:02:14][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/19 01:12:52][INFO][login]  Received request to login
+[32m[2021/03/19 01:12:52][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 01:12:52][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/19 01:12:52][INFO][login]  Authenticating
+[32m[2021/03/19 01:12:52][INFO][login]  Authentication Pass 
+[32m[2021/03/19 01:12:52][INFO][login]  Check if existing an active session
+[32m[2021/03/19 01:12:52][INFO][login]  Update session
+[32m[2021/03/19 01:12:52][INFO][login]  Update session succeeded.
+[32m[2021/03/19 01:12:52][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/19 01:14:29][INFO][login]  Received request to login
+[32m[2021/03/19 01:14:29][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 01:14:29][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/19 01:14:29][INFO][login]  Authenticating
+[32m[2021/03/19 01:14:29][INFO][login]  Authentication Pass 
+[32m[2021/03/19 01:14:29][INFO][login]  Check if existing an active session
+[32m[2021/03/19 01:14:29][INFO][login]  Update session
+[32m[2021/03/19 01:14:29][INFO][login]  Update session succeeded.
+[32m[2021/03/19 01:14:29][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/19 01:44:36][INFO][login]  Received request to login
+[32m[2021/03/19 01:44:36][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 01:44:36][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/19 01:44:36][INFO][login]  Authenticating
+[32m[2021/03/19 01:44:36][INFO][login]  Authentication Pass 
+[32m[2021/03/19 01:44:36][INFO][login]  Check if existing an active session
+[32m[2021/03/19 01:44:36][INFO][login]  Update session
+[32m[2021/03/19 01:44:36][INFO][login]  Update session succeeded.
+[32m[2021/03/19 01:44:36][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/19 01:45:57][INFO][login]  Received request to login
+[32m[2021/03/19 01:45:57][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 01:45:57][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/19 01:45:58][INFO][login]  Authenticating
+[32m[2021/03/19 01:45:58][INFO][login]  Authentication Pass 
+[32m[2021/03/19 01:45:58][INFO][login]  Check if existing an active session
+[32m[2021/03/19 01:45:58][INFO][login]  Update session
+[32m[2021/03/19 01:45:58][INFO][login]  Update session succeeded.
+[32m[2021/03/19 01:45:58][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/19 01:49:27][INFO][login]  Received request to login
+[32m[2021/03/19 01:49:27][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 01:49:27][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/19 01:49:27][INFO][login]  Authenticating
+[32m[2021/03/19 01:49:27][INFO][login]  Authentication Pass 
+[32m[2021/03/19 01:49:27][INFO][login]  Check if existing an active session
+[32m[2021/03/19 01:49:27][INFO][login]  Update session
+[32m[2021/03/19 01:49:27][INFO][login]  Received request to login
+[32m[2021/03/19 01:49:27][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 01:49:27][INFO][login]  Update session succeeded.
+[32m[2021/03/19 01:49:27][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/19 01:49:27][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/19 01:49:27][INFO][login]  Authenticating
+[32m[2021/03/19 01:49:27][INFO][login]  Authentication Pass 
+[32m[2021/03/19 01:49:27][INFO][login]  Check if existing an active session
+[32m[2021/03/19 01:49:27][INFO][login]  Update session
+[32m[2021/03/19 01:49:27][INFO][login]  Update session succeeded.
+[32m[2021/03/19 01:49:27][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/19 01:49:51][INFO][login]  Received request to login
+[32m[2021/03/19 01:49:51][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 01:49:51][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/19 01:49:51][INFO][login]  Authenticating
+[32m[2021/03/19 01:49:51][INFO][login]  Authentication Pass 
+[32m[2021/03/19 01:49:51][INFO][login]  Check if existing an active session
+[32m[2021/03/19 01:49:51][INFO][login]  Update session
+[32m[2021/03/19 01:49:51][INFO][login]  Update session succeeded.
+[32m[2021/03/19 01:49:51][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/19 01:58:08][INFO][login]  Received request to login
+[32m[2021/03/19 01:58:08][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 01:58:08][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/19 01:58:08][INFO][login]  Authenticating
+[32m[2021/03/19 01:58:08][INFO][login]  Authentication Pass 
+[32m[2021/03/19 01:58:08][INFO][login]  Check if existing an active session
+[32m[2021/03/19 01:58:08][INFO][login]  Update session
+[32m[2021/03/19 01:58:08][INFO][login]  Update session succeeded.
+[32m[2021/03/19 01:58:08][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/19 02:24:59][INFO][login]  Received request to login
+[32m[2021/03/19 02:24:59][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 02:24:59][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/19 02:24:59][INFO][login]  Authenticating
+[32m[2021/03/19 02:24:59][INFO][login]  Authentication Pass 
+[32m[2021/03/19 02:24:59][INFO][login]  Check if existing an active session
+[32m[2021/03/19 02:24:59][INFO][login]  Update session
+[32m[2021/03/19 02:24:59][INFO][login]  Update session succeeded.
+[32m[2021/03/19 02:24:59][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/19 02:53:37][INFO][login]  Received request to login
+[32m[2021/03/19 02:53:37][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 02:53:37][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/19 02:53:37][INFO][login]  Authenticating
+[32m[2021/03/19 02:53:37][INFO][login]  Authentication Pass 
+[32m[2021/03/19 02:53:37][INFO][login]  Check if existing an active session
+[32m[2021/03/19 02:53:37][INFO][login]  Update session
+[32m[2021/03/19 02:53:37][INFO][login]  Update session succeeded.
+[32m[2021/03/19 02:53:37][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/19 18:34:34][INFO][session]  Check user
+[33m[2021/03/19 18:34:35][WARNING][session]  SQL query failed
+[32m[2021/03/19 18:34:37][INFO][session]  Check user
+[32m[2021/03/19 18:34:37][INFO][session]  Check session status
+[32m[2021/03/19 18:34:37][INFO][session]  Session is active.
+[32m[2021/03/19 18:34:38][INFO][privilege]  Check user
+[32m[2021/03/19 18:34:38][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 18:48:27][INFO][session]  Check user
+[32m[2021/03/19 18:48:27][INFO][session]  Check session status
+[32m[2021/03/19 18:48:27][INFO][session]  Session is active.
+[32m[2021/03/19 18:48:27][INFO][privilege]  Check user
+[32m[2021/03/19 18:48:27][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 18:50:28][INFO][session]  Check user
+[32m[2021/03/19 18:50:28][INFO][session]  Check session status
+[32m[2021/03/19 18:50:28][INFO][session]  Session is active.
+[32m[2021/03/19 18:50:29][INFO][privilege]  Check user
+[32m[2021/03/19 18:50:29][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 18:51:22][INFO][session]  Check user
+[32m[2021/03/19 18:51:22][INFO][session]  Check session status
+[32m[2021/03/19 18:51:22][INFO][session]  Session is active.
+[32m[2021/03/19 18:51:22][INFO][privilege]  Check user
+[32m[2021/03/19 18:51:22][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 18:52:48][INFO][session]  Check user
+[32m[2021/03/19 18:52:48][INFO][session]  Check session status
+[32m[2021/03/19 18:52:48][INFO][session]  Session is active.
+[32m[2021/03/19 18:52:48][INFO][privilege]  Check user
+[32m[2021/03/19 18:52:48][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 18:53:34][INFO][session]  Check user
+[32m[2021/03/19 18:53:34][INFO][session]  Check session status
+[32m[2021/03/19 18:53:34][INFO][session]  Session is active.
+[32m[2021/03/19 18:53:34][INFO][privilege]  Check user
+[32m[2021/03/19 18:53:34][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 18:53:52][INFO][session]  Check user
+[32m[2021/03/19 18:53:52][INFO][session]  Check session status
+[32m[2021/03/19 18:53:52][INFO][session]  Session is active.
+[32m[2021/03/19 18:53:53][INFO][privilege]  Check user
+[32m[2021/03/19 18:53:53][INFO][privilege]  User has insufficient privilege level.
+[33m[2021/03/19 18:53:53][WARNING][session]  Token has invalid length.
+[32m[2021/03/19 18:54:56][INFO][session]  Check user
+[32m[2021/03/19 18:54:56][INFO][session]  Check session status
+[32m[2021/03/19 18:54:56][INFO][session]  Session is active.
+[32m[2021/03/19 18:54:57][INFO][privilege]  Check user
+[32m[2021/03/19 18:54:57][INFO][privilege]  User has insufficient privilege level.
+[33m[2021/03/19 18:54:58][WARNING][session]  Token has invalid length.
+[32m[2021/03/19 18:56:36][INFO][session]  Check user
+[32m[2021/03/19 18:56:36][INFO][session]  Check session status
+[32m[2021/03/19 18:56:36][INFO][session]  Session is active.
+[32m[2021/03/19 18:56:36][INFO][privilege]  Check user
+[32m[2021/03/19 18:56:36][INFO][privilege]  User has insufficient privilege level.
+[33m[2021/03/19 18:56:37][WARNING][session]  Token has invalid length.
+[32m[2021/03/19 18:57:27][INFO][session]  Check user
+[32m[2021/03/19 18:57:27][INFO][session]  Check session status
+[32m[2021/03/19 18:57:27][INFO][session]  Session is active.
+[32m[2021/03/19 18:57:27][INFO][privilege]  Check user
+[32m[2021/03/19 18:57:27][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 18:57:28][INFO][session]  Check user
+[32m[2021/03/19 18:57:28][INFO][session]  Check session status
+[32m[2021/03/19 18:57:28][INFO][session]  Session is active.
+[32m[2021/03/19 19:00:14][INFO][session]  Check user
+[32m[2021/03/19 19:00:14][INFO][session]  Check session status
+[32m[2021/03/19 19:00:14][INFO][session]  Session is active.
+[32m[2021/03/19 19:00:14][INFO][privilege]  Check user
+[32m[2021/03/19 19:00:14][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:00:15][INFO][session]  Check user
+[32m[2021/03/19 19:00:15][INFO][session]  Check session status
+[32m[2021/03/19 19:00:15][INFO][session]  Session is active.
+[32m[2021/03/19 19:00:17][INFO][session]  Check user
+[32m[2021/03/19 19:00:17][INFO][session]  Check session status
+[32m[2021/03/19 19:00:17][INFO][session]  Session is active.
+[32m[2021/03/19 19:00:17][INFO][privilege]  Check user
+[32m[2021/03/19 19:00:17][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:00:18][INFO][session]  Check user
+[32m[2021/03/19 19:00:18][INFO][session]  Check session status
+[32m[2021/03/19 19:00:18][INFO][session]  Session is active.
+[32m[2021/03/19 19:04:56][INFO][session]  Check user
+[32m[2021/03/19 19:04:56][INFO][session]  Check session status
+[32m[2021/03/19 19:04:56][INFO][session]  Session is active.
+[32m[2021/03/19 19:04:57][INFO][privilege]  Check user
+[32m[2021/03/19 19:04:57][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:04:57][INFO][session]  Check user
+[32m[2021/03/19 19:04:57][INFO][session]  Check session status
+[32m[2021/03/19 19:04:57][INFO][session]  Session is active.
+[32m[2021/03/19 19:05:04][INFO][session]  Check user
+[32m[2021/03/19 19:05:04][INFO][session]  Check session status
+[32m[2021/03/19 19:05:04][INFO][session]  Session is active.
+[32m[2021/03/19 19:05:04][INFO][privilege]  Check user
+[32m[2021/03/19 19:05:04][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:05:04][INFO][session]  Check user
+[32m[2021/03/19 19:05:04][INFO][session]  Check session status
+[32m[2021/03/19 19:05:04][INFO][session]  Session is active.
+[32m[2021/03/19 19:05:35][INFO][session]  Check user
+[32m[2021/03/19 19:05:35][INFO][session]  Check session status
+[32m[2021/03/19 19:05:35][INFO][session]  Session is active.
+[32m[2021/03/19 19:05:35][INFO][privilege]  Check user
+[32m[2021/03/19 19:05:35][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:05:35][INFO][session]  Check user
+[32m[2021/03/19 19:05:35][INFO][session]  Check session status
+[32m[2021/03/19 19:05:35][INFO][session]  Session is active.
+[32m[2021/03/19 19:06:08][INFO][session]  Check user
+[32m[2021/03/19 19:06:08][INFO][session]  Check session status
+[32m[2021/03/19 19:06:08][INFO][session]  Session is active.
+[32m[2021/03/19 19:06:08][INFO][privilege]  Check user
+[32m[2021/03/19 19:06:08][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:06:09][INFO][session]  Check user
+[32m[2021/03/19 19:06:09][INFO][session]  Check session status
+[32m[2021/03/19 19:06:09][INFO][session]  Session is active.
+[32m[2021/03/19 19:08:19][INFO][session]  Check user
+[32m[2021/03/19 19:08:19][INFO][session]  Check session status
+[32m[2021/03/19 19:08:19][INFO][session]  Session is active.
+[32m[2021/03/19 19:08:20][INFO][privilege]  Check user
+[32m[2021/03/19 19:08:20][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:08:20][INFO][session]  Check user
+[32m[2021/03/19 19:08:20][INFO][session]  Check session status
+[32m[2021/03/19 19:08:20][INFO][session]  Session is active.
+[32m[2021/03/19 19:10:57][INFO][session]  Check user
+[32m[2021/03/19 19:10:57][INFO][session]  Check session status
+[32m[2021/03/19 19:10:57][INFO][session]  Session is active.
+[32m[2021/03/19 19:10:58][INFO][privilege]  Check user
+[32m[2021/03/19 19:10:58][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:10:59][INFO][session]  Check user
+[32m[2021/03/19 19:10:59][INFO][session]  Check session status
+[32m[2021/03/19 19:10:59][INFO][session]  Session is active.
+[32m[2021/03/19 19:11:37][INFO][session]  Check user
+[32m[2021/03/19 19:11:37][INFO][session]  Check session status
+[32m[2021/03/19 19:11:37][INFO][session]  Session is active.
+[32m[2021/03/19 19:11:37][INFO][privilege]  Check user
+[32m[2021/03/19 19:11:37][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:11:38][INFO][session]  Check user
+[32m[2021/03/19 19:11:38][INFO][session]  Check session status
+[32m[2021/03/19 19:11:38][INFO][session]  Session is active.
+[32m[2021/03/19 19:12:17][INFO][session]  Check user
+[32m[2021/03/19 19:12:17][INFO][session]  Check session status
+[32m[2021/03/19 19:12:17][INFO][session]  Session is active.
+[32m[2021/03/19 19:12:17][INFO][privilege]  Check user
+[32m[2021/03/19 19:12:17][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:12:18][INFO][session]  Check user
+[32m[2021/03/19 19:12:18][INFO][session]  Check session status
+[32m[2021/03/19 19:12:18][INFO][session]  Session is active.
+[32m[2021/03/19 19:15:40][INFO][session]  Check user
+[32m[2021/03/19 19:15:40][INFO][session]  Check session status
+[32m[2021/03/19 19:15:40][INFO][session]  Session is active.
+[32m[2021/03/19 19:15:49][INFO][session]  Check user
+[32m[2021/03/19 19:15:49][INFO][session]  Check session status
+[32m[2021/03/19 19:15:49][INFO][session]  Session is active.
+[32m[2021/03/19 19:15:49][INFO][privilege]  Check user
+[32m[2021/03/19 19:15:49][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:15:50][INFO][session]  Check user
+[32m[2021/03/19 19:15:50][INFO][session]  Check session status
+[32m[2021/03/19 19:15:50][INFO][session]  Session is active.
+[32m[2021/03/19 19:17:23][INFO][session]  Check user
+[32m[2021/03/19 19:17:23][INFO][session]  Check session status
+[32m[2021/03/19 19:17:23][INFO][session]  Session is active.
+[32m[2021/03/19 19:17:23][INFO][privilege]  Check user
+[32m[2021/03/19 19:17:23][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:17:24][INFO][session]  Check user
+[32m[2021/03/19 19:17:24][INFO][session]  Check session status
+[32m[2021/03/19 19:17:24][INFO][session]  Session is active.
+[32m[2021/03/19 19:17:45][INFO][session]  Check user
+[32m[2021/03/19 19:17:45][INFO][session]  Check session status
+[32m[2021/03/19 19:17:45][INFO][session]  Session is active.
+[32m[2021/03/19 19:17:45][INFO][privilege]  Check user
+[32m[2021/03/19 19:17:45][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:17:45][INFO][session]  Check user
+[32m[2021/03/19 19:17:45][INFO][session]  Check session status
+[32m[2021/03/19 19:17:45][INFO][session]  Session is active.
+[32m[2021/03/19 19:19:27][INFO][session]  Check user
+[32m[2021/03/19 19:19:27][INFO][session]  Check session status
+[32m[2021/03/19 19:19:27][INFO][session]  Session is active.
+[32m[2021/03/19 19:19:27][INFO][privilege]  Check user
+[32m[2021/03/19 19:19:27][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:19:27][INFO][session]  Check user
+[32m[2021/03/19 19:19:27][INFO][session]  Check session status
+[32m[2021/03/19 19:19:27][INFO][session]  Session is active.
+[32m[2021/03/19 19:19:49][INFO][session]  Check user
+[32m[2021/03/19 19:19:49][INFO][session]  Check session status
+[32m[2021/03/19 19:19:49][INFO][session]  Session is active.
+[32m[2021/03/19 19:19:49][INFO][privilege]  Check user
+[32m[2021/03/19 19:19:49][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:19:50][INFO][session]  Check user
+[32m[2021/03/19 19:19:50][INFO][session]  Check session status
+[32m[2021/03/19 19:19:50][INFO][session]  Session is active.
+[32m[2021/03/19 19:20:00][INFO][session]  Check user
+[32m[2021/03/19 19:20:00][INFO][session]  Check session status
+[32m[2021/03/19 19:20:00][INFO][session]  Session is active.
+[32m[2021/03/19 19:20:00][INFO][privilege]  Check user
+[32m[2021/03/19 19:20:00][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:20:01][INFO][session]  Check user
+[32m[2021/03/19 19:20:01][INFO][session]  Check session status
+[32m[2021/03/19 19:20:01][INFO][session]  Session is active.
+[32m[2021/03/19 19:20:29][INFO][session]  Check user
+[32m[2021/03/19 19:20:29][INFO][session]  Check session status
+[32m[2021/03/19 19:20:29][INFO][session]  Session is active.
+[32m[2021/03/19 19:20:30][INFO][privilege]  Check user
+[32m[2021/03/19 19:20:30][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:20:30][INFO][session]  Check user
+[32m[2021/03/19 19:20:30][INFO][session]  Check session status
+[32m[2021/03/19 19:20:30][INFO][session]  Session is active.
+[32m[2021/03/19 19:20:54][INFO][session]  Check user
+[32m[2021/03/19 19:20:54][INFO][session]  Check session status
+[32m[2021/03/19 19:20:54][INFO][session]  Session is active.
+[32m[2021/03/19 19:20:54][INFO][privilege]  Check user
+[32m[2021/03/19 19:20:54][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:20:55][INFO][session]  Check user
+[32m[2021/03/19 19:20:55][INFO][session]  Check session status
+[32m[2021/03/19 19:20:55][INFO][session]  Session is active.
+[32m[2021/03/19 19:20:59][INFO][session]  Check user
+[32m[2021/03/19 19:20:59][INFO][session]  Check session status
+[32m[2021/03/19 19:20:59][INFO][session]  Session is active.
+[32m[2021/03/19 19:20:59][INFO][privilege]  Check user
+[32m[2021/03/19 19:20:59][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:20:59][INFO][session]  Check user
+[32m[2021/03/19 19:20:59][INFO][session]  Check session status
+[32m[2021/03/19 19:20:59][INFO][session]  Session is active.
+[32m[2021/03/19 19:21:10][INFO][session]  Check user
+[32m[2021/03/19 19:21:10][INFO][session]  Check session status
+[32m[2021/03/19 19:21:10][INFO][session]  Session is active.
+[32m[2021/03/19 19:21:10][INFO][privilege]  Check user
+[32m[2021/03/19 19:21:10][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:21:11][INFO][session]  Check user
+[32m[2021/03/19 19:21:11][INFO][session]  Check session status
+[32m[2021/03/19 19:21:11][INFO][session]  Session is active.
+[32m[2021/03/19 19:23:02][INFO][session]  Check user
+[32m[2021/03/19 19:23:02][INFO][session]  Check session status
+[32m[2021/03/19 19:23:02][INFO][session]  Session is active.
+[32m[2021/03/19 19:23:02][INFO][privilege]  Check user
+[32m[2021/03/19 19:23:02][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 19:23:03][INFO][session]  Check user
+[32m[2021/03/19 19:23:03][INFO][session]  Check session status
+[32m[2021/03/19 19:23:03][INFO][session]  Session is active.
+[32m[2021/03/19 20:22:44][INFO][session]  Check user
+[32m[2021/03/19 20:22:44][INFO][session]  Check session status
+[32m[2021/03/19 20:22:44][INFO][session]  Session is active.
+[32m[2021/03/19 20:22:45][INFO][privilege]  Check user
+[32m[2021/03/19 20:22:45][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 20:22:46][INFO][session]  Check user
+[32m[2021/03/19 20:22:46][INFO][session]  Check session status
+[32m[2021/03/19 20:22:46][INFO][session]  Session is active.
+[32m[2021/03/19 20:36:48][INFO][session]  Check user
+[32m[2021/03/19 20:36:48][INFO][session]  Check session status
+[32m[2021/03/19 20:36:48][INFO][session]  Session is active.
+[32m[2021/03/19 20:36:54][INFO][session]  Check user
+[32m[2021/03/19 20:36:54][INFO][session]  Check session status
+[32m[2021/03/19 20:36:54][INFO][session]  Session is active.
+[32m[2021/03/19 20:36:55][INFO][privilege]  Check user
+[32m[2021/03/19 20:36:55][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 20:36:55][INFO][session]  Check user
+[32m[2021/03/19 20:36:55][INFO][session]  Check session status
+[32m[2021/03/19 20:36:55][INFO][session]  Session is active.
+[32m[2021/03/19 20:37:19][INFO][session]  Check user
+[32m[2021/03/19 20:37:19][INFO][session]  Check session status
+[32m[2021/03/19 20:37:19][INFO][session]  Session is active.
+[32m[2021/03/19 20:37:19][INFO][privilege]  Check user
+[32m[2021/03/19 20:37:19][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 20:37:22][INFO][session]  Check user
+[32m[2021/03/19 20:37:22][INFO][session]  Check session status
+[32m[2021/03/19 20:37:22][INFO][session]  Session is active.
+[32m[2021/03/19 20:37:23][INFO][privilege]  Check user
+[32m[2021/03/19 20:37:23][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 20:37:35][INFO][session]  Check user
+[32m[2021/03/19 20:37:35][INFO][session]  Check session status
+[32m[2021/03/19 20:37:35][INFO][session]  Session is active.
+[32m[2021/03/19 20:37:35][INFO][privilege]  Check user
+[32m[2021/03/19 20:37:35][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 20:37:36][INFO][session]  Check user
+[32m[2021/03/19 20:37:36][INFO][session]  Check session status
+[32m[2021/03/19 20:37:36][INFO][session]  Session is active.
+[32m[2021/03/19 20:37:59][INFO][session]  Check user
+[32m[2021/03/19 20:37:59][INFO][session]  Check session status
+[32m[2021/03/19 20:37:59][INFO][session]  Session is active.
+[32m[2021/03/19 20:37:59][INFO][privilege]  Check user
+[32m[2021/03/19 20:37:59][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 20:38:01][INFO][session]  Check user
+[32m[2021/03/19 20:38:01][INFO][session]  Check session status
+[32m[2021/03/19 20:38:01][INFO][session]  Session is active.
+[32m[2021/03/19 20:42:44][INFO][session]  Check user
+[32m[2021/03/19 20:42:44][INFO][session]  Check session status
+[32m[2021/03/19 20:42:44][INFO][session]  Session is active.
+[32m[2021/03/19 20:42:45][INFO][privilege]  Check user
+[32m[2021/03/19 20:42:45][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 20:42:45][INFO][session]  Check user
+[32m[2021/03/19 20:42:45][INFO][session]  Check session status
+[32m[2021/03/19 20:42:45][INFO][session]  Session is active.
+[32m[2021/03/19 20:42:49][INFO][session]  Check user
+[32m[2021/03/19 20:42:49][INFO][session]  Check session status
+[32m[2021/03/19 20:42:49][INFO][session]  Session is active.
+[32m[2021/03/19 20:42:49][INFO][privilege]  Check user
+[32m[2021/03/19 20:42:49][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 20:42:50][INFO][session]  Check user
+[32m[2021/03/19 20:42:50][INFO][session]  Check session status
+[32m[2021/03/19 20:42:50][INFO][session]  Session is active.
+[32m[2021/03/19 20:43:10][INFO][session]  Check user
+[32m[2021/03/19 20:43:10][INFO][session]  Check session status
+[32m[2021/03/19 20:43:10][INFO][session]  Session is active.
+[32m[2021/03/19 20:43:10][INFO][privilege]  Check user
+[32m[2021/03/19 20:43:10][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 20:43:11][INFO][session]  Check user
+[32m[2021/03/19 20:43:11][INFO][session]  Check session status
+[32m[2021/03/19 20:43:11][INFO][session]  Session is active.
+[32m[2021/03/19 20:46:34][INFO][session]  Check user
+[32m[2021/03/19 20:46:34][INFO][session]  Check session status
+[32m[2021/03/19 20:46:34][INFO][session]  Session is active.
+[32m[2021/03/19 20:46:39][INFO][session]  Check user
+[32m[2021/03/19 20:46:39][INFO][session]  Check session status
+[32m[2021/03/19 20:46:39][INFO][session]  Session is active.
+[32m[2021/03/19 20:46:39][INFO][privilege]  Check user
+[32m[2021/03/19 20:46:39][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 20:46:40][INFO][session]  Check user
+[32m[2021/03/19 20:46:40][INFO][session]  Check session status
+[32m[2021/03/19 20:46:40][INFO][session]  Session is active.
+[32m[2021/03/19 20:52:52][INFO][session]  Check user
+[32m[2021/03/19 20:52:52][INFO][session]  Check session status
+[32m[2021/03/19 20:52:52][INFO][session]  Session is active.
+[32m[2021/03/19 20:52:52][INFO][privilege]  Check user
+[32m[2021/03/19 20:52:52][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 20:52:53][INFO][session]  Check user
+[32m[2021/03/19 20:52:53][INFO][session]  Check session status
+[32m[2021/03/19 20:52:53][INFO][session]  Session is active.
+[32m[2021/03/19 20:53:03][INFO][session]  Check user
+[32m[2021/03/19 20:53:03][INFO][session]  Check session status
+[32m[2021/03/19 20:53:03][INFO][session]  Session is active.
+[32m[2021/03/19 20:53:03][INFO][privilege]  Check user
+[32m[2021/03/19 20:53:03][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 20:53:04][INFO][session]  Check user
+[32m[2021/03/19 20:53:04][INFO][session]  Check session status
+[32m[2021/03/19 20:53:04][INFO][session]  Session is active.
+[32m[2021/03/19 21:21:33][INFO][session]  Check user
+[32m[2021/03/19 21:21:33][INFO][session]  Check session status
+[32m[2021/03/19 21:21:33][INFO][session]  Session is active.
+[32m[2021/03/19 21:21:34][INFO][privilege]  Check user
+[32m[2021/03/19 21:21:34][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:21:36][INFO][session]  Check user
+[32m[2021/03/19 21:21:36][INFO][session]  Check session status
+[32m[2021/03/19 21:21:36][INFO][session]  Session is active.
+[32m[2021/03/19 21:21:41][INFO][session]  Check user
+[32m[2021/03/19 21:21:41][INFO][session]  Check session status
+[32m[2021/03/19 21:21:41][INFO][session]  Session is active.
+[32m[2021/03/19 21:21:41][INFO][privilege]  Check user
+[32m[2021/03/19 21:21:41][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:21:42][INFO][session]  Check user
+[32m[2021/03/19 21:21:42][INFO][session]  Check session status
+[32m[2021/03/19 21:21:42][INFO][session]  Session is active.
+[32m[2021/03/19 21:21:52][INFO][session]  Check user
+[32m[2021/03/19 21:21:52][INFO][session]  Check session status
+[32m[2021/03/19 21:21:52][INFO][session]  Session is active.
+[32m[2021/03/19 21:21:52][INFO][privilege]  Check user
+[32m[2021/03/19 21:21:52][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:21:53][INFO][session]  Check user
+[32m[2021/03/19 21:21:53][INFO][session]  Check session status
+[32m[2021/03/19 21:21:53][INFO][session]  Session is active.
+[32m[2021/03/19 21:22:14][INFO][session]  Check user
+[32m[2021/03/19 21:22:14][INFO][session]  Check session status
+[32m[2021/03/19 21:22:14][INFO][session]  Session is active.
+[32m[2021/03/19 21:22:15][INFO][privilege]  Check user
+[32m[2021/03/19 21:22:15][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:22:15][INFO][session]  Check user
+[32m[2021/03/19 21:22:15][INFO][session]  Check session status
+[32m[2021/03/19 21:22:15][INFO][session]  Session is active.
+[32m[2021/03/19 21:22:23][INFO][session]  Check user
+[32m[2021/03/19 21:22:23][INFO][session]  Check session status
+[32m[2021/03/19 21:22:23][INFO][session]  Session is active.
+[32m[2021/03/19 21:22:23][INFO][privilege]  Check user
+[32m[2021/03/19 21:22:23][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:22:24][INFO][session]  Check user
+[32m[2021/03/19 21:22:24][INFO][session]  Check session status
+[32m[2021/03/19 21:22:24][INFO][session]  Session is active.
+[32m[2021/03/19 21:22:31][INFO][session]  Check user
+[32m[2021/03/19 21:22:31][INFO][session]  Check session status
+[32m[2021/03/19 21:22:31][INFO][session]  Session is active.
+[32m[2021/03/19 21:22:31][INFO][privilege]  Check user
+[32m[2021/03/19 21:22:31][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:22:32][INFO][session]  Check user
+[32m[2021/03/19 21:22:32][INFO][session]  Check session status
+[32m[2021/03/19 21:22:32][INFO][session]  Session is active.
+[32m[2021/03/19 21:22:36][INFO][session]  Check user
+[32m[2021/03/19 21:22:36][INFO][session]  Check session status
+[32m[2021/03/19 21:22:36][INFO][session]  Session is active.
+[32m[2021/03/19 21:22:36][INFO][privilege]  Check user
+[32m[2021/03/19 21:22:36][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:22:37][INFO][session]  Check user
+[32m[2021/03/19 21:22:37][INFO][session]  Check session status
+[32m[2021/03/19 21:22:37][INFO][session]  Session is active.
+[32m[2021/03/19 21:22:42][INFO][session]  Check user
+[32m[2021/03/19 21:22:42][INFO][session]  Check session status
+[32m[2021/03/19 21:22:43][INFO][session]  Session is active.
+[32m[2021/03/19 21:22:43][INFO][privilege]  Check user
+[32m[2021/03/19 21:22:43][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:22:44][INFO][session]  Check user
+[32m[2021/03/19 21:22:44][INFO][session]  Check session status
+[32m[2021/03/19 21:22:44][INFO][session]  Session is active.
+[32m[2021/03/19 21:22:52][INFO][session]  Check user
+[32m[2021/03/19 21:22:52][INFO][session]  Check session status
+[32m[2021/03/19 21:22:52][INFO][session]  Session is active.
+[32m[2021/03/19 21:22:52][INFO][privilege]  Check user
+[32m[2021/03/19 21:22:52][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:22:53][INFO][session]  Check user
+[32m[2021/03/19 21:22:53][INFO][session]  Check session status
+[32m[2021/03/19 21:22:53][INFO][session]  Session is active.
+[32m[2021/03/19 21:23:01][INFO][session]  Check user
+[32m[2021/03/19 21:23:01][INFO][session]  Check session status
+[32m[2021/03/19 21:23:01][INFO][session]  Session is active.
+[32m[2021/03/19 21:23:01][INFO][privilege]  Check user
+[32m[2021/03/19 21:23:01][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:23:02][INFO][session]  Check user
+[32m[2021/03/19 21:23:02][INFO][session]  Check session status
+[32m[2021/03/19 21:23:02][INFO][session]  Session is active.
+[32m[2021/03/19 21:23:06][INFO][session]  Check user
+[32m[2021/03/19 21:23:06][INFO][session]  Check session status
+[32m[2021/03/19 21:23:06][INFO][session]  Session is active.
+[32m[2021/03/19 21:23:06][INFO][privilege]  Check user
+[32m[2021/03/19 21:23:06][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:23:07][INFO][session]  Check user
+[32m[2021/03/19 21:23:07][INFO][session]  Check session status
+[32m[2021/03/19 21:23:07][INFO][session]  Session is active.
+[32m[2021/03/19 21:23:38][INFO][session]  Check user
+[32m[2021/03/19 21:23:38][INFO][session]  Check session status
+[32m[2021/03/19 21:23:38][INFO][session]  Session is active.
+[32m[2021/03/19 21:23:38][INFO][privilege]  Check user
+[32m[2021/03/19 21:23:38][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:23:39][INFO][session]  Check user
+[32m[2021/03/19 21:23:39][INFO][session]  Check session status
+[32m[2021/03/19 21:23:39][INFO][session]  Session is active.
+[32m[2021/03/19 21:23:43][INFO][session]  Check user
+[32m[2021/03/19 21:23:43][INFO][session]  Check session status
+[32m[2021/03/19 21:23:43][INFO][session]  Session is active.
+[32m[2021/03/19 21:23:43][INFO][privilege]  Check user
+[32m[2021/03/19 21:23:43][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:23:43][INFO][session]  Check user
+[32m[2021/03/19 21:23:43][INFO][session]  Check session status
+[32m[2021/03/19 21:23:43][INFO][session]  Session is active.
+[32m[2021/03/19 21:23:51][INFO][session]  Check user
+[32m[2021/03/19 21:23:51][INFO][session]  Check session status
+[32m[2021/03/19 21:23:51][INFO][session]  Session is active.
+[32m[2021/03/19 21:23:51][INFO][privilege]  Check user
+[32m[2021/03/19 21:23:51][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:23:52][INFO][session]  Check user
+[32m[2021/03/19 21:23:52][INFO][session]  Check session status
+[32m[2021/03/19 21:23:52][INFO][session]  Session is active.
+[32m[2021/03/19 21:23:55][INFO][session]  Check user
+[32m[2021/03/19 21:23:55][INFO][session]  Check session status
+[32m[2021/03/19 21:23:55][INFO][session]  Session is active.
+[32m[2021/03/19 21:23:55][INFO][privilege]  Check user
+[32m[2021/03/19 21:23:55][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:23:55][INFO][session]  Check user
+[32m[2021/03/19 21:23:55][INFO][session]  Check session status
+[32m[2021/03/19 21:23:55][INFO][session]  Session is active.
+[32m[2021/03/19 21:24:03][INFO][session]  Check user
+[32m[2021/03/19 21:24:03][INFO][session]  Check session status
+[32m[2021/03/19 21:24:03][INFO][session]  Session is active.
+[32m[2021/03/19 21:24:03][INFO][privilege]  Check user
+[32m[2021/03/19 21:24:03][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:24:04][INFO][session]  Check user
+[32m[2021/03/19 21:24:04][INFO][session]  Check session status
+[32m[2021/03/19 21:24:04][INFO][session]  Session is active.
+[32m[2021/03/19 21:24:24][INFO][session]  Check user
+[32m[2021/03/19 21:24:24][INFO][session]  Check session status
+[32m[2021/03/19 21:24:24][INFO][session]  Session is active.
+[32m[2021/03/19 21:24:24][INFO][privilege]  Check user
+[32m[2021/03/19 21:24:24][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:24:24][INFO][session]  Check user
+[32m[2021/03/19 21:24:24][INFO][session]  Check session status
+[32m[2021/03/19 21:24:24][INFO][session]  Session is active.
+[32m[2021/03/19 21:25:46][INFO][session]  Check user
+[32m[2021/03/19 21:25:46][INFO][session]  Check session status
+[32m[2021/03/19 21:25:46][INFO][session]  Session is active.
+[32m[2021/03/19 21:25:46][INFO][privilege]  Check user
+[32m[2021/03/19 21:25:46][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:25:46][INFO][session]  Check user
+[32m[2021/03/19 21:25:46][INFO][session]  Check session status
+[32m[2021/03/19 21:25:47][INFO][session]  Session is active.
+[32m[2021/03/19 21:25:51][INFO][session]  Check user
+[32m[2021/03/19 21:25:51][INFO][session]  Check session status
+[32m[2021/03/19 21:25:51][INFO][session]  Session is active.
+[32m[2021/03/19 21:25:51][INFO][privilege]  Check user
+[32m[2021/03/19 21:25:51][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:25:52][INFO][session]  Check user
+[32m[2021/03/19 21:25:52][INFO][session]  Check session status
+[32m[2021/03/19 21:25:52][INFO][session]  Session is active.
+[32m[2021/03/19 21:25:55][INFO][session]  Check user
+[32m[2021/03/19 21:25:55][INFO][session]  Check session status
+[32m[2021/03/19 21:25:55][INFO][session]  Session is active.
+[32m[2021/03/19 21:25:55][INFO][privilege]  Check user
+[32m[2021/03/19 21:25:55][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:25:56][INFO][session]  Check user
+[32m[2021/03/19 21:25:56][INFO][session]  Check session status
+[32m[2021/03/19 21:25:56][INFO][session]  Session is active.
+[32m[2021/03/19 21:26:00][INFO][session]  Check user
+[32m[2021/03/19 21:26:00][INFO][session]  Check session status
+[32m[2021/03/19 21:26:00][INFO][session]  Session is active.
+[32m[2021/03/19 21:26:01][INFO][privilege]  Check user
+[32m[2021/03/19 21:26:01][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:26:01][INFO][session]  Check user
+[32m[2021/03/19 21:26:01][INFO][session]  Check session status
+[32m[2021/03/19 21:26:01][INFO][session]  Session is active.
+[32m[2021/03/19 21:26:10][INFO][session]  Check user
+[32m[2021/03/19 21:26:10][INFO][session]  Check session status
+[32m[2021/03/19 21:26:10][INFO][session]  Session is active.
+[32m[2021/03/19 21:26:11][INFO][privilege]  Check user
+[32m[2021/03/19 21:26:11][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:26:15][INFO][session]  Check user
+[32m[2021/03/19 21:26:15][INFO][session]  Check session status
+[32m[2021/03/19 21:26:15][INFO][session]  Session is active.
+[32m[2021/03/19 21:26:16][INFO][privilege]  Check user
+[32m[2021/03/19 21:26:16][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:28:02][INFO][session]  Check user
+[32m[2021/03/19 21:28:02][INFO][session]  Check session status
+[32m[2021/03/19 21:28:02][INFO][session]  Session is active.
+[32m[2021/03/19 21:28:02][INFO][privilege]  Check user
+[32m[2021/03/19 21:28:02][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:28:03][INFO][session]  Check user
+[32m[2021/03/19 21:28:03][INFO][session]  Check session status
+[32m[2021/03/19 21:28:03][INFO][session]  Session is active.
+[32m[2021/03/19 21:28:11][INFO][session]  Check user
+[32m[2021/03/19 21:28:11][INFO][session]  Check session status
+[32m[2021/03/19 21:28:11][INFO][session]  Session is active.
+[32m[2021/03/19 21:28:11][INFO][privilege]  Check user
+[32m[2021/03/19 21:28:11][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:28:11][INFO][session]  Check user
+[32m[2021/03/19 21:28:11][INFO][session]  Check session status
+[32m[2021/03/19 21:28:11][INFO][session]  Session is active.
+[32m[2021/03/19 21:28:33][INFO][session]  Check user
+[32m[2021/03/19 21:28:33][INFO][session]  Check session status
+[32m[2021/03/19 21:28:33][INFO][session]  Session is active.
+[32m[2021/03/19 21:28:33][INFO][privilege]  Check user
+[32m[2021/03/19 21:28:33][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:28:34][INFO][session]  Check user
+[32m[2021/03/19 21:28:34][INFO][session]  Check session status
+[32m[2021/03/19 21:28:34][INFO][session]  Session is active.
+[32m[2021/03/19 21:29:10][INFO][session]  Check user
+[32m[2021/03/19 21:29:10][INFO][session]  Check session status
+[32m[2021/03/19 21:29:10][INFO][session]  Session is active.
+[32m[2021/03/19 21:29:11][INFO][privilege]  Check user
+[32m[2021/03/19 21:29:11][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:29:12][INFO][session]  Check user
+[32m[2021/03/19 21:29:12][INFO][session]  Check session status
+[32m[2021/03/19 21:29:12][INFO][session]  Session is active.
+[32m[2021/03/19 21:29:15][INFO][session]  Check user
+[32m[2021/03/19 21:29:15][INFO][session]  Check session status
+[32m[2021/03/19 21:29:15][INFO][session]  Session is active.
+[32m[2021/03/19 21:29:15][INFO][privilege]  Check user
+[32m[2021/03/19 21:29:15][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:29:16][INFO][session]  Check user
+[32m[2021/03/19 21:29:16][INFO][session]  Check session status
+[32m[2021/03/19 21:29:16][INFO][session]  Session is active.
+[32m[2021/03/19 21:30:40][INFO][session]  Check user
+[32m[2021/03/19 21:30:40][INFO][session]  Check session status
+[32m[2021/03/19 21:30:40][INFO][session]  Session is active.
+[32m[2021/03/19 21:30:40][INFO][privilege]  Check user
+[32m[2021/03/19 21:30:40][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:30:41][INFO][session]  Check user
+[32m[2021/03/19 21:30:41][INFO][session]  Check session status
+[32m[2021/03/19 21:30:41][INFO][session]  Session is active.
+[32m[2021/03/19 21:31:12][INFO][session]  Check user
+[32m[2021/03/19 21:31:12][INFO][session]  Check session status
+[32m[2021/03/19 21:31:12][INFO][session]  Session is active.
+[32m[2021/03/19 21:31:12][INFO][privilege]  Check user
+[32m[2021/03/19 21:31:12][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:31:12][INFO][session]  Check user
+[32m[2021/03/19 21:31:12][INFO][session]  Check session status
+[32m[2021/03/19 21:31:12][INFO][session]  Session is active.
+[32m[2021/03/19 21:34:32][INFO][session]  Check user
+[32m[2021/03/19 21:34:32][INFO][session]  Check session status
+[32m[2021/03/19 21:34:32][INFO][session]  Session is active.
+[32m[2021/03/19 21:34:32][INFO][privilege]  Check user
+[32m[2021/03/19 21:34:32][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:34:33][INFO][session]  Check user
+[32m[2021/03/19 21:34:33][INFO][session]  Check session status
+[32m[2021/03/19 21:34:33][INFO][session]  Session is active.
+[32m[2021/03/19 21:35:32][INFO][login]  Received request to login
+[32m[2021/03/19 21:35:32][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 21:35:32][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/19 21:35:32][INFO][login]  Authenticating
+[32m[2021/03/19 21:35:32][INFO][login]  Authentication Pass 
+[32m[2021/03/19 21:35:32][INFO][login]  Check if existing an active session
+[32m[2021/03/19 21:35:32][INFO][login]  Update session
+[32m[2021/03/19 21:35:32][INFO][login]  Update session succeeded.
+[32m[2021/03/19 21:35:32][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/19 21:35:35][INFO][session]  Check user
+[32m[2021/03/19 21:35:35][INFO][session]  Check session status
+[32m[2021/03/19 21:35:35][INFO][session]  Session is active.
+[32m[2021/03/19 21:37:44][INFO][session]  Check user
+[32m[2021/03/19 21:37:44][INFO][session]  Check session status
+[32m[2021/03/19 21:37:44][INFO][session]  Session is active.
+[32m[2021/03/19 21:37:50][INFO][session]  Check user
+[32m[2021/03/19 21:37:50][INFO][session]  Check session status
+[32m[2021/03/19 21:37:50][INFO][session]  Session is active.
+[32m[2021/03/19 21:38:59][INFO][session]  Check user
+[32m[2021/03/19 21:38:59][INFO][session]  Check session status
+[32m[2021/03/19 21:38:59][INFO][session]  Session is active.
+[32m[2021/03/19 21:38:59][INFO][privilege]  Check user
+[32m[2021/03/19 21:38:59][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:39:00][INFO][session]  Check user
+[32m[2021/03/19 21:39:00][INFO][session]  Check session status
+[32m[2021/03/19 21:39:00][INFO][session]  Session is active.
+[32m[2021/03/19 21:39:06][INFO][session]  Check user
+[32m[2021/03/19 21:39:06][INFO][session]  Check session status
+[32m[2021/03/19 21:39:06][INFO][session]  Session is active.
+[32m[2021/03/19 21:39:06][INFO][privilege]  Check user
+[32m[2021/03/19 21:39:06][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:39:15][INFO][session]  Check user
+[32m[2021/03/19 21:39:15][INFO][session]  Check session status
+[32m[2021/03/19 21:39:15][INFO][session]  Session is active.
+[32m[2021/03/19 21:39:16][INFO][privilege]  Check user
+[32m[2021/03/19 21:39:16][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:39:16][INFO][session]  Check user
+[32m[2021/03/19 21:39:16][INFO][session]  Check session status
+[32m[2021/03/19 21:39:16][INFO][session]  Session is active.
+[32m[2021/03/19 21:39:26][INFO][session]  Check user
+[32m[2021/03/19 21:39:26][INFO][session]  Check session status
+[32m[2021/03/19 21:39:26][INFO][session]  Session is active.
+[32m[2021/03/19 21:39:26][INFO][privilege]  Check user
+[32m[2021/03/19 21:39:26][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:39:40][INFO][session]  Check user
+[32m[2021/03/19 21:39:40][INFO][session]  Check session status
+[32m[2021/03/19 21:39:40][INFO][session]  Session is active.
+[32m[2021/03/19 21:39:40][INFO][privilege]  Check user
+[32m[2021/03/19 21:39:40][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:39:41][INFO][session]  Check user
+[32m[2021/03/19 21:39:41][INFO][session]  Check session status
+[32m[2021/03/19 21:39:41][INFO][session]  Session is active.
+[32m[2021/03/19 21:39:46][INFO][session]  Check user
+[32m[2021/03/19 21:39:46][INFO][session]  Check session status
+[32m[2021/03/19 21:39:46][INFO][session]  Session is active.
+[32m[2021/03/19 21:39:46][INFO][privilege]  Check user
+[32m[2021/03/19 21:39:46][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:39:47][INFO][session]  Check user
+[32m[2021/03/19 21:39:47][INFO][session]  Check session status
+[32m[2021/03/19 21:39:47][INFO][session]  Session is active.
+[32m[2021/03/19 21:39:53][INFO][session]  Check user
+[32m[2021/03/19 21:39:53][INFO][session]  Check session status
+[32m[2021/03/19 21:39:53][INFO][session]  Session is active.
+[32m[2021/03/19 21:39:53][INFO][privilege]  Check user
+[32m[2021/03/19 21:39:53][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 21:39:55][INFO][session]  Check user
+[32m[2021/03/19 21:39:55][INFO][session]  Check session status
+[32m[2021/03/19 21:39:55][INFO][session]  Session is active.
+[32m[2021/03/19 22:13:31][INFO][session]  Check user
+[32m[2021/03/19 22:13:31][INFO][session]  Check session status
+[32m[2021/03/19 22:13:31][INFO][session]  Session is active.
+[32m[2021/03/19 22:13:32][INFO][privilege]  Check user
+[32m[2021/03/19 22:13:32][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:13:33][INFO][session]  Check user
+[32m[2021/03/19 22:13:33][INFO][session]  Check session status
+[32m[2021/03/19 22:13:33][INFO][session]  Session is active.
+[32m[2021/03/19 22:13:38][INFO][session]  Check user
+[32m[2021/03/19 22:13:38][INFO][session]  Check session status
+[32m[2021/03/19 22:13:38][INFO][session]  Session is active.
+[32m[2021/03/19 22:13:38][INFO][privilege]  Check user
+[32m[2021/03/19 22:13:38][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:13:39][INFO][session]  Check user
+[32m[2021/03/19 22:13:39][INFO][session]  Check session status
+[32m[2021/03/19 22:13:39][INFO][session]  Session is active.
+[32m[2021/03/19 22:21:44][INFO][login]  Received request to login
+[32m[2021/03/19 22:21:44][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 22:21:44][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/19 22:21:44][INFO][login]  Authenticating
+[32m[2021/03/19 22:21:44][INFO][login]  Authentication Pass 
+[32m[2021/03/19 22:21:44][INFO][login]  Check if existing an active session
+[32m[2021/03/19 22:21:44][INFO][login]  Update session
+[32m[2021/03/19 22:21:44][INFO][login]  Update session succeeded.
+[32m[2021/03/19 22:21:44][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/19 22:21:52][INFO][session]  Check user
+[32m[2021/03/19 22:21:52][INFO][session]  Check session status
+[32m[2021/03/19 22:21:52][INFO][session]  Session is active.
+[32m[2021/03/19 22:21:52][INFO][privilege]  Check user
+[32m[2021/03/19 22:21:52][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:22:02][INFO][session]  Check user
+[32m[2021/03/19 22:22:02][INFO][session]  Check session status
+[32m[2021/03/19 22:22:02][INFO][session]  Session is active.
+[32m[2021/03/19 22:22:02][INFO][privilege]  Check user
+[32m[2021/03/19 22:22:02][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:22:05][INFO][session]  Check user
+[32m[2021/03/19 22:22:05][INFO][session]  Check session status
+[32m[2021/03/19 22:22:05][INFO][session]  Session is active.
+[32m[2021/03/19 22:22:06][INFO][privilege]  Check user
+[32m[2021/03/19 22:22:06][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:22:07][INFO][session]  Check user
+[32m[2021/03/19 22:22:07][INFO][session]  Check session status
+[32m[2021/03/19 22:22:07][INFO][session]  Session is active.
+[32m[2021/03/19 22:22:25][INFO][login]  Received request to login
+[32m[2021/03/19 22:22:25][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 22:22:25][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/19 22:22:25][INFO][login]  Authenticating
+[32m[2021/03/19 22:22:25][INFO][login]  Authentication Pass 
+[32m[2021/03/19 22:22:25][INFO][login]  Check if existing an active session
+[32m[2021/03/19 22:22:25][INFO][login]  Update session
+[32m[2021/03/19 22:22:25][INFO][login]  Update session succeeded.
+[32m[2021/03/19 22:22:25][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/19 22:22:33][INFO][session]  Check user
+[32m[2021/03/19 22:22:33][INFO][session]  Check session status
+[32m[2021/03/19 22:22:33][INFO][session]  Session is active.
+[32m[2021/03/19 22:22:33][INFO][privilege]  Check user
+[32m[2021/03/19 22:22:33][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:22:33][INFO][session]  Check user
+[32m[2021/03/19 22:22:33][INFO][session]  Check session status
+[32m[2021/03/19 22:22:33][INFO][session]  Session is active.
+[33m[2021/03/19 22:22:36][WARNING][session]  Token has invalid length.
+[32m[2021/03/19 22:27:08][INFO][login]  Received request to login
+[32m[2021/03/19 22:27:08][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 22:27:08][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/19 22:27:08][INFO][login]  Authenticating
+[32m[2021/03/19 22:27:08][INFO][login]  Authentication Pass 
+[32m[2021/03/19 22:27:08][INFO][login]  Check if existing an active session
+[32m[2021/03/19 22:27:08][INFO][login]  Update session
+[32m[2021/03/19 22:27:08][INFO][login]  Update session succeeded.
+[32m[2021/03/19 22:27:08][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/19 22:27:11][INFO][session]  Check user
+[32m[2021/03/19 22:27:11][INFO][session]  Check session status
+[32m[2021/03/19 22:27:11][INFO][session]  Session is active.
+[32m[2021/03/19 22:27:16][INFO][session]  Check user
+[32m[2021/03/19 22:27:16][INFO][session]  Check session status
+[32m[2021/03/19 22:27:16][INFO][session]  Session is active.
+[32m[2021/03/19 22:27:16][INFO][privilege]  Check user
+[32m[2021/03/19 22:27:16][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:27:17][INFO][session]  Check user
+[32m[2021/03/19 22:27:17][INFO][session]  Check session status
+[32m[2021/03/19 22:27:17][INFO][session]  Session is active.
+[33m[2021/03/19 22:27:22][WARNING][session]  Token has invalid length.
+[33m[2021/03/19 22:28:28][WARNING][session]  Token has invalid length.
+[32m[2021/03/19 22:29:46][INFO][session]  Check user
+[32m[2021/03/19 22:29:46][INFO][session]  Check session status
+[32m[2021/03/19 22:29:46][INFO][session]  Session is active.
+[32m[2021/03/19 22:30:09][INFO][session]  Check user
+[32m[2021/03/19 22:30:09][INFO][session]  Check session status
+[32m[2021/03/19 22:30:09][INFO][session]  Session is active.
+[32m[2021/03/19 22:30:48][INFO][session]  Check user
+[32m[2021/03/19 22:30:48][INFO][session]  Check session status
+[32m[2021/03/19 22:30:48][INFO][session]  Session is active.
+[32m[2021/03/19 22:30:59][INFO][session]  Check user
+[32m[2021/03/19 22:30:59][INFO][session]  Check session status
+[32m[2021/03/19 22:30:59][INFO][session]  Session is active.
+[32m[2021/03/19 22:31:22][INFO][session]  Check user
+[32m[2021/03/19 22:31:22][INFO][session]  Check session status
+[32m[2021/03/19 22:31:22][INFO][session]  Session is active.
+[32m[2021/03/19 22:31:35][INFO][session]  Check user
+[32m[2021/03/19 22:31:35][INFO][session]  Check session status
+[32m[2021/03/19 22:31:35][INFO][session]  Session is active.
+[32m[2021/03/19 22:31:50][INFO][session]  Check user
+[32m[2021/03/19 22:31:50][INFO][session]  Check session status
+[32m[2021/03/19 22:31:50][INFO][session]  Session is active.
+[32m[2021/03/19 22:33:02][INFO][session]  Check user
+[32m[2021/03/19 22:33:02][INFO][session]  Check session status
+[32m[2021/03/19 22:33:02][INFO][session]  Session is active.
+[32m[2021/03/19 22:33:03][INFO][privilege]  Check user
+[32m[2021/03/19 22:33:03][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:33:12][INFO][session]  Check user
+[32m[2021/03/19 22:33:12][INFO][session]  Check session status
+[32m[2021/03/19 22:33:12][INFO][session]  Session is active.
+[32m[2021/03/19 22:33:13][INFO][privilege]  Check user
+[32m[2021/03/19 22:33:13][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:33:44][INFO][session]  Check user
+[32m[2021/03/19 22:33:44][INFO][session]  Check session status
+[32m[2021/03/19 22:33:44][INFO][session]  Session is active.
+[32m[2021/03/19 22:33:45][INFO][privilege]  Check user
+[32m[2021/03/19 22:33:45][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:33:54][INFO][session]  Check user
+[32m[2021/03/19 22:33:54][INFO][session]  Check session status
+[32m[2021/03/19 22:33:54][INFO][session]  Session is active.
+[32m[2021/03/19 22:33:55][INFO][privilege]  Check user
+[32m[2021/03/19 22:33:55][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:34:08][INFO][session]  Check user
+[32m[2021/03/19 22:34:08][INFO][session]  Check session status
+[32m[2021/03/19 22:34:08][INFO][session]  Session is active.
+[32m[2021/03/19 22:34:08][INFO][privilege]  Check user
+[32m[2021/03/19 22:34:08][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:34:24][INFO][session]  Check user
+[32m[2021/03/19 22:34:24][INFO][session]  Check session status
+[32m[2021/03/19 22:34:24][INFO][session]  Session is active.
+[32m[2021/03/19 22:34:24][INFO][privilege]  Check user
+[32m[2021/03/19 22:34:24][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:36:31][INFO][session]  Check user
+[32m[2021/03/19 22:36:31][INFO][session]  Check session status
+[32m[2021/03/19 22:36:31][INFO][session]  Session is active.
+[32m[2021/03/19 22:36:31][INFO][privilege]  Check user
+[32m[2021/03/19 22:36:31][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:36:32][INFO][session]  Check user
+[32m[2021/03/19 22:36:32][INFO][session]  Check session status
+[32m[2021/03/19 22:36:32][INFO][session]  Session is active.
+[32m[2021/03/19 22:36:35][INFO][session]  Check user
+[32m[2021/03/19 22:36:35][INFO][session]  Check session status
+[32m[2021/03/19 22:36:35][INFO][session]  Session is active.
+[32m[2021/03/19 22:36:35][INFO][privilege]  Check user
+[32m[2021/03/19 22:36:35][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:37:06][INFO][session]  Check user
+[32m[2021/03/19 22:37:06][INFO][session]  Check session status
+[32m[2021/03/19 22:37:06][INFO][session]  Session is active.
+[32m[2021/03/19 22:37:06][INFO][privilege]  Check user
+[32m[2021/03/19 22:37:06][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:37:30][INFO][session]  Check user
+[32m[2021/03/19 22:37:30][INFO][session]  Check session status
+[32m[2021/03/19 22:37:30][INFO][session]  Session is active.
+[32m[2021/03/19 22:37:31][INFO][privilege]  Check user
+[32m[2021/03/19 22:37:31][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:37:39][INFO][session]  Check user
+[32m[2021/03/19 22:37:39][INFO][session]  Check session status
+[32m[2021/03/19 22:37:39][INFO][session]  Session is active.
+[32m[2021/03/19 22:37:39][INFO][privilege]  Check user
+[32m[2021/03/19 22:37:39][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:37:56][INFO][session]  Check user
+[32m[2021/03/19 22:37:56][INFO][session]  Check session status
+[32m[2021/03/19 22:37:56][INFO][session]  Session is active.
+[32m[2021/03/19 22:37:56][INFO][privilege]  Check user
+[32m[2021/03/19 22:37:56][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:38:11][INFO][session]  Check user
+[32m[2021/03/19 22:38:11][INFO][session]  Check session status
+[32m[2021/03/19 22:38:11][INFO][session]  Session is active.
+[32m[2021/03/19 22:38:12][INFO][privilege]  Check user
+[32m[2021/03/19 22:38:12][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:38:15][INFO][session]  Check user
+[32m[2021/03/19 22:38:15][INFO][session]  Check session status
+[32m[2021/03/19 22:38:15][INFO][session]  Session is active.
+[32m[2021/03/19 22:38:15][INFO][privilege]  Check user
+[32m[2021/03/19 22:38:15][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:38:56][INFO][session]  Check user
+[32m[2021/03/19 22:38:56][INFO][session]  Check session status
+[32m[2021/03/19 22:38:56][INFO][session]  Session is active.
+[32m[2021/03/19 22:38:56][INFO][privilege]  Check user
+[32m[2021/03/19 22:38:56][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:39:04][INFO][session]  Check user
+[32m[2021/03/19 22:39:04][INFO][session]  Check session status
+[32m[2021/03/19 22:39:04][INFO][session]  Session is active.
+[32m[2021/03/19 22:39:04][INFO][privilege]  Check user
+[32m[2021/03/19 22:39:04][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:39:13][INFO][session]  Check user
+[32m[2021/03/19 22:39:13][INFO][session]  Check session status
+[32m[2021/03/19 22:39:13][INFO][session]  Session is active.
+[32m[2021/03/19 22:39:13][INFO][privilege]  Check user
+[32m[2021/03/19 22:39:13][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:39:18][INFO][session]  Check user
+[32m[2021/03/19 22:39:18][INFO][session]  Check session status
+[32m[2021/03/19 22:39:18][INFO][session]  Session is active.
+[32m[2021/03/19 22:39:18][INFO][privilege]  Check user
+[32m[2021/03/19 22:39:18][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:39:36][INFO][session]  Check user
+[32m[2021/03/19 22:39:36][INFO][session]  Check session status
+[32m[2021/03/19 22:39:36][INFO][session]  Session is active.
+[32m[2021/03/19 22:39:36][INFO][privilege]  Check user
+[32m[2021/03/19 22:39:36][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:40:05][INFO][session]  Check user
+[32m[2021/03/19 22:40:05][INFO][session]  Check session status
+[32m[2021/03/19 22:40:05][INFO][session]  Session is active.
+[32m[2021/03/19 22:40:05][INFO][privilege]  Check user
+[32m[2021/03/19 22:40:05][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:40:18][INFO][session]  Check user
+[32m[2021/03/19 22:40:18][INFO][session]  Check session status
+[32m[2021/03/19 22:40:18][INFO][session]  Session is active.
+[32m[2021/03/19 22:40:18][INFO][privilege]  Check user
+[32m[2021/03/19 22:40:18][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:40:31][INFO][session]  Check user
+[32m[2021/03/19 22:40:31][INFO][session]  Check session status
+[32m[2021/03/19 22:40:31][INFO][session]  Session is active.
+[32m[2021/03/19 22:40:32][INFO][privilege]  Check user
+[32m[2021/03/19 22:40:32][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:40:48][INFO][session]  Check user
+[32m[2021/03/19 22:40:48][INFO][session]  Check session status
+[32m[2021/03/19 22:40:48][INFO][session]  Session is active.
+[32m[2021/03/19 22:40:49][INFO][privilege]  Check user
+[32m[2021/03/19 22:40:49][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:41:21][INFO][session]  Check user
+[32m[2021/03/19 22:41:21][INFO][session]  Check session status
+[32m[2021/03/19 22:41:21][INFO][session]  Session is active.
+[32m[2021/03/19 22:41:21][INFO][privilege]  Check user
+[32m[2021/03/19 22:41:21][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:41:50][INFO][session]  Check user
+[32m[2021/03/19 22:41:50][INFO][session]  Check session status
+[32m[2021/03/19 22:41:50][INFO][session]  Session is active.
+[32m[2021/03/19 22:41:51][INFO][privilege]  Check user
+[32m[2021/03/19 22:41:51][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:42:48][INFO][session]  Check user
+[32m[2021/03/19 22:42:48][INFO][session]  Check session status
+[32m[2021/03/19 22:42:48][INFO][session]  Session is active.
+[32m[2021/03/19 22:42:49][INFO][privilege]  Check user
+[32m[2021/03/19 22:42:49][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:43:56][INFO][session]  Check user
+[32m[2021/03/19 22:43:56][INFO][session]  Check session status
+[32m[2021/03/19 22:43:56][INFO][session]  Session is active.
+[32m[2021/03/19 22:43:56][INFO][privilege]  Check user
+[32m[2021/03/19 22:43:56][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:43:57][INFO][session]  Check user
+[32m[2021/03/19 22:43:57][INFO][session]  Check session status
+[32m[2021/03/19 22:43:57][INFO][session]  Session is active.
+[32m[2021/03/19 22:44:03][INFO][session]  Check user
+[32m[2021/03/19 22:44:03][INFO][session]  Check session status
+[32m[2021/03/19 22:44:03][INFO][session]  Session is active.
+[32m[2021/03/19 22:44:03][INFO][privilege]  Check user
+[32m[2021/03/19 22:44:03][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:45:25][INFO][session]  Check user
+[32m[2021/03/19 22:45:25][INFO][session]  Check session status
+[32m[2021/03/19 22:45:25][INFO][session]  Session is active.
+[32m[2021/03/19 22:45:25][INFO][privilege]  Check user
+[32m[2021/03/19 22:45:26][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:45:26][INFO][session]  Check user
+[32m[2021/03/19 22:45:26][INFO][session]  Check session status
+[32m[2021/03/19 22:45:26][INFO][session]  Session is active.
+[32m[2021/03/19 22:45:29][INFO][session]  Check user
+[32m[2021/03/19 22:45:29][INFO][session]  Check session status
+[32m[2021/03/19 22:45:29][INFO][session]  Session is active.
+[32m[2021/03/19 22:45:29][INFO][privilege]  Check user
+[32m[2021/03/19 22:45:29][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:47:31][INFO][session]  Check user
+[32m[2021/03/19 22:47:31][INFO][session]  Check session status
+[32m[2021/03/19 22:47:31][INFO][session]  Session is active.
+[32m[2021/03/19 22:47:31][INFO][privilege]  Check user
+[32m[2021/03/19 22:47:31][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:47:32][INFO][session]  Check user
+[32m[2021/03/19 22:47:32][INFO][session]  Check session status
+[32m[2021/03/19 22:47:32][INFO][session]  Session is active.
+[32m[2021/03/19 22:47:36][INFO][session]  Check user
+[32m[2021/03/19 22:47:36][INFO][session]  Check session status
+[32m[2021/03/19 22:47:36][INFO][session]  Session is active.
+[32m[2021/03/19 22:47:36][INFO][privilege]  Check user
+[32m[2021/03/19 22:47:36][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:48:54][INFO][session]  Check user
+[32m[2021/03/19 22:48:54][INFO][session]  Check session status
+[32m[2021/03/19 22:48:54][INFO][session]  Session is active.
+[32m[2021/03/19 22:48:54][INFO][privilege]  Check user
+[32m[2021/03/19 22:48:54][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:49:28][INFO][session]  Check user
+[32m[2021/03/19 22:49:28][INFO][session]  Check session status
+[32m[2021/03/19 22:49:28][INFO][session]  Session is active.
+[32m[2021/03/19 22:49:28][INFO][privilege]  Check user
+[32m[2021/03/19 22:49:28][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:49:53][INFO][session]  Check user
+[32m[2021/03/19 22:49:53][INFO][session]  Check session status
+[32m[2021/03/19 22:49:53][INFO][session]  Session is active.
+[32m[2021/03/19 22:49:53][INFO][privilege]  Check user
+[32m[2021/03/19 22:49:53][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:51:00][INFO][session]  Check user
+[32m[2021/03/19 22:51:00][INFO][session]  Check session status
+[32m[2021/03/19 22:51:00][INFO][session]  Session is active.
+[32m[2021/03/19 22:51:01][INFO][privilege]  Check user
+[32m[2021/03/19 22:51:01][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:52:57][INFO][session]  Check user
+[32m[2021/03/19 22:52:57][INFO][session]  Check session status
+[32m[2021/03/19 22:52:57][INFO][session]  Session is active.
+[32m[2021/03/19 22:52:57][INFO][privilege]  Check user
+[32m[2021/03/19 22:52:57][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:52:58][INFO][session]  Check user
+[32m[2021/03/19 22:52:58][INFO][session]  Check session status
+[32m[2021/03/19 22:52:58][INFO][session]  Session is active.
+[32m[2021/03/19 22:53:00][INFO][session]  Check user
+[32m[2021/03/19 22:53:00][INFO][session]  Check session status
+[32m[2021/03/19 22:53:00][INFO][session]  Session is active.
+[32m[2021/03/19 22:53:00][INFO][privilege]  Check user
+[32m[2021/03/19 22:53:00][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:53:24][INFO][session]  Check user
+[32m[2021/03/19 22:53:24][INFO][session]  Check session status
+[32m[2021/03/19 22:53:24][INFO][session]  Session is active.
+[32m[2021/03/19 22:53:24][INFO][privilege]  Check user
+[32m[2021/03/19 22:53:24][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:53:43][INFO][session]  Check user
+[32m[2021/03/19 22:53:43][INFO][session]  Check session status
+[32m[2021/03/19 22:53:43][INFO][session]  Session is active.
+[32m[2021/03/19 22:53:43][INFO][privilege]  Check user
+[32m[2021/03/19 22:53:43][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:53:48][INFO][session]  Check user
+[32m[2021/03/19 22:53:48][INFO][session]  Check session status
+[32m[2021/03/19 22:53:48][INFO][session]  Session is active.
+[32m[2021/03/19 22:53:48][INFO][privilege]  Check user
+[32m[2021/03/19 22:53:48][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:53:51][INFO][session]  Check user
+[32m[2021/03/19 22:53:51][INFO][session]  Check session status
+[32m[2021/03/19 22:53:51][INFO][session]  Session is active.
+[32m[2021/03/19 22:53:51][INFO][privilege]  Check user
+[32m[2021/03/19 22:53:51][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:54:19][INFO][session]  Check user
+[32m[2021/03/19 22:54:19][INFO][session]  Check session status
+[32m[2021/03/19 22:54:19][INFO][session]  Session is active.
+[32m[2021/03/19 22:54:20][INFO][privilege]  Check user
+[32m[2021/03/19 22:54:20][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:54:24][INFO][session]  Check user
+[32m[2021/03/19 22:54:24][INFO][session]  Check session status
+[32m[2021/03/19 22:54:24][INFO][session]  Session is active.
+[32m[2021/03/19 22:54:24][INFO][privilege]  Check user
+[32m[2021/03/19 22:54:24][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:54:27][INFO][session]  Check user
+[32m[2021/03/19 22:54:27][INFO][session]  Check session status
+[32m[2021/03/19 22:54:27][INFO][session]  Session is active.
+[32m[2021/03/19 22:54:28][INFO][privilege]  Check user
+[32m[2021/03/19 22:54:28][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:54:41][INFO][session]  Check user
+[32m[2021/03/19 22:54:41][INFO][session]  Check session status
+[32m[2021/03/19 22:54:41][INFO][session]  Session is active.
+[32m[2021/03/19 22:54:42][INFO][privilege]  Check user
+[32m[2021/03/19 22:54:42][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:54:45][INFO][session]  Check user
+[32m[2021/03/19 22:54:45][INFO][session]  Check session status
+[32m[2021/03/19 22:54:45][INFO][session]  Session is active.
+[32m[2021/03/19 22:54:45][INFO][privilege]  Check user
+[32m[2021/03/19 22:54:45][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:54:48][INFO][session]  Check user
+[32m[2021/03/19 22:54:48][INFO][session]  Check session status
+[32m[2021/03/19 22:54:48][INFO][session]  Session is active.
+[32m[2021/03/19 22:54:48][INFO][privilege]  Check user
+[32m[2021/03/19 22:54:48][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:54:52][INFO][session]  Check user
+[32m[2021/03/19 22:54:52][INFO][session]  Check session status
+[32m[2021/03/19 22:54:52][INFO][session]  Session is active.
+[32m[2021/03/19 22:54:53][INFO][privilege]  Check user
+[32m[2021/03/19 22:54:53][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:54:57][INFO][session]  Check user
+[32m[2021/03/19 22:54:57][INFO][session]  Check session status
+[32m[2021/03/19 22:54:57][INFO][session]  Session is active.
+[32m[2021/03/19 22:54:57][INFO][privilege]  Check user
+[32m[2021/03/19 22:54:57][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:56:00][INFO][session]  Check user
+[32m[2021/03/19 22:56:00][INFO][session]  Check session status
+[32m[2021/03/19 22:56:00][INFO][session]  Session is active.
+[32m[2021/03/19 22:56:00][INFO][privilege]  Check user
+[32m[2021/03/19 22:56:00][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:56:03][INFO][session]  Check user
+[32m[2021/03/19 22:56:03][INFO][session]  Check session status
+[32m[2021/03/19 22:56:03][INFO][session]  Session is active.
+[32m[2021/03/19 22:56:03][INFO][privilege]  Check user
+[32m[2021/03/19 22:56:03][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:56:05][INFO][session]  Check user
+[32m[2021/03/19 22:56:05][INFO][session]  Check session status
+[32m[2021/03/19 22:56:05][INFO][session]  Session is active.
+[32m[2021/03/19 22:56:05][INFO][privilege]  Check user
+[32m[2021/03/19 22:56:05][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:56:16][INFO][session]  Check user
+[32m[2021/03/19 22:56:17][INFO][session]  Check session status
+[32m[2021/03/19 22:56:17][INFO][session]  Session is active.
+[32m[2021/03/19 22:56:17][INFO][privilege]  Check user
+[32m[2021/03/19 22:56:17][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:56:31][INFO][session]  Check user
+[32m[2021/03/19 22:56:31][INFO][session]  Check session status
+[32m[2021/03/19 22:56:31][INFO][session]  Session is active.
+[32m[2021/03/19 22:56:31][INFO][privilege]  Check user
+[32m[2021/03/19 22:56:31][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:57:15][INFO][session]  Check user
+[32m[2021/03/19 22:57:15][INFO][session]  Check session status
+[32m[2021/03/19 22:57:15][INFO][session]  Session is active.
+[32m[2021/03/19 22:57:15][INFO][privilege]  Check user
+[32m[2021/03/19 22:57:15][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:58:09][INFO][session]  Check user
+[32m[2021/03/19 22:58:09][INFO][session]  Check session status
+[32m[2021/03/19 22:58:09][INFO][session]  Session is active.
+[32m[2021/03/19 22:58:09][INFO][privilege]  Check user
+[32m[2021/03/19 22:58:09][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:58:32][INFO][session]  Check user
+[32m[2021/03/19 22:58:32][INFO][session]  Check session status
+[32m[2021/03/19 22:58:32][INFO][session]  Session is active.
+[32m[2021/03/19 22:58:32][INFO][privilege]  Check user
+[32m[2021/03/19 22:58:32][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:58:50][INFO][session]  Check user
+[32m[2021/03/19 22:58:50][INFO][session]  Check session status
+[32m[2021/03/19 22:58:50][INFO][session]  Session is active.
+[32m[2021/03/19 22:58:50][INFO][privilege]  Check user
+[32m[2021/03/19 22:58:50][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:58:51][INFO][session]  Check user
+[32m[2021/03/19 22:58:51][INFO][session]  Check session status
+[32m[2021/03/19 22:58:51][INFO][session]  Session is active.
+[32m[2021/03/19 22:58:51][INFO][privilege]  Check user
+[32m[2021/03/19 22:58:51][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:58:58][INFO][session]  Check user
+[32m[2021/03/19 22:58:58][INFO][session]  Check session status
+[32m[2021/03/19 22:58:58][INFO][session]  Session is active.
+[32m[2021/03/19 22:58:59][INFO][privilege]  Check user
+[32m[2021/03/19 22:58:59][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:59:07][INFO][session]  Check user
+[32m[2021/03/19 22:59:07][INFO][session]  Check session status
+[32m[2021/03/19 22:59:07][INFO][session]  Session is active.
+[32m[2021/03/19 22:59:08][INFO][privilege]  Check user
+[32m[2021/03/19 22:59:08][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:59:14][INFO][session]  Check user
+[32m[2021/03/19 22:59:14][INFO][session]  Check session status
+[32m[2021/03/19 22:59:14][INFO][session]  Session is active.
+[32m[2021/03/19 22:59:14][INFO][privilege]  Check user
+[32m[2021/03/19 22:59:14][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:59:18][INFO][session]  Check user
+[32m[2021/03/19 22:59:18][INFO][session]  Check session status
+[32m[2021/03/19 22:59:18][INFO][session]  Session is active.
+[32m[2021/03/19 22:59:18][INFO][privilege]  Check user
+[32m[2021/03/19 22:59:18][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:59:32][INFO][session]  Check user
+[32m[2021/03/19 22:59:32][INFO][session]  Check session status
+[32m[2021/03/19 22:59:32][INFO][session]  Session is active.
+[32m[2021/03/19 22:59:32][INFO][privilege]  Check user
+[32m[2021/03/19 22:59:33][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 22:59:39][INFO][session]  Check user
+[32m[2021/03/19 22:59:39][INFO][session]  Check session status
+[32m[2021/03/19 22:59:39][INFO][session]  Session is active.
+[32m[2021/03/19 22:59:39][INFO][privilege]  Check user
+[32m[2021/03/19 22:59:39][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:00:14][INFO][session]  Check user
+[32m[2021/03/19 23:00:14][INFO][session]  Check session status
+[32m[2021/03/19 23:00:14][INFO][session]  Session is active.
+[32m[2021/03/19 23:00:15][INFO][privilege]  Check user
+[32m[2021/03/19 23:00:15][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:00:54][INFO][session]  Check user
+[32m[2021/03/19 23:00:54][INFO][session]  Check session status
+[32m[2021/03/19 23:00:54][INFO][session]  Session is active.
+[32m[2021/03/19 23:00:55][INFO][privilege]  Check user
+[32m[2021/03/19 23:00:55][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:01:00][INFO][session]  Check user
+[32m[2021/03/19 23:01:00][INFO][session]  Check session status
+[32m[2021/03/19 23:01:00][INFO][session]  Session is active.
+[32m[2021/03/19 23:01:00][INFO][privilege]  Check user
+[32m[2021/03/19 23:01:00][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:01:17][INFO][session]  Check user
+[32m[2021/03/19 23:01:17][INFO][session]  Check session status
+[32m[2021/03/19 23:01:17][INFO][session]  Session is active.
+[32m[2021/03/19 23:01:17][INFO][privilege]  Check user
+[32m[2021/03/19 23:01:17][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:01:28][INFO][session]  Check user
+[32m[2021/03/19 23:01:28][INFO][session]  Check session status
+[32m[2021/03/19 23:01:28][INFO][session]  Session is active.
+[32m[2021/03/19 23:01:28][INFO][privilege]  Check user
+[32m[2021/03/19 23:01:28][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:01:32][INFO][session]  Check user
+[32m[2021/03/19 23:01:32][INFO][session]  Check session status
+[32m[2021/03/19 23:01:32][INFO][session]  Session is active.
+[32m[2021/03/19 23:01:32][INFO][privilege]  Check user
+[32m[2021/03/19 23:01:32][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:01:49][INFO][session]  Check user
+[32m[2021/03/19 23:01:49][INFO][session]  Check session status
+[32m[2021/03/19 23:01:49][INFO][session]  Session is active.
+[32m[2021/03/19 23:01:49][INFO][privilege]  Check user
+[32m[2021/03/19 23:01:49][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:02:04][INFO][session]  Check user
+[32m[2021/03/19 23:02:04][INFO][session]  Check session status
+[32m[2021/03/19 23:02:04][INFO][session]  Session is active.
+[32m[2021/03/19 23:02:04][INFO][privilege]  Check user
+[32m[2021/03/19 23:02:04][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:02:21][INFO][session]  Check user
+[32m[2021/03/19 23:02:21][INFO][session]  Check session status
+[32m[2021/03/19 23:02:21][INFO][session]  Session is active.
+[32m[2021/03/19 23:02:21][INFO][privilege]  Check user
+[32m[2021/03/19 23:02:21][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:02:28][INFO][session]  Check user
+[32m[2021/03/19 23:02:28][INFO][session]  Check session status
+[32m[2021/03/19 23:02:28][INFO][session]  Session is active.
+[32m[2021/03/19 23:02:28][INFO][privilege]  Check user
+[32m[2021/03/19 23:02:28][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:06:05][INFO][session]  Check user
+[32m[2021/03/19 23:06:05][INFO][session]  Check session status
+[32m[2021/03/19 23:06:05][INFO][session]  Session is active.
+[32m[2021/03/19 23:06:05][INFO][privilege]  Check user
+[32m[2021/03/19 23:06:05][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:06:28][INFO][session]  Check user
+[32m[2021/03/19 23:06:28][INFO][session]  Check session status
+[32m[2021/03/19 23:06:28][INFO][session]  Session is active.
+[32m[2021/03/19 23:06:28][INFO][privilege]  Check user
+[32m[2021/03/19 23:06:28][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:06:45][INFO][session]  Check user
+[32m[2021/03/19 23:06:45][INFO][session]  Check session status
+[32m[2021/03/19 23:06:45][INFO][session]  Session is active.
+[32m[2021/03/19 23:06:45][INFO][privilege]  Check user
+[32m[2021/03/19 23:06:45][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:09:07][INFO][session]  Check user
+[32m[2021/03/19 23:09:07][INFO][session]  Check session status
+[32m[2021/03/19 23:09:07][INFO][session]  Session is active.
+[32m[2021/03/19 23:09:07][INFO][privilege]  Check user
+[32m[2021/03/19 23:09:07][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:09:08][INFO][session]  Check user
+[32m[2021/03/19 23:09:08][INFO][session]  Check session status
+[32m[2021/03/19 23:09:08][INFO][session]  Session is active.
+[32m[2021/03/19 23:09:41][INFO][session]  Check user
+[32m[2021/03/19 23:09:41][INFO][session]  Check session status
+[32m[2021/03/19 23:09:41][INFO][session]  Session is active.
+[32m[2021/03/19 23:09:41][INFO][privilege]  Check user
+[32m[2021/03/19 23:09:41][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:09:42][INFO][session]  Check user
+[32m[2021/03/19 23:09:42][INFO][session]  Check session status
+[32m[2021/03/19 23:09:42][INFO][session]  Session is active.
+[32m[2021/03/19 23:10:16][INFO][session]  Check user
+[32m[2021/03/19 23:10:16][INFO][session]  Check session status
+[32m[2021/03/19 23:10:16][INFO][session]  Session is active.
+[32m[2021/03/19 23:10:18][INFO][session]  Check user
+[32m[2021/03/19 23:10:18][INFO][session]  Check session status
+[32m[2021/03/19 23:10:18][INFO][session]  Session is active.
+[32m[2021/03/19 23:10:18][INFO][privilege]  Check user
+[32m[2021/03/19 23:10:19][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:10:19][INFO][session]  Check user
+[32m[2021/03/19 23:10:19][INFO][session]  Check session status
+[32m[2021/03/19 23:10:19][INFO][session]  Session is active.
+[32m[2021/03/19 23:10:23][INFO][session]  Check user
+[32m[2021/03/19 23:10:23][INFO][session]  Check session status
+[32m[2021/03/19 23:10:23][INFO][session]  Session is active.
+[32m[2021/03/19 23:10:23][INFO][privilege]  Check user
+[32m[2021/03/19 23:10:23][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:10:40][INFO][session]  Check user
+[32m[2021/03/19 23:10:40][INFO][session]  Check session status
+[32m[2021/03/19 23:10:40][INFO][session]  Session is active.
+[32m[2021/03/19 23:10:40][INFO][privilege]  Check user
+[32m[2021/03/19 23:10:40][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:11:22][INFO][session]  Check user
+[32m[2021/03/19 23:11:22][INFO][session]  Check session status
+[32m[2021/03/19 23:11:22][INFO][session]  Session is active.
+[32m[2021/03/19 23:11:22][INFO][privilege]  Check user
+[32m[2021/03/19 23:11:22][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:11:48][INFO][session]  Check user
+[32m[2021/03/19 23:11:48][INFO][session]  Check session status
+[32m[2021/03/19 23:11:48][INFO][session]  Session is active.
+[32m[2021/03/19 23:11:48][INFO][privilege]  Check user
+[32m[2021/03/19 23:11:48][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:11:51][INFO][session]  Check user
+[32m[2021/03/19 23:11:51][INFO][session]  Check session status
+[32m[2021/03/19 23:11:51][INFO][session]  Session is active.
+[32m[2021/03/19 23:11:51][INFO][privilege]  Check user
+[32m[2021/03/19 23:11:51][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:11:59][INFO][session]  Check user
+[32m[2021/03/19 23:11:59][INFO][session]  Check session status
+[32m[2021/03/19 23:11:59][INFO][session]  Session is active.
+[32m[2021/03/19 23:11:59][INFO][privilege]  Check user
+[32m[2021/03/19 23:11:59][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:12:24][INFO][session]  Check user
+[32m[2021/03/19 23:12:24][INFO][session]  Check session status
+[32m[2021/03/19 23:12:24][INFO][session]  Session is active.
+[32m[2021/03/19 23:12:24][INFO][privilege]  Check user
+[32m[2021/03/19 23:12:24][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:12:29][INFO][session]  Check user
+[32m[2021/03/19 23:12:29][INFO][session]  Check session status
+[32m[2021/03/19 23:12:29][INFO][session]  Session is active.
+[32m[2021/03/19 23:12:30][INFO][privilege]  Check user
+[32m[2021/03/19 23:12:30][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:13:47][INFO][session]  Check user
+[32m[2021/03/19 23:13:47][INFO][session]  Check session status
+[32m[2021/03/19 23:13:47][INFO][session]  Session is active.
+[32m[2021/03/19 23:13:48][INFO][privilege]  Check user
+[32m[2021/03/19 23:13:48][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:13:55][INFO][session]  Check user
+[32m[2021/03/19 23:13:55][INFO][session]  Check session status
+[32m[2021/03/19 23:13:55][INFO][session]  Session is active.
+[32m[2021/03/19 23:13:55][INFO][privilege]  Check user
+[32m[2021/03/19 23:13:55][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:14:03][INFO][session]  Check user
+[32m[2021/03/19 23:14:03][INFO][session]  Check session status
+[32m[2021/03/19 23:14:03][INFO][session]  Session is active.
+[32m[2021/03/19 23:14:04][INFO][privilege]  Check user
+[32m[2021/03/19 23:14:04][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:14:11][INFO][session]  Check user
+[32m[2021/03/19 23:14:11][INFO][session]  Check session status
+[32m[2021/03/19 23:14:11][INFO][session]  Session is active.
+[32m[2021/03/19 23:14:11][INFO][privilege]  Check user
+[32m[2021/03/19 23:14:11][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:15:02][INFO][session]  Check user
+[32m[2021/03/19 23:15:02][INFO][session]  Check session status
+[32m[2021/03/19 23:15:02][INFO][session]  Session is active.
+[32m[2021/03/19 23:15:02][INFO][privilege]  Check user
+[32m[2021/03/19 23:15:02][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:15:21][INFO][session]  Check user
+[32m[2021/03/19 23:15:21][INFO][session]  Check session status
+[32m[2021/03/19 23:15:21][INFO][session]  Session is active.
+[32m[2021/03/19 23:15:21][INFO][privilege]  Check user
+[32m[2021/03/19 23:15:21][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:15:50][INFO][session]  Check user
+[32m[2021/03/19 23:15:50][INFO][session]  Check session status
+[32m[2021/03/19 23:15:50][INFO][session]  Session is active.
+[32m[2021/03/19 23:15:50][INFO][privilege]  Check user
+[32m[2021/03/19 23:15:50][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:15:54][INFO][session]  Check user
+[32m[2021/03/19 23:15:54][INFO][session]  Check session status
+[32m[2021/03/19 23:15:54][INFO][session]  Session is active.
+[32m[2021/03/19 23:15:54][INFO][privilege]  Check user
+[32m[2021/03/19 23:15:54][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:16:01][INFO][session]  Check user
+[32m[2021/03/19 23:16:01][INFO][session]  Check session status
+[32m[2021/03/19 23:16:01][INFO][session]  Session is active.
+[32m[2021/03/19 23:16:01][INFO][privilege]  Check user
+[32m[2021/03/19 23:16:01][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:16:05][INFO][session]  Check user
+[32m[2021/03/19 23:16:05][INFO][session]  Check session status
+[32m[2021/03/19 23:16:05][INFO][session]  Session is active.
+[32m[2021/03/19 23:16:05][INFO][privilege]  Check user
+[32m[2021/03/19 23:16:05][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:17:52][INFO][session]  Check user
+[32m[2021/03/19 23:17:52][INFO][session]  Check session status
+[32m[2021/03/19 23:17:52][INFO][session]  Session is active.
+[32m[2021/03/19 23:17:52][INFO][privilege]  Check user
+[32m[2021/03/19 23:17:52][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:18:32][INFO][session]  Check user
+[32m[2021/03/19 23:18:32][INFO][session]  Check session status
+[32m[2021/03/19 23:18:32][INFO][session]  Session is active.
+[32m[2021/03/19 23:18:32][INFO][privilege]  Check user
+[32m[2021/03/19 23:18:32][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:21:29][INFO][session]  Check user
+[32m[2021/03/19 23:21:29][INFO][session]  Check session status
+[32m[2021/03/19 23:21:29][INFO][session]  Session is active.
+[32m[2021/03/19 23:21:30][INFO][privilege]  Check user
+[32m[2021/03/19 23:21:30][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:21:59][INFO][session]  Check user
+[32m[2021/03/19 23:21:59][INFO][session]  Check session status
+[32m[2021/03/19 23:21:59][INFO][session]  Session is active.
+[32m[2021/03/19 23:21:59][INFO][privilege]  Check user
+[32m[2021/03/19 23:21:59][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:22:06][INFO][session]  Check user
+[32m[2021/03/19 23:22:06][INFO][session]  Check session status
+[32m[2021/03/19 23:22:06][INFO][session]  Session is active.
+[32m[2021/03/19 23:22:06][INFO][privilege]  Check user
+[32m[2021/03/19 23:22:06][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:22:13][INFO][session]  Check user
+[32m[2021/03/19 23:22:13][INFO][session]  Check session status
+[32m[2021/03/19 23:22:13][INFO][session]  Session is active.
+[32m[2021/03/19 23:22:14][INFO][privilege]  Check user
+[32m[2021/03/19 23:22:14][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:22:17][INFO][session]  Check user
+[32m[2021/03/19 23:22:17][INFO][session]  Check session status
+[32m[2021/03/19 23:22:17][INFO][session]  Session is active.
+[32m[2021/03/19 23:22:17][INFO][privilege]  Check user
+[32m[2021/03/19 23:22:17][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:22:29][INFO][session]  Check user
+[32m[2021/03/19 23:22:29][INFO][session]  Check session status
+[32m[2021/03/19 23:22:29][INFO][session]  Session is active.
+[32m[2021/03/19 23:22:29][INFO][privilege]  Check user
+[32m[2021/03/19 23:22:29][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:22:44][INFO][session]  Check user
+[32m[2021/03/19 23:22:44][INFO][session]  Check session status
+[32m[2021/03/19 23:22:44][INFO][session]  Session is active.
+[32m[2021/03/19 23:22:44][INFO][privilege]  Check user
+[32m[2021/03/19 23:22:44][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:22:47][INFO][session]  Check user
+[32m[2021/03/19 23:22:47][INFO][session]  Check session status
+[32m[2021/03/19 23:22:47][INFO][session]  Session is active.
+[32m[2021/03/19 23:22:47][INFO][privilege]  Check user
+[32m[2021/03/19 23:22:47][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:23:57][INFO][session]  Check user
+[32m[2021/03/19 23:23:57][INFO][session]  Check session status
+[32m[2021/03/19 23:23:57][INFO][session]  Session is active.
+[32m[2021/03/19 23:23:57][INFO][privilege]  Check user
+[32m[2021/03/19 23:23:57][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:24:07][INFO][session]  Check user
+[32m[2021/03/19 23:24:07][INFO][session]  Check session status
+[32m[2021/03/19 23:24:07][INFO][session]  Session is active.
+[32m[2021/03/19 23:24:07][INFO][privilege]  Check user
+[32m[2021/03/19 23:24:07][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:24:13][INFO][session]  Check user
+[32m[2021/03/19 23:24:13][INFO][session]  Check session status
+[32m[2021/03/19 23:24:13][INFO][session]  Session is active.
+[32m[2021/03/19 23:24:14][INFO][privilege]  Check user
+[32m[2021/03/19 23:24:14][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:24:20][INFO][session]  Check user
+[32m[2021/03/19 23:24:20][INFO][session]  Check session status
+[32m[2021/03/19 23:24:20][INFO][session]  Session is active.
+[32m[2021/03/19 23:24:20][INFO][privilege]  Check user
+[32m[2021/03/19 23:24:20][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:24:22][INFO][session]  Check user
+[32m[2021/03/19 23:24:22][INFO][session]  Check session status
+[32m[2021/03/19 23:24:22][INFO][session]  Session is active.
+[32m[2021/03/19 23:24:23][INFO][privilege]  Check user
+[32m[2021/03/19 23:24:23][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:24:41][INFO][session]  Check user
+[32m[2021/03/19 23:24:41][INFO][session]  Check session status
+[32m[2021/03/19 23:24:41][INFO][session]  Session is active.
+[32m[2021/03/19 23:24:41][INFO][privilege]  Check user
+[32m[2021/03/19 23:24:41][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:25:26][INFO][session]  Check user
+[32m[2021/03/19 23:25:26][INFO][session]  Check session status
+[32m[2021/03/19 23:25:26][INFO][session]  Session is active.
+[32m[2021/03/19 23:25:26][INFO][privilege]  Check user
+[32m[2021/03/19 23:25:26][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:27:00][INFO][session]  Check user
+[32m[2021/03/19 23:27:00][INFO][session]  Check session status
+[32m[2021/03/19 23:27:00][INFO][session]  Session is active.
+[32m[2021/03/19 23:27:00][INFO][privilege]  Check user
+[32m[2021/03/19 23:27:00][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:27:01][INFO][session]  Check user
+[32m[2021/03/19 23:27:01][INFO][session]  Check session status
+[32m[2021/03/19 23:27:01][INFO][session]  Session is active.
+[32m[2021/03/19 23:27:04][INFO][session]  Check user
+[32m[2021/03/19 23:27:04][INFO][session]  Check session status
+[32m[2021/03/19 23:27:04][INFO][session]  Session is active.
+[32m[2021/03/19 23:27:04][INFO][privilege]  Check user
+[32m[2021/03/19 23:27:04][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:27:34][INFO][session]  Check user
+[32m[2021/03/19 23:27:34][INFO][session]  Check session status
+[32m[2021/03/19 23:27:34][INFO][session]  Session is active.
+[32m[2021/03/19 23:27:34][INFO][privilege]  Check user
+[32m[2021/03/19 23:27:34][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:27:35][INFO][session]  Check user
+[32m[2021/03/19 23:27:35][INFO][session]  Check session status
+[32m[2021/03/19 23:27:35][INFO][session]  Session is active.
+[32m[2021/03/19 23:27:38][INFO][session]  Check user
+[32m[2021/03/19 23:27:38][INFO][session]  Check session status
+[32m[2021/03/19 23:27:38][INFO][session]  Session is active.
+[32m[2021/03/19 23:27:38][INFO][privilege]  Check user
+[32m[2021/03/19 23:27:38][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:27:49][INFO][session]  Check user
+[32m[2021/03/19 23:27:49][INFO][session]  Check session status
+[32m[2021/03/19 23:27:49][INFO][session]  Session is active.
+[32m[2021/03/19 23:27:49][INFO][privilege]  Check user
+[32m[2021/03/19 23:27:49][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:27:52][INFO][session]  Check user
+[32m[2021/03/19 23:27:52][INFO][session]  Check session status
+[32m[2021/03/19 23:27:52][INFO][session]  Session is active.
+[32m[2021/03/19 23:27:52][INFO][privilege]  Check user
+[32m[2021/03/19 23:27:52][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:27:56][INFO][session]  Check user
+[32m[2021/03/19 23:27:56][INFO][session]  Check session status
+[32m[2021/03/19 23:27:56][INFO][session]  Session is active.
+[32m[2021/03/19 23:27:56][INFO][privilege]  Check user
+[32m[2021/03/19 23:27:56][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:28:36][INFO][session]  Check user
+[32m[2021/03/19 23:28:36][INFO][session]  Check session status
+[32m[2021/03/19 23:28:36][INFO][session]  Session is active.
+[32m[2021/03/19 23:28:36][INFO][privilege]  Check user
+[32m[2021/03/19 23:28:36][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:28:38][INFO][session]  Check user
+[32m[2021/03/19 23:28:38][INFO][session]  Check session status
+[32m[2021/03/19 23:28:38][INFO][session]  Session is active.
+[32m[2021/03/19 23:28:38][INFO][privilege]  Check user
+[32m[2021/03/19 23:28:38][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:29:10][INFO][session]  Check user
+[32m[2021/03/19 23:29:10][INFO][session]  Check session status
+[32m[2021/03/19 23:29:10][INFO][session]  Session is active.
+[32m[2021/03/19 23:29:10][INFO][privilege]  Check user
+[32m[2021/03/19 23:29:10][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:29:13][INFO][session]  Check user
+[32m[2021/03/19 23:29:13][INFO][session]  Check session status
+[32m[2021/03/19 23:29:13][INFO][session]  Session is active.
+[32m[2021/03/19 23:29:14][INFO][privilege]  Check user
+[32m[2021/03/19 23:29:14][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:29:19][INFO][session]  Check user
+[32m[2021/03/19 23:29:19][INFO][session]  Check session status
+[32m[2021/03/19 23:29:19][INFO][session]  Session is active.
+[32m[2021/03/19 23:29:19][INFO][privilege]  Check user
+[32m[2021/03/19 23:29:19][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:29:24][INFO][session]  Check user
+[32m[2021/03/19 23:29:24][INFO][session]  Check session status
+[32m[2021/03/19 23:29:24][INFO][session]  Session is active.
+[32m[2021/03/19 23:29:24][INFO][privilege]  Check user
+[32m[2021/03/19 23:29:24][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:29:33][INFO][session]  Check user
+[32m[2021/03/19 23:29:33][INFO][session]  Check session status
+[32m[2021/03/19 23:29:33][INFO][session]  Session is active.
+[32m[2021/03/19 23:29:33][INFO][privilege]  Check user
+[32m[2021/03/19 23:29:33][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:29:34][INFO][session]  Check user
+[32m[2021/03/19 23:29:34][INFO][session]  Check session status
+[32m[2021/03/19 23:29:34][INFO][session]  Session is active.
+[32m[2021/03/19 23:29:37][INFO][session]  Check user
+[32m[2021/03/19 23:29:37][INFO][session]  Check session status
+[32m[2021/03/19 23:29:37][INFO][session]  Session is active.
+[32m[2021/03/19 23:29:37][INFO][privilege]  Check user
+[32m[2021/03/19 23:29:37][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:29:53][INFO][session]  Check user
+[32m[2021/03/19 23:29:53][INFO][session]  Check session status
+[32m[2021/03/19 23:29:53][INFO][session]  Session is active.
+[32m[2021/03/19 23:29:53][INFO][privilege]  Check user
+[32m[2021/03/19 23:29:53][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:30:16][INFO][session]  Check user
+[32m[2021/03/19 23:30:16][INFO][session]  Check session status
+[32m[2021/03/19 23:30:16][INFO][session]  Session is active.
+[32m[2021/03/19 23:30:17][INFO][privilege]  Check user
+[32m[2021/03/19 23:30:17][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:30:20][INFO][session]  Check user
+[32m[2021/03/19 23:30:20][INFO][session]  Check session status
+[32m[2021/03/19 23:30:20][INFO][session]  Session is active.
+[32m[2021/03/19 23:30:20][INFO][privilege]  Check user
+[32m[2021/03/19 23:30:20][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:30:43][INFO][session]  Check user
+[32m[2021/03/19 23:30:43][INFO][session]  Check session status
+[32m[2021/03/19 23:30:43][INFO][session]  Session is active.
+[32m[2021/03/19 23:30:43][INFO][privilege]  Check user
+[32m[2021/03/19 23:30:43][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:31:12][INFO][session]  Check user
+[32m[2021/03/19 23:31:12][INFO][session]  Check session status
+[32m[2021/03/19 23:31:12][INFO][session]  Session is active.
+[32m[2021/03/19 23:31:12][INFO][privilege]  Check user
+[32m[2021/03/19 23:31:13][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:31:33][INFO][session]  Check user
+[32m[2021/03/19 23:31:33][INFO][session]  Check session status
+[32m[2021/03/19 23:31:33][INFO][session]  Session is active.
+[32m[2021/03/19 23:31:33][INFO][privilege]  Check user
+[32m[2021/03/19 23:31:33][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:32:15][INFO][session]  Check user
+[32m[2021/03/19 23:32:15][INFO][session]  Check session status
+[32m[2021/03/19 23:32:15][INFO][session]  Session is active.
+[32m[2021/03/19 23:32:15][INFO][privilege]  Check user
+[32m[2021/03/19 23:32:15][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:32:22][INFO][session]  Check user
+[32m[2021/03/19 23:32:22][INFO][session]  Check session status
+[32m[2021/03/19 23:32:22][INFO][session]  Session is active.
+[32m[2021/03/19 23:32:22][INFO][privilege]  Check user
+[32m[2021/03/19 23:32:22][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:32:28][INFO][session]  Check user
+[32m[2021/03/19 23:32:28][INFO][session]  Check session status
+[32m[2021/03/19 23:32:28][INFO][session]  Session is active.
+[32m[2021/03/19 23:32:28][INFO][privilege]  Check user
+[32m[2021/03/19 23:32:28][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:33:14][INFO][session]  Check user
+[32m[2021/03/19 23:33:14][INFO][session]  Check session status
+[32m[2021/03/19 23:33:14][INFO][session]  Session is active.
+[32m[2021/03/19 23:33:14][INFO][privilege]  Check user
+[32m[2021/03/19 23:33:14][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:33:22][INFO][session]  Check user
+[32m[2021/03/19 23:33:22][INFO][session]  Check session status
+[32m[2021/03/19 23:33:22][INFO][session]  Session is active.
+[32m[2021/03/19 23:33:22][INFO][privilege]  Check user
+[32m[2021/03/19 23:33:22][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:33:26][INFO][session]  Check user
+[32m[2021/03/19 23:33:26][INFO][session]  Check session status
+[32m[2021/03/19 23:33:26][INFO][session]  Session is active.
+[32m[2021/03/19 23:33:26][INFO][privilege]  Check user
+[32m[2021/03/19 23:33:26][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:34:27][INFO][session]  Check user
+[32m[2021/03/19 23:34:27][INFO][session]  Check session status
+[32m[2021/03/19 23:34:27][INFO][session]  Session is active.
+[32m[2021/03/19 23:34:27][INFO][privilege]  Check user
+[32m[2021/03/19 23:34:27][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:34:31][INFO][session]  Check user
+[32m[2021/03/19 23:34:31][INFO][session]  Check session status
+[32m[2021/03/19 23:34:31][INFO][session]  Session is active.
+[32m[2021/03/19 23:34:31][INFO][privilege]  Check user
+[32m[2021/03/19 23:34:31][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:34:33][INFO][session]  Check user
+[32m[2021/03/19 23:34:33][INFO][session]  Check session status
+[32m[2021/03/19 23:34:33][INFO][session]  Session is active.
+[32m[2021/03/19 23:34:33][INFO][privilege]  Check user
+[32m[2021/03/19 23:34:33][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:34:43][INFO][session]  Check user
+[32m[2021/03/19 23:34:43][INFO][session]  Check session status
+[32m[2021/03/19 23:34:43][INFO][session]  Session is active.
+[32m[2021/03/19 23:34:43][INFO][privilege]  Check user
+[32m[2021/03/19 23:34:43][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:35:02][INFO][session]  Check user
+[32m[2021/03/19 23:35:02][INFO][session]  Check session status
+[32m[2021/03/19 23:35:02][INFO][session]  Session is active.
+[32m[2021/03/19 23:35:02][INFO][privilege]  Check user
+[32m[2021/03/19 23:35:02][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:35:03][INFO][session]  Check user
+[32m[2021/03/19 23:35:03][INFO][session]  Check session status
+[32m[2021/03/19 23:35:03][INFO][session]  Session is active.
+[32m[2021/03/19 23:35:03][INFO][privilege]  Check user
+[32m[2021/03/19 23:35:03][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:35:12][INFO][session]  Check user
+[32m[2021/03/19 23:35:12][INFO][session]  Check session status
+[32m[2021/03/19 23:35:12][INFO][session]  Session is active.
+[32m[2021/03/19 23:35:12][INFO][privilege]  Check user
+[32m[2021/03/19 23:35:12][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:35:13][INFO][session]  Check user
+[32m[2021/03/19 23:35:13][INFO][session]  Check session status
+[32m[2021/03/19 23:35:13][INFO][session]  Session is active.
+[32m[2021/03/19 23:35:22][INFO][session]  Check user
+[32m[2021/03/19 23:35:22][INFO][session]  Check session status
+[32m[2021/03/19 23:35:22][INFO][session]  Session is active.
+[32m[2021/03/19 23:35:22][INFO][privilege]  Check user
+[32m[2021/03/19 23:35:22][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:38:37][INFO][register]  Received request to hash and salt and password
+[32m[2021/03/19 23:38:37][INFO][register]  Trying insertion:new usr tt@uci.edu
+[32m[2021/03/19 23:38:37][INFO][register]  Trying insertion:new usr tt@uci.edu
+[32m[2021/03/19 23:38:37][INFO][register]  User registered successfully. tt@uci.edu
+[32m[2021/03/19 23:38:49][INFO][login]  Received request to login
+[32m[2021/03/19 23:38:49][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 23:38:49][INFO][login]  Trying SELECT:tt@uci.edu
+[32m[2021/03/19 23:38:49][INFO][login]  Authenticating
+[32m[2021/03/19 23:38:49][INFO][login]  Authentication Pass 
+[32m[2021/03/19 23:38:49][INFO][login]  Check if existing an active session
+[32m[2021/03/19 23:38:49][INFO][login]  Create a new session. 
+[32m[2021/03/19 23:38:49][INFO][login]  User logged in successfully. tt@uci.edu
+[32m[2021/03/19 23:39:07][INFO][session]  Check user
+[32m[2021/03/19 23:39:07][INFO][session]  Check session status
+[32m[2021/03/19 23:39:07][INFO][session]  Session is active.
+[32m[2021/03/19 23:39:07][INFO][privilege]  Check user
+[32m[2021/03/19 23:39:07][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:39:08][INFO][session]  Check user
+[32m[2021/03/19 23:39:08][INFO][session]  Check session status
+[32m[2021/03/19 23:39:08][INFO][session]  Session is active.
+[32m[2021/03/19 23:39:12][INFO][session]  Check user
+[32m[2021/03/19 23:39:12][INFO][session]  Check session status
+[32m[2021/03/19 23:39:12][INFO][session]  Session is active.
+[32m[2021/03/19 23:39:12][INFO][privilege]  Check user
+[32m[2021/03/19 23:39:12][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:39:16][INFO][session]  Check user
+[32m[2021/03/19 23:39:16][INFO][session]  Check session status
+[32m[2021/03/19 23:39:16][INFO][session]  Session is active.
+[32m[2021/03/19 23:39:16][INFO][privilege]  Check user
+[32m[2021/03/19 23:39:16][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:39:21][INFO][session]  Check user
+[32m[2021/03/19 23:39:21][INFO][session]  Check session status
+[32m[2021/03/19 23:39:21][INFO][session]  Session is active.
+[32m[2021/03/19 23:39:21][INFO][privilege]  Check user
+[32m[2021/03/19 23:39:21][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:39:34][INFO][session]  Check user
+[32m[2021/03/19 23:39:34][INFO][session]  Check session status
+[32m[2021/03/19 23:39:34][INFO][session]  Session is active.
+[32m[2021/03/19 23:39:35][INFO][privilege]  Check user
+[32m[2021/03/19 23:39:35][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:39:35][INFO][session]  Check user
+[32m[2021/03/19 23:39:35][INFO][session]  Check session status
+[32m[2021/03/19 23:39:35][INFO][session]  Session is active.
+[32m[2021/03/19 23:39:42][INFO][session]  Check user
+[32m[2021/03/19 23:39:42][INFO][session]  Check session status
+[32m[2021/03/19 23:39:42][INFO][session]  Session is active.
+[32m[2021/03/19 23:39:42][INFO][privilege]  Check user
+[32m[2021/03/19 23:39:42][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:39:42][INFO][session]  Check user
+[32m[2021/03/19 23:39:42][INFO][session]  Check session status
+[32m[2021/03/19 23:39:42][INFO][session]  Session is active.
+[32m[2021/03/19 23:39:45][INFO][session]  Check user
+[32m[2021/03/19 23:39:45][INFO][session]  Check session status
+[32m[2021/03/19 23:39:45][INFO][session]  Session is active.
+[32m[2021/03/19 23:39:45][INFO][privilege]  Check user
+[32m[2021/03/19 23:39:45][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:41:26][INFO][register]  Received request to hash and salt and password
+[32m[2021/03/19 23:41:26][INFO][register]  Trying insertion:new usr Fe4@uci.edu
+[32m[2021/03/19 23:41:26][INFO][register]  Trying insertion:new usr Fe4@uci.edu
+[32m[2021/03/19 23:41:26][INFO][register]  User registered successfully. Fe4@uci.edu
+[32m[2021/03/19 23:41:56][INFO][login]  Received request to login
+[32m[2021/03/19 23:41:56][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 23:41:56][INFO][login]  Trying SELECT:Fe4@uci.edu
+[32m[2021/03/19 23:41:57][INFO][login]  Authenticating
+[32m[2021/03/19 23:41:57][INFO][login]  Passwords do not match. 
+[32m[2021/03/19 23:42:07][INFO][login]  Received request to login
+[32m[2021/03/19 23:42:07][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/19 23:42:07][INFO][login]  Trying SELECT:Fe4@uci.edu
+[32m[2021/03/19 23:42:07][INFO][login]  Authenticating
+[32m[2021/03/19 23:42:07][INFO][login]  Authentication Pass 
+[32m[2021/03/19 23:42:07][INFO][login]  Check if existing an active session
+[32m[2021/03/19 23:42:07][INFO][login]  Create a new session. 
+[32m[2021/03/19 23:42:07][INFO][login]  User logged in successfully. Fe4@uci.edu
+[32m[2021/03/19 23:42:21][INFO][session]  Check user
+[32m[2021/03/19 23:42:21][INFO][session]  Check session status
+[32m[2021/03/19 23:42:21][INFO][session]  Session is active.
+[32m[2021/03/19 23:42:21][INFO][privilege]  Check user
+[32m[2021/03/19 23:42:21][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:42:22][INFO][session]  Check user
+[32m[2021/03/19 23:42:22][INFO][session]  Check session status
+[32m[2021/03/19 23:42:22][INFO][session]  Session is active.
+[32m[2021/03/19 23:42:27][INFO][session]  Check user
+[32m[2021/03/19 23:42:27][INFO][session]  Check session status
+[32m[2021/03/19 23:42:27][INFO][session]  Session is active.
+[32m[2021/03/19 23:42:28][INFO][privilege]  Check user
+[32m[2021/03/19 23:42:28][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:42:33][INFO][session]  Check user
+[32m[2021/03/19 23:42:33][INFO][session]  Check session status
+[32m[2021/03/19 23:42:33][INFO][session]  Session is active.
+[32m[2021/03/19 23:42:33][INFO][privilege]  Check user
+[32m[2021/03/19 23:42:33][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:42:45][INFO][session]  Check user
+[32m[2021/03/19 23:42:45][INFO][session]  Check session status
+[32m[2021/03/19 23:42:45][INFO][session]  Session is active.
+[32m[2021/03/19 23:42:45][INFO][privilege]  Check user
+[32m[2021/03/19 23:42:45][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:42:47][INFO][session]  Check user
+[32m[2021/03/19 23:42:47][INFO][session]  Check session status
+[32m[2021/03/19 23:42:47][INFO][session]  Session is active.
+[32m[2021/03/19 23:42:53][INFO][session]  Check user
+[32m[2021/03/19 23:42:53][INFO][session]  Check session status
+[32m[2021/03/19 23:42:53][INFO][session]  Session is active.
+[32m[2021/03/19 23:42:53][INFO][privilege]  Check user
+[32m[2021/03/19 23:42:53][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:42:53][INFO][session]  Check user
+[32m[2021/03/19 23:42:53][INFO][session]  Check session status
+[32m[2021/03/19 23:42:53][INFO][session]  Session is active.
+[32m[2021/03/19 23:42:59][INFO][session]  Check user
+[32m[2021/03/19 23:42:59][INFO][session]  Check session status
+[32m[2021/03/19 23:42:59][INFO][session]  Session is active.
+[32m[2021/03/19 23:42:59][INFO][privilege]  Check user
+[32m[2021/03/19 23:42:59][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/19 23:43:00][INFO][session]  Check user
+[32m[2021/03/19 23:43:00][INFO][session]  Check session status
+[32m[2021/03/19 23:43:00][INFO][session]  Session is active.
+[32m[2021/03/19 23:43:05][INFO][session]  Check user
+[32m[2021/03/19 23:43:05][INFO][session]  Check session status
+[32m[2021/03/19 23:43:05][INFO][session]  Session is active.
+[32m[2021/03/19 23:43:05][INFO][privilege]  Check user
+[32m[2021/03/19 23:43:05][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/20 00:10:25][INFO][login]  Received request to login
+[32m[2021/03/20 00:10:25][INFO][login]  Received request to hash and salt and password
+[32m[2021/03/20 00:10:25][INFO][login]  Trying SELECT:iostest@uci.edu
+[32m[2021/03/20 00:10:25][INFO][login]  Authenticating
+[32m[2021/03/20 00:10:25][INFO][login]  Authentication Pass 
+[32m[2021/03/20 00:10:25][INFO][login]  Check if existing an active session
+[32m[2021/03/20 00:10:25][INFO][login]  Update session
+[32m[2021/03/20 00:10:25][INFO][login]  Update session succeeded.
+[32m[2021/03/20 00:10:25][INFO][login]  User logged in successfully. iostest@uci.edu
+[32m[2021/03/20 00:10:32][INFO][session]  Check user
+[32m[2021/03/20 00:10:32][INFO][session]  Check session status
+[32m[2021/03/20 00:10:32][INFO][session]  Session is active.
+[32m[2021/03/20 00:10:33][INFO][privilege]  Check user
+[32m[2021/03/20 00:10:33][INFO][privilege]  User has insufficient privilege level.
+[32m[2021/03/20 00:10:33][INFO][session]  Check user
+[32m[2021/03/20 00:10:33][INFO][session]  Check session status
+[32m[2021/03/20 00:10:33][INFO][session]  Session is active.
+[32m[2021/03/20 00:10:38][INFO][session]  Check user
+[32m[2021/03/20 00:10:38][INFO][session]  Check session status
+[32m[2021/03/20 00:10:38][INFO][session]  Session is active.
+[32m[2021/03/20 00:10:38][INFO][privilege]  Check user
+[32m[2021/03/20 00:10:38][INFO][privilege]  User has insufficient privilege level.

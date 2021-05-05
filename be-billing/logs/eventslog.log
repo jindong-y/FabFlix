@@ -1,0 +1,2459 @@
+[0m[2021/03/08 22:02:17][CONFIG][initService]  Starting service...
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  Scheme: http://
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  Hostname: 127.0.0.1
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  Port: 12348
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  Path: /api/billing
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  Logger output directory: logs/
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  Database hostname: localhost
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  Database port: 3306
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  Database username: root
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  Database password provided? true
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  Database name: billing
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  IDM Scheme: http://
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  IDM Hostname: 127.0.0.1
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  IDM Port: 12346
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  IDM Path: /api/idm
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  IDM Privilege Path: /privilege
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  Movies Scheme: http://
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  Movies Hostname: 127.0.0.1
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  Movies Port: 12347
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  Movies Path: /api/movies
+[0m[2021/03/08 22:02:17][CONFIG][currentConfigs]  Movies Thumbnail Path: /thumbnail
+[0m[2021/03/08 22:02:17][CONFIG][connectToDatabase]  Connecting to database...
+[0m[2021/03/08 22:02:17][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://localhost:3306/billing?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[0m[2021/03/08 22:02:18][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://localhost:3306/billing?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[0m[2021/03/08 22:02:18][CONFIG][initHTTPServer]  Initializing HTTP server...
+[0m[2021/03/08 22:02:18][CONFIG][initHTTPServer]  Building URI from configs...
+[0m[2021/03/08 22:02:18][CONFIG][initHTTPServer]  Final URI: http://127.0.0.1:12348/api/billing
+[0m[2021/03/08 22:02:18][CONFIG][initHTTPServer]  Set Jersey resources.
+[0m[2021/03/08 22:02:18][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[0m[2021/03/08 22:02:18][CONFIG][initHTTPServer]  Starting HTTP server...
+[0m[2021/03/08 22:02:19][CONFIG][initHTTPServer]  HTTP server started.
+[0m[2021/03/08 22:02:19][CONFIG][initService]  Service initialized.
+[37m[2021/03/08 22:02:46][INFO][sendRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[37m[2021/03/08 22:02:46][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:02:46][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:02:46][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:02:46][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:02:46][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.IDMRequest@2338b918, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:02:46][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:02:46][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:02:46][INFO][requestPrivilege]  Reading response
+[37m[2021/03/08 22:02:46][INFO][requestPrivilege]  Received resultCode: 141
+[37m[2021/03/08 22:02:46][INFO][requestPrivilege]  Received Message: User has insufficient privilege level.
+[37m[2021/03/08 22:02:46][INFO][insert]  user found
+[37m[2021/03/08 22:02:46][INFO][insert]  Quantity valid
+[37m[2021/03/08 22:02:46][INFO][insert]  Movie_id valid
+[37m[2021/03/08 22:02:46][INFO][insert]  SQL query...
+[37m[2021/03/08 22:02:46][INFO][buildResponse]  Response being built with Result: CART_ITEM_INSERT_SUCCESSFUL
+[37m[2021/03/08 22:02:46][INFO][buildResponse]  Shopping cart item inserted successfully.
+[37m[2021/03/08 22:02:46][INFO][buildResponse]  3100
+[33m[2021/03/08 22:02:51][WARNING][retrieve]  /order/retrieve get called
+[33m[2021/03/08 22:02:51][WARNING][retrieve]  token:36F91836C3408113H
+[37m[2021/03/08 22:02:51][INFO][getOrder]  Response Body:
+	{"update_time":"2021-03-09T05:45:40Z","create_time":"2021-03-09T05:26:46Z","purchase_units":[{"payee":{"email_address":"sb-mji7s5143247@business.example.com","merchant_id":"FRLAY7KC26S54"},"amount":{"value":"55.06","currency_code":"USD"},"reference_id":"default","shipping":{"address":{"country_code":"US","admin_area_1":"CA","address_line_1":"1 Main St","admin_area_2":"San Jose","postal_code":"95131"},"name":{"full_name":"John Doe"}},"payments":{"captures":[{"amount":{"value":"55.06","currency_code":"USD"},"seller_protection":{"dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"],"status":"ELIGIBLE"},"update_time":"2021-03-09T05:45:40Z","create_time":"2021-03-09T05:45:40Z","final_capture":true,"seller_receivable_breakdown":{"paypal_fee":{"value":"1.90","currency_code":"USD"},"gross_amount":{"value":"55.06","currency_code":"USD"},"net_amount":{"value":"53.16","currency_code":"USD"}},"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/payments/captures/3AB02674LS5310823"},{"method":"POST","rel":"refund","href":"https://api.sandbox.paypal.com/v2/payments/captures/3AB02674LS5310823/refund"},{"method":"GET","rel":"up","href":"https://api.sandbox.paypal.com/v2/checkout/orders/36F91836C3408113H"}],"id":"3AB02674LS5310823","status":"COMPLETED"}]}}],"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/checkout/orders/36F91836C3408113H"}],"id":"36F91836C3408113H","intent":"CAPTURE","payer":{"address":{"country_code":"US"},"email_address":"sb-a7ukv5138675@personal.example.com","name":{"surname":"Doe","given_name":"John"},"payer_id":"HA4CVRW2R4J46"},"status":"COMPLETED"}
+[37m[2021/03/08 22:02:52][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:02:52][INFO][buildResponse]  Order retrieved successfully
+[37m[2021/03/08 22:02:52][INFO][buildResponse]  3410
+[33m[2021/03/08 22:02:54][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:02:54][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:02:54][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:02:54][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:02:54][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:02:54][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:02:54][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:02:54][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:02:54][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:02:54][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:02:54][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@264d023f, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:02:54][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:02:54][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:02:54][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:02:54][INFO][retrieve]  2
+[37m[2021/03/08 22:02:54][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:02:54][INFO][retrieve]  0
+[37m[2021/03/08 22:02:54][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:02:54][INFO][retrieve]  1
+[37m[2021/03/08 22:02:54][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:02:54][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:02:54][INFO][buildResponse]  3130
+[37m[2021/03/08 22:02:57][INFO][place]  Total amount $22.34
+[37m[2021/03/08 22:02:58][INFO][createOrder]  Order ID: 69V75728MJ352525J
+[37m[2021/03/08 22:02:58][INFO][lambda$createOrder$0]  self => GET:https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J
+[37m[2021/03/08 22:02:58][INFO][lambda$createOrder$0]  approve => GET:https://www.sandbox.paypal.com/checkoutnow?token=69V75728MJ352525J
+[37m[2021/03/08 22:02:58][INFO][lambda$createOrder$0]  update => PATCH:https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J
+[37m[2021/03/08 22:02:58][INFO][lambda$createOrder$0]  capture => POST:https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J/capture
+[33m[2021/03/08 22:02:58][WARNING][place]  com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO transaction(sale_id, token)
+VALUE (67, '69V75728MJ352525J'),
+(68, '69V75728MJ352525J')
+[37m[2021/03/08 22:02:58][INFO][buildResponse]  Response being built with Result: ORDER_PLACE_SUCCESSFUL
+[37m[2021/03/08 22:02:58][INFO][buildResponse]  Order placed successfully
+[37m[2021/03/08 22:02:58][INFO][buildResponse]  3400
+[37m[2021/03/08 22:03:01][INFO][place]  Total amount $22.34
+[37m[2021/03/08 22:03:02][INFO][createOrder]  Order ID: 8P386208JS037472J
+[37m[2021/03/08 22:03:02][INFO][lambda$createOrder$0]  self => GET:https://api.sandbox.paypal.com/v2/checkout/orders/8P386208JS037472J
+[37m[2021/03/08 22:03:02][INFO][lambda$createOrder$0]  approve => GET:https://www.sandbox.paypal.com/checkoutnow?token=8P386208JS037472J
+[37m[2021/03/08 22:03:02][INFO][lambda$createOrder$0]  update => PATCH:https://api.sandbox.paypal.com/v2/checkout/orders/8P386208JS037472J
+[37m[2021/03/08 22:03:02][INFO][lambda$createOrder$0]  capture => POST:https://api.sandbox.paypal.com/v2/checkout/orders/8P386208JS037472J/capture
+[33m[2021/03/08 22:03:02][WARNING][place]  com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO transaction(sale_id, token)
+VALUE (70, '8P386208JS037472J'),
+(71, '8P386208JS037472J')
+[37m[2021/03/08 22:03:02][INFO][buildResponse]  Response being built with Result: ORDER_PLACE_SUCCESSFUL
+[37m[2021/03/08 22:03:02][INFO][buildResponse]  Order placed successfully
+[37m[2021/03/08 22:03:02][INFO][buildResponse]  3400
+[37m[2021/03/08 22:03:20][INFO][complete]  token:69V75728MJ352525J
+[37m[2021/03/08 22:03:20][INFO][complete]  PayerID:HA4CVRW2R4J46
+[37m[2021/03/08 22:03:20][INFO][complete]  Token is valid
+[37m[2021/03/08 22:03:22][INFO][captureOrder]  Capture_ID:8DM221652X6424648
+[37m[2021/03/08 22:03:22][INFO][lambda$captureOrder$1]  	self => GET:https://api.sandbox.paypal.com/v2/payments/captures/8DM221652X6424648
+[37m[2021/03/08 22:03:22][INFO][lambda$captureOrder$1]  	refund => POST:https://api.sandbox.paypal.com/v2/payments/captures/8DM221652X6424648/refund
+[37m[2021/03/08 22:03:22][INFO][lambda$captureOrder$1]  	up => GET:https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J
+[37m[2021/03/08 22:03:22][INFO][buildResponse]  Response being built with Result: ORDER_COMPLETED_SUCCESSFUL
+[37m[2021/03/08 22:03:22][INFO][buildResponse]  Order is completed successfully.
+[37m[2021/03/08 22:03:22][INFO][buildResponse]  3420
+[37m[2021/03/08 22:04:20][INFO][complete]  token:69V75728MJ352525J
+[37m[2021/03/08 22:04:20][INFO][complete]  PayerID:HA4CVRW2R4J46
+[37m[2021/03/08 22:04:20][INFO][complete]  Token is valid
+[37m[2021/03/08 22:04:21][INFO][buildResponse]  Response being built with Result: ORDER_CANNOT_COMPLETE
+[37m[2021/03/08 22:04:21][INFO][buildResponse]  Order can not be completetd
+[37m[2021/03/08 22:04:21][INFO][buildResponse]  3422
+[33m[2021/03/08 22:05:39][WARNING][retrieve]  /order/retrieve get called
+[33m[2021/03/08 22:05:39][WARNING][retrieve]  token:36F91836C3408113H
+[33m[2021/03/08 22:05:39][WARNING][retrieve]  token:69V75728MJ352525J
+[37m[2021/03/08 22:05:39][INFO][getOrder]  Response Body:
+	{"update_time":"2021-03-09T05:45:40Z","create_time":"2021-03-09T05:26:46Z","purchase_units":[{"payee":{"email_address":"sb-mji7s5143247@business.example.com","merchant_id":"FRLAY7KC26S54"},"amount":{"value":"55.06","currency_code":"USD"},"reference_id":"default","shipping":{"address":{"country_code":"US","admin_area_1":"CA","address_line_1":"1 Main St","admin_area_2":"San Jose","postal_code":"95131"},"name":{"full_name":"John Doe"}},"payments":{"captures":[{"amount":{"value":"55.06","currency_code":"USD"},"seller_protection":{"dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"],"status":"ELIGIBLE"},"update_time":"2021-03-09T05:45:40Z","create_time":"2021-03-09T05:45:40Z","final_capture":true,"seller_receivable_breakdown":{"paypal_fee":{"value":"1.90","currency_code":"USD"},"gross_amount":{"value":"55.06","currency_code":"USD"},"net_amount":{"value":"53.16","currency_code":"USD"}},"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/payments/captures/3AB02674LS5310823"},{"method":"POST","rel":"refund","href":"https://api.sandbox.paypal.com/v2/payments/captures/3AB02674LS5310823/refund"},{"method":"GET","rel":"up","href":"https://api.sandbox.paypal.com/v2/checkout/orders/36F91836C3408113H"}],"id":"3AB02674LS5310823","status":"COMPLETED"}]}}],"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/checkout/orders/36F91836C3408113H"}],"id":"36F91836C3408113H","intent":"CAPTURE","payer":{"address":{"country_code":"US"},"email_address":"sb-a7ukv5138675@personal.example.com","name":{"surname":"Doe","given_name":"John"},"payer_id":"HA4CVRW2R4J46"},"status":"COMPLETED"}
+[37m[2021/03/08 22:05:39][INFO][getOrder]  Response Body:
+	{"update_time":"2021-03-09T06:03:21Z","create_time":"2021-03-09T06:02:58Z","purchase_units":[{"payee":{"email_address":"sb-mji7s5143247@business.example.com","merchant_id":"FRLAY7KC26S54"},"amount":{"value":"22.34","currency_code":"USD"},"reference_id":"default","shipping":{"address":{"country_code":"US","admin_area_1":"CA","address_line_1":"1 Main St","admin_area_2":"San Jose","postal_code":"95131"},"name":{"full_name":"John Doe"}},"payments":{"captures":[{"amount":{"value":"22.34","currency_code":"USD"},"seller_protection":{"dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"],"status":"ELIGIBLE"},"update_time":"2021-03-09T06:03:21Z","create_time":"2021-03-09T06:03:21Z","final_capture":true,"seller_receivable_breakdown":{"paypal_fee":{"value":"0.95","currency_code":"USD"},"gross_amount":{"value":"22.34","currency_code":"USD"},"net_amount":{"value":"21.39","currency_code":"USD"}},"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/payments/captures/8DM221652X6424648"},{"method":"POST","rel":"refund","href":"https://api.sandbox.paypal.com/v2/payments/captures/8DM221652X6424648/refund"},{"method":"GET","rel":"up","href":"https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J"}],"id":"8DM221652X6424648","status":"COMPLETED"}]}}],"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J"}],"id":"69V75728MJ352525J","intent":"CAPTURE","payer":{"address":{"country_code":"US"},"email_address":"sb-a7ukv5138675@personal.example.com","name":{"surname":"Doe","given_name":"John"},"payer_id":"HA4CVRW2R4J46"},"status":"COMPLETED"}
+[37m[2021/03/08 22:05:39][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:05:39][INFO][buildResponse]  Order retrieved successfully
+[37m[2021/03/08 22:05:39][INFO][buildResponse]  3410
+[33m[2021/03/08 22:05:47][WARNING][retrieve]  /order/retrieve get called
+[33m[2021/03/08 22:05:47][WARNING][retrieve]  token:36F91836C3408113H
+[33m[2021/03/08 22:05:47][WARNING][retrieve]  token:69V75728MJ352525J
+[37m[2021/03/08 22:05:48][INFO][getOrder]  Response Body:
+	{"update_time":"2021-03-09T05:45:40Z","create_time":"2021-03-09T05:26:46Z","purchase_units":[{"payee":{"email_address":"sb-mji7s5143247@business.example.com","merchant_id":"FRLAY7KC26S54"},"amount":{"value":"55.06","currency_code":"USD"},"reference_id":"default","shipping":{"address":{"country_code":"US","admin_area_1":"CA","address_line_1":"1 Main St","admin_area_2":"San Jose","postal_code":"95131"},"name":{"full_name":"John Doe"}},"payments":{"captures":[{"amount":{"value":"55.06","currency_code":"USD"},"seller_protection":{"dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"],"status":"ELIGIBLE"},"update_time":"2021-03-09T05:45:40Z","create_time":"2021-03-09T05:45:40Z","final_capture":true,"seller_receivable_breakdown":{"paypal_fee":{"value":"1.90","currency_code":"USD"},"gross_amount":{"value":"55.06","currency_code":"USD"},"net_amount":{"value":"53.16","currency_code":"USD"}},"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/payments/captures/3AB02674LS5310823"},{"method":"POST","rel":"refund","href":"https://api.sandbox.paypal.com/v2/payments/captures/3AB02674LS5310823/refund"},{"method":"GET","rel":"up","href":"https://api.sandbox.paypal.com/v2/checkout/orders/36F91836C3408113H"}],"id":"3AB02674LS5310823","status":"COMPLETED"}]}}],"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/checkout/orders/36F91836C3408113H"}],"id":"36F91836C3408113H","intent":"CAPTURE","payer":{"address":{"country_code":"US"},"email_address":"sb-a7ukv5138675@personal.example.com","name":{"surname":"Doe","given_name":"John"},"payer_id":"HA4CVRW2R4J46"},"status":"COMPLETED"}
+[37m[2021/03/08 22:05:48][INFO][getOrder]  Response Body:
+	{"update_time":"2021-03-09T06:03:21Z","create_time":"2021-03-09T06:02:58Z","purchase_units":[{"payee":{"email_address":"sb-mji7s5143247@business.example.com","merchant_id":"FRLAY7KC26S54"},"amount":{"value":"22.34","currency_code":"USD"},"reference_id":"default","shipping":{"address":{"country_code":"US","admin_area_1":"CA","address_line_1":"1 Main St","admin_area_2":"San Jose","postal_code":"95131"},"name":{"full_name":"John Doe"}},"payments":{"captures":[{"amount":{"value":"22.34","currency_code":"USD"},"seller_protection":{"dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"],"status":"ELIGIBLE"},"update_time":"2021-03-09T06:03:21Z","create_time":"2021-03-09T06:03:21Z","final_capture":true,"seller_receivable_breakdown":{"paypal_fee":{"value":"0.95","currency_code":"USD"},"gross_amount":{"value":"22.34","currency_code":"USD"},"net_amount":{"value":"21.39","currency_code":"USD"}},"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/payments/captures/8DM221652X6424648"},{"method":"POST","rel":"refund","href":"https://api.sandbox.paypal.com/v2/payments/captures/8DM221652X6424648/refund"},{"method":"GET","rel":"up","href":"https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J"}],"id":"8DM221652X6424648","status":"COMPLETED"}]}}],"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J"}],"id":"69V75728MJ352525J","intent":"CAPTURE","payer":{"address":{"country_code":"US"},"email_address":"sb-a7ukv5138675@personal.example.com","name":{"surname":"Doe","given_name":"John"},"payer_id":"HA4CVRW2R4J46"},"status":"COMPLETED"}
+[37m[2021/03/08 22:05:48][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:05:48][INFO][buildResponse]  Order retrieved successfully
+[37m[2021/03/08 22:05:48][INFO][buildResponse]  3410
+[33m[2021/03/08 22:06:26][WARNING][retrieve]  /order/retrieve get called
+[33m[2021/03/08 22:06:26][WARNING][retrieve]  token:36F91836C3408113H
+[33m[2021/03/08 22:06:26][WARNING][retrieve]  token:69V75728MJ352525J
+[37m[2021/03/08 22:06:27][INFO][getOrder]  Response Body:
+	{"update_time":"2021-03-09T05:45:40Z","create_time":"2021-03-09T05:26:46Z","purchase_units":[{"payee":{"email_address":"sb-mji7s5143247@business.example.com","merchant_id":"FRLAY7KC26S54"},"amount":{"value":"55.06","currency_code":"USD"},"reference_id":"default","shipping":{"address":{"country_code":"US","admin_area_1":"CA","address_line_1":"1 Main St","admin_area_2":"San Jose","postal_code":"95131"},"name":{"full_name":"John Doe"}},"payments":{"captures":[{"amount":{"value":"55.06","currency_code":"USD"},"seller_protection":{"dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"],"status":"ELIGIBLE"},"update_time":"2021-03-09T05:45:40Z","create_time":"2021-03-09T05:45:40Z","final_capture":true,"seller_receivable_breakdown":{"paypal_fee":{"value":"1.90","currency_code":"USD"},"gross_amount":{"value":"55.06","currency_code":"USD"},"net_amount":{"value":"53.16","currency_code":"USD"}},"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/payments/captures/3AB02674LS5310823"},{"method":"POST","rel":"refund","href":"https://api.sandbox.paypal.com/v2/payments/captures/3AB02674LS5310823/refund"},{"method":"GET","rel":"up","href":"https://api.sandbox.paypal.com/v2/checkout/orders/36F91836C3408113H"}],"id":"3AB02674LS5310823","status":"COMPLETED"}]}}],"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/checkout/orders/36F91836C3408113H"}],"id":"36F91836C3408113H","intent":"CAPTURE","payer":{"address":{"country_code":"US"},"email_address":"sb-a7ukv5138675@personal.example.com","name":{"surname":"Doe","given_name":"John"},"payer_id":"HA4CVRW2R4J46"},"status":"COMPLETED"}
+[37m[2021/03/08 22:06:27][INFO][getOrder]  Response Body:
+	{"update_time":"2021-03-09T06:03:21Z","create_time":"2021-03-09T06:02:58Z","purchase_units":[{"payee":{"email_address":"sb-mji7s5143247@business.example.com","merchant_id":"FRLAY7KC26S54"},"amount":{"value":"22.34","currency_code":"USD"},"reference_id":"default","shipping":{"address":{"country_code":"US","admin_area_1":"CA","address_line_1":"1 Main St","admin_area_2":"San Jose","postal_code":"95131"},"name":{"full_name":"John Doe"}},"payments":{"captures":[{"amount":{"value":"22.34","currency_code":"USD"},"seller_protection":{"dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"],"status":"ELIGIBLE"},"update_time":"2021-03-09T06:03:21Z","create_time":"2021-03-09T06:03:21Z","final_capture":true,"seller_receivable_breakdown":{"paypal_fee":{"value":"0.95","currency_code":"USD"},"gross_amount":{"value":"22.34","currency_code":"USD"},"net_amount":{"value":"21.39","currency_code":"USD"}},"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/payments/captures/8DM221652X6424648"},{"method":"POST","rel":"refund","href":"https://api.sandbox.paypal.com/v2/payments/captures/8DM221652X6424648/refund"},{"method":"GET","rel":"up","href":"https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J"}],"id":"8DM221652X6424648","status":"COMPLETED"}]}}],"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J"}],"id":"69V75728MJ352525J","intent":"CAPTURE","payer":{"address":{"country_code":"US"},"email_address":"sb-a7ukv5138675@personal.example.com","name":{"surname":"Doe","given_name":"John"},"payer_id":"HA4CVRW2R4J46"},"status":"COMPLETED"}
+[37m[2021/03/08 22:06:27][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:06:27][INFO][buildResponse]  Order retrieved successfully
+[37m[2021/03/08 22:06:27][INFO][buildResponse]  3410
+[33m[2021/03/08 22:07:17][WARNING][retrieve]  /order/retrieve get called
+[33m[2021/03/08 22:07:17][WARNING][retrieve]  token:36F91836C3408113H
+[33m[2021/03/08 22:07:17][WARNING][retrieve]  token:69V75728MJ352525J
+[37m[2021/03/08 22:07:17][INFO][getOrder]  Response Body:
+	{"update_time":"2021-03-09T05:45:40Z","create_time":"2021-03-09T05:26:46Z","purchase_units":[{"payee":{"email_address":"sb-mji7s5143247@business.example.com","merchant_id":"FRLAY7KC26S54"},"amount":{"value":"55.06","currency_code":"USD"},"reference_id":"default","shipping":{"address":{"country_code":"US","admin_area_1":"CA","address_line_1":"1 Main St","admin_area_2":"San Jose","postal_code":"95131"},"name":{"full_name":"John Doe"}},"payments":{"captures":[{"amount":{"value":"55.06","currency_code":"USD"},"seller_protection":{"dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"],"status":"ELIGIBLE"},"update_time":"2021-03-09T05:45:40Z","create_time":"2021-03-09T05:45:40Z","final_capture":true,"seller_receivable_breakdown":{"paypal_fee":{"value":"1.90","currency_code":"USD"},"gross_amount":{"value":"55.06","currency_code":"USD"},"net_amount":{"value":"53.16","currency_code":"USD"}},"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/payments/captures/3AB02674LS5310823"},{"method":"POST","rel":"refund","href":"https://api.sandbox.paypal.com/v2/payments/captures/3AB02674LS5310823/refund"},{"method":"GET","rel":"up","href":"https://api.sandbox.paypal.com/v2/checkout/orders/36F91836C3408113H"}],"id":"3AB02674LS5310823","status":"COMPLETED"}]}}],"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/checkout/orders/36F91836C3408113H"}],"id":"36F91836C3408113H","intent":"CAPTURE","payer":{"address":{"country_code":"US"},"email_address":"sb-a7ukv5138675@personal.example.com","name":{"surname":"Doe","given_name":"John"},"payer_id":"HA4CVRW2R4J46"},"status":"COMPLETED"}
+[37m[2021/03/08 22:07:18][INFO][getOrder]  Response Body:
+	{"update_time":"2021-03-09T06:03:21Z","create_time":"2021-03-09T06:02:58Z","purchase_units":[{"payee":{"email_address":"sb-mji7s5143247@business.example.com","merchant_id":"FRLAY7KC26S54"},"amount":{"value":"22.34","currency_code":"USD"},"reference_id":"default","shipping":{"address":{"country_code":"US","admin_area_1":"CA","address_line_1":"1 Main St","admin_area_2":"San Jose","postal_code":"95131"},"name":{"full_name":"John Doe"}},"payments":{"captures":[{"amount":{"value":"22.34","currency_code":"USD"},"seller_protection":{"dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"],"status":"ELIGIBLE"},"update_time":"2021-03-09T06:03:21Z","create_time":"2021-03-09T06:03:21Z","final_capture":true,"seller_receivable_breakdown":{"paypal_fee":{"value":"0.95","currency_code":"USD"},"gross_amount":{"value":"22.34","currency_code":"USD"},"net_amount":{"value":"21.39","currency_code":"USD"}},"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/payments/captures/8DM221652X6424648"},{"method":"POST","rel":"refund","href":"https://api.sandbox.paypal.com/v2/payments/captures/8DM221652X6424648/refund"},{"method":"GET","rel":"up","href":"https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J"}],"id":"8DM221652X6424648","status":"COMPLETED"}]}}],"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J"}],"id":"69V75728MJ352525J","intent":"CAPTURE","payer":{"address":{"country_code":"US"},"email_address":"sb-a7ukv5138675@personal.example.com","name":{"surname":"Doe","given_name":"John"},"payer_id":"HA4CVRW2R4J46"},"status":"COMPLETED"}
+[37m[2021/03/08 22:07:18][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:07:18][INFO][buildResponse]  Order retrieved successfully
+[37m[2021/03/08 22:07:18][INFO][buildResponse]  3410
+[33m[2021/03/08 22:07:22][WARNING][retrieve]  /order/retrieve get called
+[33m[2021/03/08 22:07:22][WARNING][retrieve]  token:36F91836C3408113H
+[33m[2021/03/08 22:07:22][WARNING][retrieve]  token:69V75728MJ352525J
+[37m[2021/03/08 22:07:22][INFO][getOrder]  Response Body:
+	{"update_time":"2021-03-09T05:45:40Z","create_time":"2021-03-09T05:26:46Z","purchase_units":[{"payee":{"email_address":"sb-mji7s5143247@business.example.com","merchant_id":"FRLAY7KC26S54"},"amount":{"value":"55.06","currency_code":"USD"},"reference_id":"default","shipping":{"address":{"country_code":"US","admin_area_1":"CA","address_line_1":"1 Main St","admin_area_2":"San Jose","postal_code":"95131"},"name":{"full_name":"John Doe"}},"payments":{"captures":[{"amount":{"value":"55.06","currency_code":"USD"},"seller_protection":{"dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"],"status":"ELIGIBLE"},"update_time":"2021-03-09T05:45:40Z","create_time":"2021-03-09T05:45:40Z","final_capture":true,"seller_receivable_breakdown":{"paypal_fee":{"value":"1.90","currency_code":"USD"},"gross_amount":{"value":"55.06","currency_code":"USD"},"net_amount":{"value":"53.16","currency_code":"USD"}},"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/payments/captures/3AB02674LS5310823"},{"method":"POST","rel":"refund","href":"https://api.sandbox.paypal.com/v2/payments/captures/3AB02674LS5310823/refund"},{"method":"GET","rel":"up","href":"https://api.sandbox.paypal.com/v2/checkout/orders/36F91836C3408113H"}],"id":"3AB02674LS5310823","status":"COMPLETED"}]}}],"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/checkout/orders/36F91836C3408113H"}],"id":"36F91836C3408113H","intent":"CAPTURE","payer":{"address":{"country_code":"US"},"email_address":"sb-a7ukv5138675@personal.example.com","name":{"surname":"Doe","given_name":"John"},"payer_id":"HA4CVRW2R4J46"},"status":"COMPLETED"}
+[37m[2021/03/08 22:07:22][INFO][getOrder]  Response Body:
+	{"update_time":"2021-03-09T06:03:21Z","create_time":"2021-03-09T06:02:58Z","purchase_units":[{"payee":{"email_address":"sb-mji7s5143247@business.example.com","merchant_id":"FRLAY7KC26S54"},"amount":{"value":"22.34","currency_code":"USD"},"reference_id":"default","shipping":{"address":{"country_code":"US","admin_area_1":"CA","address_line_1":"1 Main St","admin_area_2":"San Jose","postal_code":"95131"},"name":{"full_name":"John Doe"}},"payments":{"captures":[{"amount":{"value":"22.34","currency_code":"USD"},"seller_protection":{"dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"],"status":"ELIGIBLE"},"update_time":"2021-03-09T06:03:21Z","create_time":"2021-03-09T06:03:21Z","final_capture":true,"seller_receivable_breakdown":{"paypal_fee":{"value":"0.95","currency_code":"USD"},"gross_amount":{"value":"22.34","currency_code":"USD"},"net_amount":{"value":"21.39","currency_code":"USD"}},"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/payments/captures/8DM221652X6424648"},{"method":"POST","rel":"refund","href":"https://api.sandbox.paypal.com/v2/payments/captures/8DM221652X6424648/refund"},{"method":"GET","rel":"up","href":"https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J"}],"id":"8DM221652X6424648","status":"COMPLETED"}]}}],"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J"}],"id":"69V75728MJ352525J","intent":"CAPTURE","payer":{"address":{"country_code":"US"},"email_address":"sb-a7ukv5138675@personal.example.com","name":{"surname":"Doe","given_name":"John"},"payer_id":"HA4CVRW2R4J46"},"status":"COMPLETED"}
+[37m[2021/03/08 22:07:22][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:07:22][INFO][buildResponse]  Order retrieved successfully
+[37m[2021/03/08 22:07:22][INFO][buildResponse]  3410
+[33m[2021/03/08 22:07:59][WARNING][retrieve]  /order/retrieve get called
+[33m[2021/03/08 22:07:59][WARNING][retrieve]  token:36F91836C3408113H
+[33m[2021/03/08 22:07:59][WARNING][retrieve]  token:69V75728MJ352525J
+[37m[2021/03/08 22:07:59][INFO][getOrder]  Response Body:
+	{"update_time":"2021-03-09T05:45:40Z","create_time":"2021-03-09T05:26:46Z","purchase_units":[{"payee":{"email_address":"sb-mji7s5143247@business.example.com","merchant_id":"FRLAY7KC26S54"},"amount":{"value":"55.06","currency_code":"USD"},"reference_id":"default","shipping":{"address":{"country_code":"US","admin_area_1":"CA","address_line_1":"1 Main St","admin_area_2":"San Jose","postal_code":"95131"},"name":{"full_name":"John Doe"}},"payments":{"captures":[{"amount":{"value":"55.06","currency_code":"USD"},"seller_protection":{"dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"],"status":"ELIGIBLE"},"update_time":"2021-03-09T05:45:40Z","create_time":"2021-03-09T05:45:40Z","final_capture":true,"seller_receivable_breakdown":{"paypal_fee":{"value":"1.90","currency_code":"USD"},"gross_amount":{"value":"55.06","currency_code":"USD"},"net_amount":{"value":"53.16","currency_code":"USD"}},"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/payments/captures/3AB02674LS5310823"},{"method":"POST","rel":"refund","href":"https://api.sandbox.paypal.com/v2/payments/captures/3AB02674LS5310823/refund"},{"method":"GET","rel":"up","href":"https://api.sandbox.paypal.com/v2/checkout/orders/36F91836C3408113H"}],"id":"3AB02674LS5310823","status":"COMPLETED"}]}}],"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/checkout/orders/36F91836C3408113H"}],"id":"36F91836C3408113H","intent":"CAPTURE","payer":{"address":{"country_code":"US"},"email_address":"sb-a7ukv5138675@personal.example.com","name":{"surname":"Doe","given_name":"John"},"payer_id":"HA4CVRW2R4J46"},"status":"COMPLETED"}
+[37m[2021/03/08 22:07:59][INFO][getOrder]  Response Body:
+	{"update_time":"2021-03-09T06:03:21Z","create_time":"2021-03-09T06:02:58Z","purchase_units":[{"payee":{"email_address":"sb-mji7s5143247@business.example.com","merchant_id":"FRLAY7KC26S54"},"amount":{"value":"22.34","currency_code":"USD"},"reference_id":"default","shipping":{"address":{"country_code":"US","admin_area_1":"CA","address_line_1":"1 Main St","admin_area_2":"San Jose","postal_code":"95131"},"name":{"full_name":"John Doe"}},"payments":{"captures":[{"amount":{"value":"22.34","currency_code":"USD"},"seller_protection":{"dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"],"status":"ELIGIBLE"},"update_time":"2021-03-09T06:03:21Z","create_time":"2021-03-09T06:03:21Z","final_capture":true,"seller_receivable_breakdown":{"paypal_fee":{"value":"0.95","currency_code":"USD"},"gross_amount":{"value":"22.34","currency_code":"USD"},"net_amount":{"value":"21.39","currency_code":"USD"}},"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/payments/captures/8DM221652X6424648"},{"method":"POST","rel":"refund","href":"https://api.sandbox.paypal.com/v2/payments/captures/8DM221652X6424648/refund"},{"method":"GET","rel":"up","href":"https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J"}],"id":"8DM221652X6424648","status":"COMPLETED"}]}}],"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J"}],"id":"69V75728MJ352525J","intent":"CAPTURE","payer":{"address":{"country_code":"US"},"email_address":"sb-a7ukv5138675@personal.example.com","name":{"surname":"Doe","given_name":"John"},"payer_id":"HA4CVRW2R4J46"},"status":"COMPLETED"}
+[37m[2021/03/08 22:07:59][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:07:59][INFO][buildResponse]  Order retrieved successfully
+[37m[2021/03/08 22:07:59][INFO][buildResponse]  3410
+[33m[2021/03/08 22:17:50][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:17:50][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:17:50][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:17:50][INFO][buildResponse]  Response being built with Result: CART_ITEM_NOT_EXIST
+[37m[2021/03/08 22:17:50][INFO][buildResponse]  Shopping cart item does not exist.
+[37m[2021/03/08 22:17:50][INFO][buildResponse]  312
+[37m[2021/03/08 22:19:09][INFO][sendRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[37m[2021/03/08 22:19:09][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:19:09][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:19:09][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:19:09][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:19:09][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.IDMRequest@48b45142, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:19:09][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:19:09][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:19:09][INFO][requestPrivilege]  Reading response
+[37m[2021/03/08 22:19:09][INFO][requestPrivilege]  Received resultCode: 141
+[37m[2021/03/08 22:19:09][INFO][requestPrivilege]  Received Message: User has insufficient privilege level.
+[37m[2021/03/08 22:19:09][INFO][insert]  user found
+[37m[2021/03/08 22:19:09][INFO][insert]  Quantity valid
+[37m[2021/03/08 22:19:09][INFO][insert]  Movie_id valid
+[37m[2021/03/08 22:19:09][INFO][insert]  SQL query...
+[37m[2021/03/08 22:19:09][INFO][buildResponse]  Response being built with Result: CART_ITEM_INSERT_SUCCESSFUL
+[37m[2021/03/08 22:19:09][INFO][buildResponse]  Shopping cart item inserted successfully.
+[37m[2021/03/08 22:19:09][INFO][buildResponse]  3100
+[37m[2021/03/08 22:19:47][INFO][sendRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[37m[2021/03/08 22:19:47][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:19:47][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:19:47][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:19:47][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:19:47][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.IDMRequest@7ad2b792, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:19:47][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:19:47][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:19:47][INFO][requestPrivilege]  Reading response
+[37m[2021/03/08 22:19:47][INFO][requestPrivilege]  Received resultCode: 141
+[37m[2021/03/08 22:19:47][INFO][requestPrivilege]  Received Message: User has insufficient privilege level.
+[37m[2021/03/08 22:19:47][INFO][insert]  user found
+[37m[2021/03/08 22:19:47][INFO][insert]  Quantity valid
+[37m[2021/03/08 22:19:47][INFO][insert]  Movie_id valid
+[37m[2021/03/08 22:19:47][INFO][insert]  SQL query...
+[37m[2021/03/08 22:19:47][INFO][buildResponse]  Response being built with Result: CART_ITEM_INSERT_SUCCESSFUL
+[37m[2021/03/08 22:19:47][INFO][buildResponse]  Shopping cart item inserted successfully.
+[37m[2021/03/08 22:19:47][INFO][buildResponse]  3100
+[37m[2021/03/08 22:20:08][INFO][sendRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[37m[2021/03/08 22:20:08][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:20:08][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:20:08][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:20:08][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:20:08][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.IDMRequest@380e2135, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:20:08][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:20:08][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:20:08][INFO][requestPrivilege]  Reading response
+[37m[2021/03/08 22:20:08][INFO][requestPrivilege]  Received resultCode: 141
+[37m[2021/03/08 22:20:08][INFO][requestPrivilege]  Received Message: User has insufficient privilege level.
+[37m[2021/03/08 22:20:08][INFO][insert]  user found
+[37m[2021/03/08 22:20:08][INFO][insert]  Quantity valid
+[37m[2021/03/08 22:20:08][INFO][insert]  Movie_id valid
+[37m[2021/03/08 22:20:08][INFO][insert]  SQL query...
+[33m[2021/03/08 22:20:08][WARNING][insert]  Duplicate entry 'apiGatewayTest@uci.edu-tt4154796' for key 'cart.cart_email_movie_id_uindex'
+[37m[2021/03/08 22:20:08][INFO][buildResponse]  Response being built with Result: DUPLICATE_INSERTION
+[37m[2021/03/08 22:20:08][INFO][buildResponse]  Ducplication,insertion.
+[37m[2021/03/08 22:20:08][INFO][buildResponse]  311
+[33m[2021/03/08 22:20:13][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:20:13][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:20:13][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:20:13][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:20:13][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:20:13][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:20:13][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:20:13][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:20:13][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:20:13][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:20:13][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@1006019d, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:20:13][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:20:13][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:20:13][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:20:13][INFO][retrieve]  2
+[37m[2021/03/08 22:20:13][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:20:13][INFO][retrieve]  0
+[37m[2021/03/08 22:20:13][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:20:13][INFO][retrieve]  1
+[37m[2021/03/08 22:20:13][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:20:13][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:20:13][INFO][buildResponse]  3130
+[37m[2021/03/08 22:22:35][INFO][sendRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[37m[2021/03/08 22:22:35][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:22:35][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:22:35][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:22:35][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:22:35][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.IDMRequest@24cd0506, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:22:35][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:22:35][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:22:35][INFO][requestPrivilege]  Reading response
+[37m[2021/03/08 22:22:35][INFO][requestPrivilege]  Received resultCode: 141
+[37m[2021/03/08 22:22:35][INFO][requestPrivilege]  Received Message: User has insufficient privilege level.
+[37m[2021/03/08 22:22:35][INFO][insert]  user found
+[37m[2021/03/08 22:22:35][INFO][insert]  Quantity valid
+[37m[2021/03/08 22:22:35][INFO][insert]  Movie_id valid
+[37m[2021/03/08 22:22:35][INFO][insert]  SQL query...
+[33m[2021/03/08 22:22:35][WARNING][insert]  Duplicate entry 'apiGatewayTest@uci.edu-tt4154796' for key 'cart.cart_email_movie_id_uindex'
+[37m[2021/03/08 22:22:35][INFO][buildResponse]  Response being built with Result: DUPLICATE_INSERTION
+[37m[2021/03/08 22:22:35][INFO][buildResponse]  Ducplication,insertion.
+[37m[2021/03/08 22:22:35][INFO][buildResponse]  311
+[33m[2021/03/08 22:22:45][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:22:45][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:22:45][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:22:45][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:22:45][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:22:45][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:22:45][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:22:45][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:22:45][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:22:45][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:22:45][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@720b5ff1, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:22:45][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:22:45][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:22:45][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:22:45][INFO][retrieve]  2
+[37m[2021/03/08 22:22:45][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:22:45][INFO][retrieve]  0
+[37m[2021/03/08 22:22:45][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:22:45][INFO][retrieve]  1
+[37m[2021/03/08 22:22:45][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:22:45][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:22:45][INFO][buildResponse]  3130
+[37m[2021/03/08 22:22:47][INFO][buildResponse]  Response being built with Result: CART_ITEM_DELETE_SUCCESSFUL
+[37m[2021/03/08 22:22:47][INFO][buildResponse]  Shopping cart item deleted successfully.
+[37m[2021/03/08 22:22:47][INFO][buildResponse]  3120
+[33m[2021/03/08 22:22:49][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:22:49][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:22:49][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:22:49][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:22:49][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:22:49][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:22:49][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:22:49][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:22:49][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:22:49][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:22:49][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@68345320, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:22:49][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:22:49][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:22:49][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:22:49][INFO][retrieve]  1
+[37m[2021/03/08 22:22:49][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:22:49][INFO][retrieve]  0
+[37m[2021/03/08 22:22:49][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:22:49][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:22:49][INFO][buildResponse]  3130
+[33m[2021/03/08 22:23:03][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:23:03][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:23:03][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:23:03][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:23:03][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:23:03][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:23:03][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:23:03][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:23:03][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:23:03][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:23:03][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@2e063fa2, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:23:03][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:23:03][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:23:03][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:23:03][INFO][retrieve]  1
+[37m[2021/03/08 22:23:03][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:23:03][INFO][retrieve]  0
+[37m[2021/03/08 22:23:03][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:23:03][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:23:03][INFO][buildResponse]  3130
+[33m[2021/03/08 22:23:10][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:23:10][INFO][update]  Quantity valid
+[37m[2021/03/08 22:23:10][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:23:10][INFO][update]  SQL query...
+[37m[2021/03/08 22:23:10][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:23:10][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:23:10][INFO][buildResponse]  3110
+[33m[2021/03/08 22:23:11][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:23:11][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:23:11][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:23:11][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:23:11][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:23:11][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:23:11][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:23:11][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:23:11][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:23:11][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:23:11][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@1f22f886, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:23:11][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:23:11][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:23:11][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:23:11][INFO][retrieve]  1
+[37m[2021/03/08 22:23:11][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:23:11][INFO][retrieve]  0
+[37m[2021/03/08 22:23:11][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:23:11][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:23:11][INFO][buildResponse]  3130
+[33m[2021/03/08 22:23:13][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:23:13][INFO][update]  Quantity valid
+[37m[2021/03/08 22:23:13][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:23:13][INFO][update]  SQL query...
+[37m[2021/03/08 22:23:13][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:23:13][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:23:13][INFO][buildResponse]  3110
+[33m[2021/03/08 22:23:14][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:23:14][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:23:14][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:23:14][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:23:14][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:23:14][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:23:14][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:23:14][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:23:14][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:23:14][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:23:14][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@1d3d92ef, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:23:14][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:23:14][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:23:14][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:23:14][INFO][retrieve]  1
+[37m[2021/03/08 22:23:14][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:23:14][INFO][retrieve]  0
+[37m[2021/03/08 22:23:14][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:23:14][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:23:14][INFO][buildResponse]  3130
+[33m[2021/03/08 22:23:15][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:23:15][INFO][update]  Quantity valid
+[37m[2021/03/08 22:23:15][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:23:15][INFO][update]  SQL query...
+[37m[2021/03/08 22:23:15][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:23:15][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:23:15][INFO][buildResponse]  3110
+[33m[2021/03/08 22:23:16][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:23:16][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:23:16][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:23:16][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:23:16][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:23:16][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:23:16][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:23:16][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:23:16][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:23:16][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:23:16][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@7490b1ce, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:23:16][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:23:16][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:23:16][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:23:16][INFO][retrieve]  1
+[37m[2021/03/08 22:23:16][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:23:16][INFO][retrieve]  0
+[37m[2021/03/08 22:23:16][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:23:16][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:23:16][INFO][buildResponse]  3130
+[33m[2021/03/08 22:23:23][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:23:23][INFO][update]  Quantity valid
+[37m[2021/03/08 22:23:23][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:23:23][INFO][update]  SQL query...
+[37m[2021/03/08 22:23:23][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:23:23][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:23:23][INFO][buildResponse]  3110
+[33m[2021/03/08 22:23:24][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:23:24][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:23:24][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:23:24][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:23:24][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:23:24][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:23:24][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:23:24][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:23:24][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:23:24][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:23:24][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@27f212c, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:23:24][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:23:24][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:23:24][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:23:24][INFO][retrieve]  1
+[37m[2021/03/08 22:23:24][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:23:24][INFO][retrieve]  0
+[37m[2021/03/08 22:23:24][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:23:24][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:23:24][INFO][buildResponse]  3130
+[33m[2021/03/08 22:23:25][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:23:25][INFO][update]  Quantity valid
+[37m[2021/03/08 22:23:25][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:23:25][INFO][update]  SQL query...
+[37m[2021/03/08 22:23:25][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:23:25][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:23:25][INFO][buildResponse]  3110
+[33m[2021/03/08 22:23:26][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:23:26][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:23:26][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:23:26][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:23:26][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:23:26][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:23:26][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:23:26][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:23:26][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:23:26][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:23:26][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@628a8c3c, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:23:28][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:23:28][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:23:28][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:23:28][INFO][retrieve]  1
+[37m[2021/03/08 22:23:28][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:23:28][INFO][retrieve]  0
+[37m[2021/03/08 22:23:28][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:23:28][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:23:28][INFO][buildResponse]  3130
+[33m[2021/03/08 22:23:29][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:23:29][INFO][update]  Quantity valid
+[37m[2021/03/08 22:23:29][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:23:29][INFO][update]  SQL query...
+[37m[2021/03/08 22:23:29][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:23:29][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:23:29][INFO][buildResponse]  3110
+[33m[2021/03/08 22:23:30][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:23:30][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:23:30][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:23:30][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:23:30][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:23:30][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:23:30][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:23:30][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:23:30][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:23:30][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:23:30][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@69160607, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:23:30][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:23:30][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:23:30][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:23:30][INFO][retrieve]  1
+[37m[2021/03/08 22:23:30][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:23:30][INFO][retrieve]  0
+[37m[2021/03/08 22:23:30][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:23:30][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:23:30][INFO][buildResponse]  3130
+[33m[2021/03/08 22:23:39][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:23:39][INFO][update]  Quantity valid
+[37m[2021/03/08 22:23:39][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:23:39][INFO][update]  SQL query...
+[37m[2021/03/08 22:23:39][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:23:39][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:23:39][INFO][buildResponse]  3110
+[33m[2021/03/08 22:23:40][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:23:40][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:23:40][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:23:40][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:23:40][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:23:40][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:23:40][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:23:40][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:23:40][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:23:40][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:23:40][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@790f4e4a, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:23:40][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:23:40][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:23:40][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:23:40][INFO][retrieve]  1
+[37m[2021/03/08 22:23:40][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:23:40][INFO][retrieve]  0
+[37m[2021/03/08 22:23:40][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:23:40][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:23:40][INFO][buildResponse]  3130
+[33m[2021/03/08 22:23:50][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:23:50][INFO][update]  Quantity valid
+[37m[2021/03/08 22:23:50][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:23:50][INFO][update]  SQL query...
+[37m[2021/03/08 22:23:50][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:23:50][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:23:50][INFO][buildResponse]  3110
+[33m[2021/03/08 22:23:51][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:23:51][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:23:51][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:23:51][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:23:51][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:23:51][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:23:51][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:23:51][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:23:51][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:23:51][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:23:51][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@11f8c58, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:23:52][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:23:52][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:23:52][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:23:52][INFO][retrieve]  1
+[37m[2021/03/08 22:23:52][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:23:52][INFO][retrieve]  0
+[37m[2021/03/08 22:23:52][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:23:52][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:23:52][INFO][buildResponse]  3130
+[33m[2021/03/08 22:23:57][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:23:57][INFO][update]  Quantity valid
+[37m[2021/03/08 22:23:57][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:23:57][INFO][update]  SQL query...
+[37m[2021/03/08 22:23:57][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:23:57][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:23:57][INFO][buildResponse]  3110
+[33m[2021/03/08 22:23:58][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:23:58][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:23:58][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:23:58][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:23:58][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:23:58][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:23:58][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:23:58][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:23:58][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:23:58][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:23:58][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@2a334513, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:23:58][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:23:58][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:23:58][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:23:58][INFO][retrieve]  1
+[37m[2021/03/08 22:23:58][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:23:58][INFO][retrieve]  0
+[37m[2021/03/08 22:23:58][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:23:58][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:23:58][INFO][buildResponse]  3130
+[33m[2021/03/08 22:24:00][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:24:00][INFO][update]  Quantity valid
+[37m[2021/03/08 22:24:00][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:24:00][INFO][update]  SQL query...
+[37m[2021/03/08 22:24:00][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:24:00][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:24:00][INFO][buildResponse]  3110
+[33m[2021/03/08 22:24:01][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:24:01][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:24:01][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:24:01][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:24:01][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:24:01][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:24:01][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:24:01][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:24:01][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:24:01][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:24:01][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@68db70eb, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:24:01][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:24:01][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:24:01][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:24:01][INFO][retrieve]  1
+[37m[2021/03/08 22:24:01][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:24:01][INFO][retrieve]  0
+[37m[2021/03/08 22:24:01][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:24:01][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:24:01][INFO][buildResponse]  3130
+[33m[2021/03/08 22:24:02][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:24:02][INFO][update]  Quantity valid
+[37m[2021/03/08 22:24:02][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:24:02][INFO][update]  SQL query...
+[37m[2021/03/08 22:24:02][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:24:02][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:24:02][INFO][buildResponse]  3110
+[33m[2021/03/08 22:24:03][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:24:03][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:24:03][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:24:03][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:24:03][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:24:03][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:24:03][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:24:03][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:24:03][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:24:03][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:24:03][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@5a4633e3, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:24:03][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:24:03][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:24:03][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:24:03][INFO][retrieve]  1
+[37m[2021/03/08 22:24:03][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:24:03][INFO][retrieve]  0
+[37m[2021/03/08 22:24:03][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:24:03][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:24:03][INFO][buildResponse]  3130
+[33m[2021/03/08 22:24:04][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:24:04][INFO][update]  Quantity valid
+[37m[2021/03/08 22:24:04][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:24:04][INFO][update]  SQL query...
+[37m[2021/03/08 22:24:04][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:24:04][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:24:04][INFO][buildResponse]  3110
+[33m[2021/03/08 22:24:05][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:24:05][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:24:05][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:24:05][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:24:05][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:24:05][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:24:05][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:24:05][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:24:05][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:24:05][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:24:05][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@704b1faf, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:24:05][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:24:05][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:24:05][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:24:05][INFO][retrieve]  1
+[37m[2021/03/08 22:24:05][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:24:05][INFO][retrieve]  0
+[37m[2021/03/08 22:24:05][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:24:05][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:24:05][INFO][buildResponse]  3130
+[33m[2021/03/08 22:24:07][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:24:07][INFO][update]  Quantity valid
+[37m[2021/03/08 22:24:07][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:24:07][INFO][update]  SQL query...
+[37m[2021/03/08 22:24:07][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:24:07][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:24:07][INFO][buildResponse]  3110
+[33m[2021/03/08 22:24:08][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:24:08][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:24:08][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:24:08][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:24:08][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:24:08][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:24:08][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:24:08][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:24:08][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:24:08][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:24:08][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@360dcf30, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:24:08][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:24:08][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:24:08][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:24:08][INFO][retrieve]  1
+[37m[2021/03/08 22:24:08][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:24:08][INFO][retrieve]  0
+[37m[2021/03/08 22:24:08][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:24:08][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:24:08][INFO][buildResponse]  3130
+[33m[2021/03/08 22:24:09][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:24:09][INFO][update]  Quantity valid
+[37m[2021/03/08 22:24:09][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:24:09][INFO][update]  SQL query...
+[37m[2021/03/08 22:24:09][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:24:09][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:24:09][INFO][buildResponse]  3110
+[33m[2021/03/08 22:24:10][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:24:10][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:24:10][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:24:10][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:24:10][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:24:10][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:24:10][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:24:10][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:24:10][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:24:10][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:24:10][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@461724c8, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:24:10][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:24:10][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:24:10][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:24:10][INFO][retrieve]  1
+[37m[2021/03/08 22:24:10][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:24:10][INFO][retrieve]  0
+[37m[2021/03/08 22:24:10][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:24:10][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:24:10][INFO][buildResponse]  3130
+[33m[2021/03/08 22:24:12][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:24:12][INFO][update]  Quantity valid
+[37m[2021/03/08 22:24:12][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:24:12][INFO][update]  SQL query...
+[37m[2021/03/08 22:24:12][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:24:12][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:24:12][INFO][buildResponse]  3110
+[33m[2021/03/08 22:24:13][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:24:13][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:24:13][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:24:13][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:24:13][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:24:13][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:24:13][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:24:13][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:24:13][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:24:13][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:24:13][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@a9ca373, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:24:13][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:24:13][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:24:13][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:24:13][INFO][retrieve]  1
+[37m[2021/03/08 22:24:13][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:24:13][INFO][retrieve]  0
+[37m[2021/03/08 22:24:13][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:24:13][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:24:13][INFO][buildResponse]  3130
+[33m[2021/03/08 22:24:15][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:24:15][INFO][update]  Quantity valid
+[37m[2021/03/08 22:24:15][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:24:15][INFO][update]  SQL query...
+[37m[2021/03/08 22:24:15][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:24:15][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:24:15][INFO][buildResponse]  3110
+[33m[2021/03/08 22:24:16][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:24:16][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:24:16][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:24:16][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:24:16][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:24:16][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:24:16][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:24:16][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:24:16][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:24:16][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:24:16][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@5d161a18, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:24:16][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:24:16][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:24:16][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:24:16][INFO][retrieve]  1
+[37m[2021/03/08 22:24:16][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:24:16][INFO][retrieve]  0
+[37m[2021/03/08 22:24:16][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:24:16][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:24:16][INFO][buildResponse]  3130
+[33m[2021/03/08 22:24:17][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:24:17][INFO][update]  Quantity valid
+[37m[2021/03/08 22:24:17][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:24:17][INFO][update]  SQL query...
+[37m[2021/03/08 22:24:17][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:24:17][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:24:17][INFO][buildResponse]  3110
+[33m[2021/03/08 22:24:18][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:24:18][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:24:18][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:24:18][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:24:18][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:24:18][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:24:18][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:24:18][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:24:18][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:24:18][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:24:18][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@777680e4, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:24:18][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:24:18][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:24:18][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:24:18][INFO][retrieve]  1
+[37m[2021/03/08 22:24:18][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:24:18][INFO][retrieve]  0
+[37m[2021/03/08 22:24:18][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:24:18][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:24:18][INFO][buildResponse]  3130
+[37m[2021/03/08 22:24:23][INFO][place]  Total amount $205.22
+[37m[2021/03/08 22:24:24][INFO][createOrder]  Order ID: 7VU57385830593140
+[37m[2021/03/08 22:24:24][INFO][lambda$createOrder$0]  self => GET:https://api.sandbox.paypal.com/v2/checkout/orders/7VU57385830593140
+[37m[2021/03/08 22:24:24][INFO][lambda$createOrder$0]  approve => GET:https://www.sandbox.paypal.com/checkoutnow?token=7VU57385830593140
+[37m[2021/03/08 22:24:24][INFO][lambda$createOrder$0]  update => PATCH:https://api.sandbox.paypal.com/v2/checkout/orders/7VU57385830593140
+[37m[2021/03/08 22:24:24][INFO][lambda$createOrder$0]  capture => POST:https://api.sandbox.paypal.com/v2/checkout/orders/7VU57385830593140/capture
+[33m[2021/03/08 22:24:24][WARNING][place]  com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO transaction(sale_id, token)
+VALUE (73, '7VU57385830593140')
+[37m[2021/03/08 22:24:24][INFO][buildResponse]  Response being built with Result: ORDER_PLACE_SUCCESSFUL
+[37m[2021/03/08 22:24:24][INFO][buildResponse]  Order placed successfully
+[37m[2021/03/08 22:24:24][INFO][buildResponse]  3400
+[37m[2021/03/08 22:24:28][INFO][place]  Total amount $205.22
+[37m[2021/03/08 22:24:29][INFO][createOrder]  Order ID: 92V39276P75085930
+[37m[2021/03/08 22:24:29][INFO][lambda$createOrder$0]  self => GET:https://api.sandbox.paypal.com/v2/checkout/orders/92V39276P75085930
+[37m[2021/03/08 22:24:29][INFO][lambda$createOrder$0]  approve => GET:https://www.sandbox.paypal.com/checkoutnow?token=92V39276P75085930
+[37m[2021/03/08 22:24:29][INFO][lambda$createOrder$0]  update => PATCH:https://api.sandbox.paypal.com/v2/checkout/orders/92V39276P75085930
+[37m[2021/03/08 22:24:29][INFO][lambda$createOrder$0]  capture => POST:https://api.sandbox.paypal.com/v2/checkout/orders/92V39276P75085930/capture
+[33m[2021/03/08 22:24:29][WARNING][place]  com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO transaction(sale_id, token)
+VALUE (74, '92V39276P75085930')
+[37m[2021/03/08 22:24:29][INFO][buildResponse]  Response being built with Result: ORDER_PLACE_SUCCESSFUL
+[37m[2021/03/08 22:24:29][INFO][buildResponse]  Order placed successfully
+[37m[2021/03/08 22:24:29][INFO][buildResponse]  3400
+[37m[2021/03/08 22:24:44][INFO][complete]  token:7VU57385830593140
+[37m[2021/03/08 22:24:44][INFO][complete]  PayerID:HA4CVRW2R4J46
+[37m[2021/03/08 22:24:44][INFO][complete]  Token is valid
+[37m[2021/03/08 22:24:46][INFO][captureOrder]  Capture_ID:4BM6271081950735N
+[37m[2021/03/08 22:24:46][INFO][lambda$captureOrder$1]  	self => GET:https://api.sandbox.paypal.com/v2/payments/captures/4BM6271081950735N
+[37m[2021/03/08 22:24:46][INFO][lambda$captureOrder$1]  	refund => POST:https://api.sandbox.paypal.com/v2/payments/captures/4BM6271081950735N/refund
+[37m[2021/03/08 22:24:46][INFO][lambda$captureOrder$1]  	up => GET:https://api.sandbox.paypal.com/v2/checkout/orders/7VU57385830593140
+[37m[2021/03/08 22:24:46][INFO][buildResponse]  Response being built with Result: ORDER_COMPLETED_SUCCESSFUL
+[37m[2021/03/08 22:24:46][INFO][buildResponse]  Order is completed successfully.
+[37m[2021/03/08 22:24:46][INFO][buildResponse]  3420
+[33m[2021/03/08 22:24:50][WARNING][retrieve]  /order/retrieve get called
+[33m[2021/03/08 22:24:50][WARNING][retrieve]  token:36F91836C3408113H
+[33m[2021/03/08 22:24:50][WARNING][retrieve]  token:69V75728MJ352525J
+[33m[2021/03/08 22:24:50][WARNING][retrieve]  token:7VU57385830593140
+[37m[2021/03/08 22:24:50][INFO][getOrder]  Response Body:
+	{"update_time":"2021-03-09T05:45:40Z","create_time":"2021-03-09T05:26:46Z","purchase_units":[{"payee":{"email_address":"sb-mji7s5143247@business.example.com","merchant_id":"FRLAY7KC26S54"},"amount":{"value":"55.06","currency_code":"USD"},"reference_id":"default","shipping":{"address":{"country_code":"US","admin_area_1":"CA","address_line_1":"1 Main St","admin_area_2":"San Jose","postal_code":"95131"},"name":{"full_name":"John Doe"}},"payments":{"captures":[{"amount":{"value":"55.06","currency_code":"USD"},"seller_protection":{"dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"],"status":"ELIGIBLE"},"update_time":"2021-03-09T05:45:40Z","create_time":"2021-03-09T05:45:40Z","final_capture":true,"seller_receivable_breakdown":{"paypal_fee":{"value":"1.90","currency_code":"USD"},"gross_amount":{"value":"55.06","currency_code":"USD"},"net_amount":{"value":"53.16","currency_code":"USD"}},"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/payments/captures/3AB02674LS5310823"},{"method":"POST","rel":"refund","href":"https://api.sandbox.paypal.com/v2/payments/captures/3AB02674LS5310823/refund"},{"method":"GET","rel":"up","href":"https://api.sandbox.paypal.com/v2/checkout/orders/36F91836C3408113H"}],"id":"3AB02674LS5310823","status":"COMPLETED"}]}}],"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/checkout/orders/36F91836C3408113H"}],"id":"36F91836C3408113H","intent":"CAPTURE","payer":{"address":{"country_code":"US"},"email_address":"sb-a7ukv5138675@personal.example.com","name":{"surname":"Doe","given_name":"John"},"payer_id":"HA4CVRW2R4J46"},"status":"COMPLETED"}
+[37m[2021/03/08 22:24:50][INFO][getOrder]  Response Body:
+	{"update_time":"2021-03-09T06:03:21Z","create_time":"2021-03-09T06:02:58Z","purchase_units":[{"payee":{"email_address":"sb-mji7s5143247@business.example.com","merchant_id":"FRLAY7KC26S54"},"amount":{"value":"22.34","currency_code":"USD"},"reference_id":"default","shipping":{"address":{"country_code":"US","admin_area_1":"CA","address_line_1":"1 Main St","admin_area_2":"San Jose","postal_code":"95131"},"name":{"full_name":"John Doe"}},"payments":{"captures":[{"amount":{"value":"22.34","currency_code":"USD"},"seller_protection":{"dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"],"status":"ELIGIBLE"},"update_time":"2021-03-09T06:03:21Z","create_time":"2021-03-09T06:03:21Z","final_capture":true,"seller_receivable_breakdown":{"paypal_fee":{"value":"0.95","currency_code":"USD"},"gross_amount":{"value":"22.34","currency_code":"USD"},"net_amount":{"value":"21.39","currency_code":"USD"}},"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/payments/captures/8DM221652X6424648"},{"method":"POST","rel":"refund","href":"https://api.sandbox.paypal.com/v2/payments/captures/8DM221652X6424648/refund"},{"method":"GET","rel":"up","href":"https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J"}],"id":"8DM221652X6424648","status":"COMPLETED"}]}}],"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/checkout/orders/69V75728MJ352525J"}],"id":"69V75728MJ352525J","intent":"CAPTURE","payer":{"address":{"country_code":"US"},"email_address":"sb-a7ukv5138675@personal.example.com","name":{"surname":"Doe","given_name":"John"},"payer_id":"HA4CVRW2R4J46"},"status":"COMPLETED"}
+[37m[2021/03/08 22:24:51][INFO][getOrder]  Response Body:
+	{"update_time":"2021-03-09T06:24:45Z","create_time":"2021-03-09T06:24:24Z","purchase_units":[{"payee":{"email_address":"sb-mji7s5143247@business.example.com","merchant_id":"FRLAY7KC26S54"},"amount":{"value":"205.22","currency_code":"USD"},"reference_id":"default","shipping":{"address":{"country_code":"US","admin_area_1":"CA","address_line_1":"1 Main St","admin_area_2":"San Jose","postal_code":"95131"},"name":{"full_name":"John Doe"}},"payments":{"captures":[{"amount":{"value":"205.22","currency_code":"USD"},"seller_protection":{"dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"],"status":"ELIGIBLE"},"update_time":"2021-03-09T06:24:45Z","create_time":"2021-03-09T06:24:45Z","final_capture":true,"seller_receivable_breakdown":{"paypal_fee":{"value":"6.25","currency_code":"USD"},"gross_amount":{"value":"205.22","currency_code":"USD"},"net_amount":{"value":"198.97","currency_code":"USD"}},"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/payments/captures/4BM6271081950735N"},{"method":"POST","rel":"refund","href":"https://api.sandbox.paypal.com/v2/payments/captures/4BM6271081950735N/refund"},{"method":"GET","rel":"up","href":"https://api.sandbox.paypal.com/v2/checkout/orders/7VU57385830593140"}],"id":"4BM6271081950735N","status":"COMPLETED"}]}}],"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/checkout/orders/7VU57385830593140"}],"id":"7VU57385830593140","intent":"CAPTURE","payer":{"address":{"country_code":"US"},"email_address":"sb-a7ukv5138675@personal.example.com","name":{"surname":"Doe","given_name":"John"},"payer_id":"HA4CVRW2R4J46"},"status":"COMPLETED"}
+[37m[2021/03/08 22:24:51][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:24:51][INFO][buildResponse]  Order retrieved successfully
+[37m[2021/03/08 22:24:51][INFO][buildResponse]  3410
+[33m[2021/03/08 22:33:12][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:33:12][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:33:12][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:33:12][INFO][buildResponse]  Response being built with Result: CART_ITEM_NOT_EXIST
+[37m[2021/03/08 22:33:12][INFO][buildResponse]  Shopping cart item does not exist.
+[37m[2021/03/08 22:33:12][INFO][buildResponse]  312
+[37m[2021/03/08 22:34:17][INFO][sendRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[37m[2021/03/08 22:34:17][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:34:17][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:34:17][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:34:17][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:34:17][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.IDMRequest@1829dd6f, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:34:17][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:34:17][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:34:17][INFO][requestPrivilege]  Reading response
+[37m[2021/03/08 22:34:17][INFO][requestPrivilege]  Received resultCode: 141
+[37m[2021/03/08 22:34:17][INFO][requestPrivilege]  Received Message: User has insufficient privilege level.
+[37m[2021/03/08 22:34:17][INFO][insert]  user found
+[37m[2021/03/08 22:34:17][INFO][insert]  Quantity valid
+[37m[2021/03/08 22:34:17][INFO][insert]  Movie_id valid
+[37m[2021/03/08 22:34:17][INFO][insert]  SQL query...
+[37m[2021/03/08 22:34:17][INFO][buildResponse]  Response being built with Result: CART_ITEM_INSERT_SUCCESSFUL
+[37m[2021/03/08 22:34:17][INFO][buildResponse]  Shopping cart item inserted successfully.
+[37m[2021/03/08 22:34:17][INFO][buildResponse]  3100
+[33m[2021/03/08 22:34:28][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:34:28][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:34:28][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:34:28][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:34:28][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:34:28][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:34:28][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:34:28][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:34:28][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:34:28][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:34:28][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@5ddc2fe8, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:34:28][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:34:28][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:34:28][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:34:28][INFO][retrieve]  1
+[37m[2021/03/08 22:34:28][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:34:28][INFO][retrieve]  0
+[37m[2021/03/08 22:34:28][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:34:28][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:34:28][INFO][buildResponse]  3130
+[37m[2021/03/08 22:34:30][INFO][buildResponse]  Response being built with Result: CART_ITEM_DELETE_SUCCESSFUL
+[37m[2021/03/08 22:34:30][INFO][buildResponse]  Shopping cart item deleted successfully.
+[37m[2021/03/08 22:34:30][INFO][buildResponse]  3120
+[33m[2021/03/08 22:34:32][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:34:32][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:34:32][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:34:32][INFO][buildResponse]  Response being built with Result: CART_ITEM_NOT_EXIST
+[37m[2021/03/08 22:34:32][INFO][buildResponse]  Shopping cart item does not exist.
+[37m[2021/03/08 22:34:32][INFO][buildResponse]  312
+[37m[2021/03/08 22:35:00][INFO][sendRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[37m[2021/03/08 22:35:00][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:35:00][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:35:00][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:35:00][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:35:00][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.IDMRequest@76ce9fb2, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:35:00][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:35:00][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:35:00][INFO][requestPrivilege]  Reading response
+[37m[2021/03/08 22:35:00][INFO][requestPrivilege]  Received resultCode: 141
+[37m[2021/03/08 22:35:00][INFO][requestPrivilege]  Received Message: User has insufficient privilege level.
+[37m[2021/03/08 22:35:00][INFO][insert]  user found
+[37m[2021/03/08 22:35:00][INFO][insert]  Quantity valid
+[37m[2021/03/08 22:35:00][INFO][insert]  Movie_id valid
+[37m[2021/03/08 22:35:00][INFO][insert]  SQL query...
+[37m[2021/03/08 22:35:00][INFO][buildResponse]  Response being built with Result: CART_ITEM_INSERT_SUCCESSFUL
+[37m[2021/03/08 22:35:00][INFO][buildResponse]  Shopping cart item inserted successfully.
+[37m[2021/03/08 22:35:00][INFO][buildResponse]  3100
+[37m[2021/03/08 22:35:49][INFO][sendRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[37m[2021/03/08 22:35:49][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:35:49][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:35:49][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:35:49][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:35:49][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.IDMRequest@7ed7edb3, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:35:49][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:35:49][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:35:49][INFO][requestPrivilege]  Reading response
+[37m[2021/03/08 22:35:49][INFO][requestPrivilege]  Received resultCode: 141
+[37m[2021/03/08 22:35:49][INFO][requestPrivilege]  Received Message: User has insufficient privilege level.
+[37m[2021/03/08 22:35:49][INFO][insert]  user found
+[37m[2021/03/08 22:35:49][INFO][insert]  Quantity valid
+[37m[2021/03/08 22:35:49][INFO][insert]  Movie_id valid
+[37m[2021/03/08 22:35:49][INFO][insert]  SQL query...
+[37m[2021/03/08 22:35:49][INFO][buildResponse]  Response being built with Result: CART_ITEM_INSERT_SUCCESSFUL
+[37m[2021/03/08 22:35:49][INFO][buildResponse]  Shopping cart item inserted successfully.
+[37m[2021/03/08 22:35:49][INFO][buildResponse]  3100
+[33m[2021/03/08 22:35:53][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:35:53][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:35:53][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:35:53][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:35:53][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:35:53][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:35:53][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:35:53][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:35:53][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:35:53][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:35:53][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@4fb94ab4, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:35:53][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:35:53][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:35:53][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:35:53][INFO][retrieve]  2
+[37m[2021/03/08 22:35:53][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:35:53][INFO][retrieve]  0
+[37m[2021/03/08 22:35:53][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:35:53][INFO][retrieve]  1
+[37m[2021/03/08 22:35:53][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:35:53][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:35:53][INFO][buildResponse]  3130
+[33m[2021/03/08 22:36:13][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:36:13][INFO][update]  Quantity valid
+[37m[2021/03/08 22:36:13][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:36:13][INFO][update]  SQL query...
+[37m[2021/03/08 22:36:13][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:36:13][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:36:13][INFO][buildResponse]  3110
+[33m[2021/03/08 22:36:15][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:36:15][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:36:15][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:36:15][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:36:15][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:36:15][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:36:15][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:36:15][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:36:15][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:36:15][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:36:15][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@517193f, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:36:15][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:36:15][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:36:15][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:36:15][INFO][retrieve]  2
+[37m[2021/03/08 22:36:15][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:36:15][INFO][retrieve]  0
+[37m[2021/03/08 22:36:15][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:36:15][INFO][retrieve]  1
+[37m[2021/03/08 22:36:15][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:36:15][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:36:15][INFO][buildResponse]  3130
+[33m[2021/03/08 22:36:17][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:36:17][INFO][update]  Quantity valid
+[37m[2021/03/08 22:36:17][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:36:17][INFO][update]  SQL query...
+[37m[2021/03/08 22:36:17][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:36:17][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:36:17][INFO][buildResponse]  3110
+[33m[2021/03/08 22:36:18][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:36:18][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:36:18][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:36:18][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:36:18][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:36:18][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:36:18][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:36:18][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:36:18][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:36:18][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:36:18][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@35044927, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:36:18][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:36:18][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:36:18][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:36:18][INFO][retrieve]  2
+[37m[2021/03/08 22:36:18][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:36:18][INFO][retrieve]  0
+[37m[2021/03/08 22:36:18][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:36:18][INFO][retrieve]  1
+[37m[2021/03/08 22:36:18][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:36:18][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:36:18][INFO][buildResponse]  3130
+[37m[2021/03/08 22:36:22][INFO][buildResponse]  Response being built with Result: CART_ITEM_DELETE_SUCCESSFUL
+[37m[2021/03/08 22:36:22][INFO][buildResponse]  Shopping cart item deleted successfully.
+[37m[2021/03/08 22:36:22][INFO][buildResponse]  3120
+[33m[2021/03/08 22:36:24][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:36:24][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:36:24][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:36:24][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:36:24][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:36:24][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:36:24][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:36:24][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:36:24][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:36:24][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:36:24][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@35d50423, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:36:24][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:36:24][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:36:24][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:36:24][INFO][retrieve]  1
+[37m[2021/03/08 22:36:24][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:36:24][INFO][retrieve]  0
+[37m[2021/03/08 22:36:24][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:36:24][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:36:24][INFO][buildResponse]  3130
+[33m[2021/03/08 22:36:26][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:36:26][INFO][update]  Quantity valid
+[37m[2021/03/08 22:36:26][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:36:26][INFO][update]  SQL query...
+[37m[2021/03/08 22:36:26][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:36:26][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:36:26][INFO][buildResponse]  3110
+[33m[2021/03/08 22:36:28][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:36:28][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:36:28][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:36:28][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:36:28][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:36:28][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:36:28][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:36:28][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:36:28][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:36:28][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:36:28][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@67cede84, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:36:28][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:36:28][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:36:28][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:36:28][INFO][retrieve]  1
+[37m[2021/03/08 22:36:28][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:36:28][INFO][retrieve]  0
+[37m[2021/03/08 22:36:28][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:36:28][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:36:28][INFO][buildResponse]  3130
+[33m[2021/03/08 22:36:29][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:36:29][INFO][update]  Quantity valid
+[37m[2021/03/08 22:36:29][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:36:29][INFO][update]  SQL query...
+[37m[2021/03/08 22:36:29][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:36:29][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:36:29][INFO][buildResponse]  3110
+[33m[2021/03/08 22:36:31][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:36:31][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:36:31][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:36:31][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:36:31][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:36:31][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:36:31][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:36:31][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:36:31][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:36:31][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:36:32][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@212cfdec, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:36:32][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:36:32][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:36:32][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:36:32][INFO][retrieve]  1
+[37m[2021/03/08 22:36:32][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:36:32][INFO][retrieve]  0
+[37m[2021/03/08 22:36:32][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:36:32][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:36:32][INFO][buildResponse]  3130
+[33m[2021/03/08 22:36:33][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:36:33][INFO][update]  Quantity valid
+[37m[2021/03/08 22:36:33][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:36:33][INFO][update]  SQL query...
+[37m[2021/03/08 22:36:33][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:36:33][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:36:33][INFO][buildResponse]  3110
+[33m[2021/03/08 22:36:35][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:36:35][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:36:35][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:36:35][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:36:35][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:36:35][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:36:35][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:36:35][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:36:35][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:36:35][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:36:35][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@6e93c60f, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:36:35][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:36:35][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:36:35][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:36:35][INFO][retrieve]  1
+[37m[2021/03/08 22:36:35][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:36:35][INFO][retrieve]  0
+[37m[2021/03/08 22:36:35][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:36:35][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:36:35][INFO][buildResponse]  3130
+[33m[2021/03/08 22:36:37][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:36:37][INFO][update]  Quantity valid
+[37m[2021/03/08 22:36:37][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:36:37][INFO][update]  SQL query...
+[37m[2021/03/08 22:36:37][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:36:37][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:36:37][INFO][buildResponse]  3110
+[33m[2021/03/08 22:36:39][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:36:39][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:36:39][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:36:39][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:36:39][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:36:39][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:36:39][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:36:39][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:36:39][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:36:39][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:36:40][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@641b2eb4, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:36:40][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:36:40][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:36:40][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:36:40][INFO][retrieve]  1
+[37m[2021/03/08 22:36:40][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:36:40][INFO][retrieve]  0
+[37m[2021/03/08 22:36:40][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:36:40][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:36:40][INFO][buildResponse]  3130
+[33m[2021/03/08 22:36:41][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:36:41][INFO][update]  Quantity valid
+[37m[2021/03/08 22:36:41][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:36:41][INFO][update]  SQL query...
+[37m[2021/03/08 22:36:41][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:36:41][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:36:41][INFO][buildResponse]  3110
+[33m[2021/03/08 22:36:44][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:36:44][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:36:44][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:36:44][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:36:44][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:36:44][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:36:44][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:36:44][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:36:44][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:36:44][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:36:44][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@566a26f6, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:36:44][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:36:44][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:36:44][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:36:44][INFO][retrieve]  1
+[37m[2021/03/08 22:36:44][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:36:44][INFO][retrieve]  0
+[37m[2021/03/08 22:36:44][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:36:44][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:36:44][INFO][buildResponse]  3130
+[33m[2021/03/08 22:36:45][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:36:45][INFO][update]  Quantity valid
+[37m[2021/03/08 22:36:45][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:36:45][INFO][update]  SQL query...
+[37m[2021/03/08 22:36:45][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:36:45][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:36:45][INFO][buildResponse]  3110
+[33m[2021/03/08 22:36:47][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:36:47][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:36:47][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:36:47][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:36:47][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:36:47][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:36:47][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:36:47][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:36:47][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:36:47][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:36:47][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@3c2e5d29, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:36:47][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:36:47][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:36:47][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:36:47][INFO][retrieve]  1
+[37m[2021/03/08 22:36:47][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:36:47][INFO][retrieve]  0
+[37m[2021/03/08 22:36:47][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:36:47][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:36:47][INFO][buildResponse]  3130
+[33m[2021/03/08 22:36:49][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:36:49][INFO][update]  Quantity valid
+[37m[2021/03/08 22:36:49][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:36:49][INFO][update]  SQL query...
+[37m[2021/03/08 22:36:49][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:36:49][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:36:49][INFO][buildResponse]  3110
+[33m[2021/03/08 22:36:51][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:36:51][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:36:51][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:36:51][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:36:51][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:36:51][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:36:51][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:36:51][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:36:51][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:36:51][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:36:51][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@70f52c3c, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:36:51][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:36:51][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:36:51][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:36:51][INFO][retrieve]  1
+[37m[2021/03/08 22:36:51][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:36:51][INFO][retrieve]  0
+[37m[2021/03/08 22:36:51][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:36:51][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:36:51][INFO][buildResponse]  3130
+[33m[2021/03/08 22:36:53][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:36:53][INFO][update]  Quantity valid
+[37m[2021/03/08 22:36:53][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:36:53][INFO][update]  SQL query...
+[37m[2021/03/08 22:36:53][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:36:53][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:36:53][INFO][buildResponse]  3110
+[33m[2021/03/08 22:36:55][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:36:55][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:36:55][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:36:55][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:36:55][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:36:55][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:36:55][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:36:55][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:36:55][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:36:55][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:36:55][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@19933c99, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:36:55][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:36:55][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:36:55][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:36:55][INFO][retrieve]  1
+[37m[2021/03/08 22:36:55][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:36:55][INFO][retrieve]  0
+[37m[2021/03/08 22:36:55][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:36:55][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:36:55][INFO][buildResponse]  3130
+[33m[2021/03/08 22:36:56][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:36:56][INFO][update]  Quantity valid
+[37m[2021/03/08 22:36:56][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:36:56][INFO][update]  SQL query...
+[37m[2021/03/08 22:36:56][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:36:56][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:36:56][INFO][buildResponse]  3110
+[33m[2021/03/08 22:36:59][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:36:59][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:36:59][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:36:59][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:36:59][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:36:59][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:36:59][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:36:59][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:36:59][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:36:59][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:36:59][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@5aafe090, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:36:59][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:36:59][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:36:59][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:36:59][INFO][retrieve]  1
+[37m[2021/03/08 22:36:59][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:36:59][INFO][retrieve]  0
+[37m[2021/03/08 22:36:59][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:36:59][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:36:59][INFO][buildResponse]  3130
+[33m[2021/03/08 22:37:01][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:37:01][INFO][update]  Quantity valid
+[37m[2021/03/08 22:37:01][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:37:01][INFO][update]  SQL query...
+[37m[2021/03/08 22:37:01][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:37:01][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:37:01][INFO][buildResponse]  3110
+[33m[2021/03/08 22:37:02][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:37:02][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:37:02][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:37:02][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:37:02][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:37:02][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:37:02][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:37:02][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:37:02][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:37:02][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:37:02][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@30aa4dc2, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:37:02][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:37:02][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:37:02][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:37:02][INFO][retrieve]  1
+[37m[2021/03/08 22:37:02][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:37:02][INFO][retrieve]  0
+[37m[2021/03/08 22:37:02][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:37:02][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:37:02][INFO][buildResponse]  3130
+[37m[2021/03/08 22:37:09][INFO][place]  Total amount $194.96
+[37m[2021/03/08 22:37:10][INFO][place]  Total amount $194.96
+[37m[2021/03/08 22:37:10][INFO][createOrder]  Order ID: 12X2400291910942M
+[37m[2021/03/08 22:37:10][INFO][lambda$createOrder$0]  self => GET:https://api.sandbox.paypal.com/v2/checkout/orders/12X2400291910942M
+[37m[2021/03/08 22:37:10][INFO][lambda$createOrder$0]  approve => GET:https://www.sandbox.paypal.com/checkoutnow?token=12X2400291910942M
+[37m[2021/03/08 22:37:10][INFO][lambda$createOrder$0]  update => PATCH:https://api.sandbox.paypal.com/v2/checkout/orders/12X2400291910942M
+[37m[2021/03/08 22:37:10][INFO][lambda$createOrder$0]  capture => POST:https://api.sandbox.paypal.com/v2/checkout/orders/12X2400291910942M/capture
+[33m[2021/03/08 22:37:10][WARNING][place]  com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO transaction(sale_id, token)
+VALUE (75, '12X2400291910942M')
+[37m[2021/03/08 22:37:10][INFO][buildResponse]  Response being built with Result: ORDER_PLACE_SUCCESSFUL
+[37m[2021/03/08 22:37:10][INFO][buildResponse]  Order placed successfully
+[37m[2021/03/08 22:37:10][INFO][buildResponse]  3400
+[37m[2021/03/08 22:37:11][INFO][createOrder]  Order ID: 35584362KW384634U
+[37m[2021/03/08 22:37:11][INFO][lambda$createOrder$0]  self => GET:https://api.sandbox.paypal.com/v2/checkout/orders/35584362KW384634U
+[37m[2021/03/08 22:37:11][INFO][lambda$createOrder$0]  approve => GET:https://www.sandbox.paypal.com/checkoutnow?token=35584362KW384634U
+[37m[2021/03/08 22:37:11][INFO][lambda$createOrder$0]  update => PATCH:https://api.sandbox.paypal.com/v2/checkout/orders/35584362KW384634U
+[37m[2021/03/08 22:37:11][INFO][lambda$createOrder$0]  capture => POST:https://api.sandbox.paypal.com/v2/checkout/orders/35584362KW384634U/capture
+[33m[2021/03/08 22:37:11][WARNING][place]  com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO transaction(sale_id, token)
+VALUE (76, '35584362KW384634U')
+[37m[2021/03/08 22:37:11][INFO][buildResponse]  Response being built with Result: ORDER_PLACE_SUCCESSFUL
+[37m[2021/03/08 22:37:11][INFO][buildResponse]  Order placed successfully
+[37m[2021/03/08 22:37:11][INFO][buildResponse]  3400
+[37m[2021/03/08 22:37:14][INFO][place]  Total amount $194.96
+[37m[2021/03/08 22:37:15][INFO][createOrder]  Order ID: 10T902738A850960R
+[37m[2021/03/08 22:37:15][INFO][lambda$createOrder$0]  self => GET:https://api.sandbox.paypal.com/v2/checkout/orders/10T902738A850960R
+[37m[2021/03/08 22:37:15][INFO][lambda$createOrder$0]  approve => GET:https://www.sandbox.paypal.com/checkoutnow?token=10T902738A850960R
+[37m[2021/03/08 22:37:15][INFO][lambda$createOrder$0]  update => PATCH:https://api.sandbox.paypal.com/v2/checkout/orders/10T902738A850960R
+[37m[2021/03/08 22:37:15][INFO][lambda$createOrder$0]  capture => POST:https://api.sandbox.paypal.com/v2/checkout/orders/10T902738A850960R/capture
+[33m[2021/03/08 22:37:15][WARNING][place]  com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO transaction(sale_id, token)
+VALUE (77, '10T902738A850960R')
+[37m[2021/03/08 22:37:15][INFO][buildResponse]  Response being built with Result: ORDER_PLACE_SUCCESSFUL
+[37m[2021/03/08 22:37:15][INFO][buildResponse]  Order placed successfully
+[37m[2021/03/08 22:37:15][INFO][buildResponse]  3400
+[33m[2021/03/08 22:38:28][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:38:28][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:38:28][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:38:28][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:38:28][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:38:28][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:38:28][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:38:28][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:38:28][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:38:28][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:38:28][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@21db6c41, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:38:28][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:38:28][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:38:28][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:38:28][INFO][retrieve]  1
+[37m[2021/03/08 22:38:28][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:38:28][INFO][retrieve]  0
+[37m[2021/03/08 22:38:28][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:38:28][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:38:28][INFO][buildResponse]  3130
+[33m[2021/03/08 22:38:35][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:38:35][INFO][update]  Quantity valid
+[37m[2021/03/08 22:38:35][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:38:35][INFO][update]  SQL query...
+[37m[2021/03/08 22:38:35][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:38:35][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:38:35][INFO][buildResponse]  3110
+[33m[2021/03/08 22:38:36][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:38:36][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:38:36][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:38:36][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:38:36][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:38:36][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:38:36][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:38:36][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:38:36][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:38:36][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:38:36][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@34553a82, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:38:37][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:38:37][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:38:37][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:38:37][INFO][retrieve]  1
+[37m[2021/03/08 22:38:37][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:38:37][INFO][retrieve]  0
+[37m[2021/03/08 22:38:37][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:38:37][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:38:37][INFO][buildResponse]  3130
+[33m[2021/03/08 22:38:38][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:38:38][INFO][update]  Quantity valid
+[37m[2021/03/08 22:38:38][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:38:38][INFO][update]  SQL query...
+[37m[2021/03/08 22:38:38][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:38:38][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:38:38][INFO][buildResponse]  3110
+[33m[2021/03/08 22:38:39][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:38:39][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:38:39][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:38:39][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:38:39][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:38:39][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:38:39][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:38:39][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:38:39][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:38:39][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:38:39][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@7a8e9408, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:38:39][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:38:39][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:38:39][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:38:39][INFO][retrieve]  1
+[37m[2021/03/08 22:38:39][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:38:39][INFO][retrieve]  0
+[37m[2021/03/08 22:38:39][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:38:39][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:38:39][INFO][buildResponse]  3130
+[33m[2021/03/08 22:38:40][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:38:40][INFO][update]  Quantity valid
+[37m[2021/03/08 22:38:40][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:38:40][INFO][update]  SQL query...
+[37m[2021/03/08 22:38:40][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:38:40][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:38:40][INFO][buildResponse]  3110
+[33m[2021/03/08 22:38:42][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:38:42][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:38:42][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:38:42][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:38:42][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:38:42][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:38:42][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:38:42][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:38:42][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:38:42][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:38:42][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@5bb2535c, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:38:42][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:38:42][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:38:42][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:38:42][INFO][retrieve]  1
+[37m[2021/03/08 22:38:42][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:38:42][INFO][retrieve]  0
+[37m[2021/03/08 22:38:42][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:38:42][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:38:42][INFO][buildResponse]  3130
+[33m[2021/03/08 22:39:09][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:39:09][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:39:09][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:39:09][INFO][buildResponse]  Response being built with Result: CART_ITEM_NOT_EXIST
+[37m[2021/03/08 22:39:09][INFO][buildResponse]  Shopping cart item does not exist.
+[37m[2021/03/08 22:39:09][INFO][buildResponse]  312
+[33m[2021/03/08 22:41:00][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:41:00][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:41:00][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:41:00][INFO][buildResponse]  Response being built with Result: CART_ITEM_NOT_EXIST
+[37m[2021/03/08 22:41:00][INFO][buildResponse]  Shopping cart item does not exist.
+[37m[2021/03/08 22:41:00][INFO][buildResponse]  312
+[37m[2021/03/08 22:41:50][INFO][sendRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[37m[2021/03/08 22:41:50][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:41:50][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:41:50][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:41:50][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:41:50][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.IDMRequest@2a3df243, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:41:50][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:41:50][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:41:50][INFO][requestPrivilege]  Reading response
+[37m[2021/03/08 22:41:50][INFO][requestPrivilege]  Received resultCode: 141
+[37m[2021/03/08 22:41:50][INFO][requestPrivilege]  Received Message: User has insufficient privilege level.
+[37m[2021/03/08 22:41:50][INFO][insert]  user found
+[37m[2021/03/08 22:41:50][INFO][insert]  Quantity valid
+[37m[2021/03/08 22:41:50][INFO][insert]  Movie_id valid
+[37m[2021/03/08 22:41:50][INFO][insert]  SQL query...
+[37m[2021/03/08 22:41:50][INFO][buildResponse]  Response being built with Result: CART_ITEM_INSERT_SUCCESSFUL
+[37m[2021/03/08 22:41:50][INFO][buildResponse]  Shopping cart item inserted successfully.
+[37m[2021/03/08 22:41:50][INFO][buildResponse]  3100
+[37m[2021/03/08 22:42:24][INFO][sendRequest]  Build uri: http://127.0.0.1:12346/api/idm
+[37m[2021/03/08 22:42:24][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:42:24][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:42:24][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:42:24][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:42:24][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.IDMRequest@21394002, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:42:24][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:42:24][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:42:24][INFO][requestPrivilege]  Reading response
+[37m[2021/03/08 22:42:24][INFO][requestPrivilege]  Received resultCode: 141
+[37m[2021/03/08 22:42:24][INFO][requestPrivilege]  Received Message: User has insufficient privilege level.
+[37m[2021/03/08 22:42:24][INFO][insert]  user found
+[37m[2021/03/08 22:42:24][INFO][insert]  Quantity valid
+[37m[2021/03/08 22:42:24][INFO][insert]  Movie_id valid
+[37m[2021/03/08 22:42:24][INFO][insert]  SQL query...
+[37m[2021/03/08 22:42:24][INFO][buildResponse]  Response being built with Result: CART_ITEM_INSERT_SUCCESSFUL
+[37m[2021/03/08 22:42:24][INFO][buildResponse]  Shopping cart item inserted successfully.
+[37m[2021/03/08 22:42:24][INFO][buildResponse]  3100
+[33m[2021/03/08 22:42:30][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:42:30][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:42:30][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:42:30][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:42:30][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:42:30][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:42:30][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:42:30][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:42:30][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:42:30][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:42:30][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@73f0bed1, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:42:30][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:42:30][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:42:30][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:42:30][INFO][retrieve]  2
+[37m[2021/03/08 22:42:30][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:42:30][INFO][retrieve]  0
+[37m[2021/03/08 22:42:30][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:42:30][INFO][retrieve]  1
+[37m[2021/03/08 22:42:30][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:42:30][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:42:30][INFO][buildResponse]  3130
+[33m[2021/03/08 22:42:40][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:42:40][INFO][update]  Quantity valid
+[37m[2021/03/08 22:42:40][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:42:40][INFO][update]  SQL query...
+[37m[2021/03/08 22:42:40][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:42:40][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:42:40][INFO][buildResponse]  3110
+[33m[2021/03/08 22:42:41][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:42:41][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:42:41][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:42:41][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:42:41][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:42:41][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:42:41][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:42:41][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:42:41][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:42:41][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:42:41][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@417c5a4c, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:42:41][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:42:41][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:42:41][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:42:41][INFO][retrieve]  2
+[37m[2021/03/08 22:42:41][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:42:41][INFO][retrieve]  0
+[37m[2021/03/08 22:42:41][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:42:41][INFO][retrieve]  1
+[37m[2021/03/08 22:42:41][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:42:41][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:42:41][INFO][buildResponse]  3130
+[33m[2021/03/08 22:42:43][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:42:43][INFO][update]  Quantity valid
+[37m[2021/03/08 22:42:43][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:42:43][INFO][update]  SQL query...
+[37m[2021/03/08 22:42:43][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:42:43][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:42:43][INFO][buildResponse]  3110
+[33m[2021/03/08 22:42:45][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:42:45][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:42:45][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:42:45][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:42:45][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:42:45][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:42:45][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:42:45][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:42:45][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:42:45][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:42:45][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@190dae55, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:42:45][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:42:45][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:42:45][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:42:45][INFO][retrieve]  2
+[37m[2021/03/08 22:42:45][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:42:45][INFO][retrieve]  0
+[37m[2021/03/08 22:42:45][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:42:45][INFO][retrieve]  1
+[37m[2021/03/08 22:42:45][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:42:45][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:42:45][INFO][buildResponse]  3130
+[37m[2021/03/08 22:42:48][INFO][buildResponse]  Response being built with Result: CART_ITEM_DELETE_SUCCESSFUL
+[37m[2021/03/08 22:42:48][INFO][buildResponse]  Shopping cart item deleted successfully.
+[37m[2021/03/08 22:42:48][INFO][buildResponse]  3120
+[33m[2021/03/08 22:42:49][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:42:49][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:42:49][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:42:49][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:42:49][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:42:49][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:42:49][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:42:49][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:42:49][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:42:49][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:42:49][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@565e7686, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:42:50][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:42:50][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:42:50][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:42:50][INFO][retrieve]  1
+[37m[2021/03/08 22:42:50][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:42:50][INFO][retrieve]  0
+[37m[2021/03/08 22:42:50][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:42:50][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:42:50][INFO][buildResponse]  3130
+[33m[2021/03/08 22:42:54][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:42:54][INFO][update]  Quantity valid
+[37m[2021/03/08 22:42:54][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:42:54][INFO][update]  SQL query...
+[37m[2021/03/08 22:42:54][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:42:54][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:42:54][INFO][buildResponse]  3110
+[33m[2021/03/08 22:42:55][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:42:55][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:42:55][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:42:55][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:42:55][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:42:55][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:42:55][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:42:55][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:42:55][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:42:55][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:42:55][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@fbfb159, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:42:56][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:42:56][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:42:56][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:42:56][INFO][retrieve]  1
+[37m[2021/03/08 22:42:56][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:42:56][INFO][retrieve]  0
+[37m[2021/03/08 22:42:56][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:42:56][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:42:56][INFO][buildResponse]  3130
+[33m[2021/03/08 22:42:57][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:42:57][INFO][update]  Quantity valid
+[37m[2021/03/08 22:42:57][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:42:57][INFO][update]  SQL query...
+[37m[2021/03/08 22:42:57][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:42:57][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:42:57][INFO][buildResponse]  3110
+[33m[2021/03/08 22:42:58][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:42:58][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:42:58][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:42:58][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:42:58][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:42:58][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:42:58][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:42:58][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:42:58][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:42:58][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:42:58][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@57628d65, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:42:59][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:42:59][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:42:59][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:42:59][INFO][retrieve]  1
+[37m[2021/03/08 22:42:59][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:42:59][INFO][retrieve]  0
+[37m[2021/03/08 22:42:59][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:42:59][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:42:59][INFO][buildResponse]  3130
+[33m[2021/03/08 22:43:00][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:43:00][INFO][update]  Quantity valid
+[37m[2021/03/08 22:43:00][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:43:00][INFO][update]  SQL query...
+[37m[2021/03/08 22:43:00][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:43:00][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:43:00][INFO][buildResponse]  3110
+[33m[2021/03/08 22:43:01][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:43:01][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:43:01][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:43:01][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:43:01][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:43:01][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:43:01][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:43:01][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:43:01][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:43:01][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:43:01][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@503a699b, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:43:01][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:43:01][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:43:01][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:43:01][INFO][retrieve]  1
+[37m[2021/03/08 22:43:01][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:43:01][INFO][retrieve]  0
+[37m[2021/03/08 22:43:01][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:43:01][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:43:01][INFO][buildResponse]  3130
+[33m[2021/03/08 22:43:02][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:43:02][INFO][update]  Quantity valid
+[37m[2021/03/08 22:43:02][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:43:02][INFO][update]  SQL query...
+[37m[2021/03/08 22:43:02][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:43:02][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:43:02][INFO][buildResponse]  3110
+[33m[2021/03/08 22:43:04][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:43:04][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:43:04][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:43:04][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:43:04][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:43:04][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:43:04][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:43:04][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:43:04][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:43:04][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:43:04][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@797ba5b1, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:43:04][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:43:04][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:43:04][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:43:04][INFO][retrieve]  1
+[37m[2021/03/08 22:43:04][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:43:04][INFO][retrieve]  0
+[37m[2021/03/08 22:43:04][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:43:04][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:43:04][INFO][buildResponse]  3130
+[33m[2021/03/08 22:43:05][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:43:05][INFO][update]  Quantity valid
+[37m[2021/03/08 22:43:05][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:43:05][INFO][update]  SQL query...
+[37m[2021/03/08 22:43:05][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:43:05][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:43:05][INFO][buildResponse]  3110
+[33m[2021/03/08 22:43:07][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:43:07][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:43:07][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:43:07][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:43:07][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:43:07][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:43:07][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:43:07][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:43:07][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:43:07][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:43:07][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@2cc3b176, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:43:07][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:43:07][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:43:07][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:43:07][INFO][retrieve]  1
+[37m[2021/03/08 22:43:07][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:43:07][INFO][retrieve]  0
+[37m[2021/03/08 22:43:07][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:43:07][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:43:07][INFO][buildResponse]  3130
+[33m[2021/03/08 22:43:08][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:43:08][INFO][update]  Quantity valid
+[37m[2021/03/08 22:43:08][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:43:08][INFO][update]  SQL query...
+[37m[2021/03/08 22:43:08][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:43:08][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:43:08][INFO][buildResponse]  3110
+[33m[2021/03/08 22:43:09][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:43:09][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:43:09][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:43:09][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:43:09][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:43:09][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:43:09][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:43:09][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:43:09][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:43:09][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:43:09][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@25892a43, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:43:09][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:43:09][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:43:09][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:43:09][INFO][retrieve]  1
+[37m[2021/03/08 22:43:09][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:43:09][INFO][retrieve]  0
+[37m[2021/03/08 22:43:09][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:43:09][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:43:09][INFO][buildResponse]  3130
+[33m[2021/03/08 22:43:11][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:43:11][INFO][update]  Quantity valid
+[37m[2021/03/08 22:43:11][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:43:11][INFO][update]  SQL query...
+[37m[2021/03/08 22:43:11][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:43:11][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:43:11][INFO][buildResponse]  3110
+[33m[2021/03/08 22:43:12][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:43:12][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:43:12][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:43:12][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:43:12][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:43:12][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:43:12][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:43:12][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:43:12][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:43:12][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:43:12][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@7b6b941d, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:43:13][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:43:13][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:43:13][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:43:13][INFO][retrieve]  1
+[37m[2021/03/08 22:43:13][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:43:13][INFO][retrieve]  0
+[37m[2021/03/08 22:43:13][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:43:13][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:43:13][INFO][buildResponse]  3130
+[33m[2021/03/08 22:43:14][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:43:14][INFO][update]  Quantity valid
+[37m[2021/03/08 22:43:14][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:43:14][INFO][update]  SQL query...
+[37m[2021/03/08 22:43:14][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:43:14][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:43:14][INFO][buildResponse]  3110
+[33m[2021/03/08 22:43:15][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:43:15][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:43:15][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:43:15][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:43:15][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:43:15][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:43:15][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:43:15][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:43:15][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:43:15][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:43:15][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@4cd0652, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:43:15][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:43:15][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:43:15][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:43:15][INFO][retrieve]  1
+[37m[2021/03/08 22:43:15][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:43:15][INFO][retrieve]  0
+[37m[2021/03/08 22:43:15][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:43:15][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:43:15][INFO][buildResponse]  3130
+[33m[2021/03/08 22:43:17][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:43:17][INFO][update]  Quantity valid
+[37m[2021/03/08 22:43:17][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:43:17][INFO][update]  SQL query...
+[37m[2021/03/08 22:43:17][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:43:17][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:43:17][INFO][buildResponse]  3110
+[33m[2021/03/08 22:43:17][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:43:17][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:43:17][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:43:17][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:43:17][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:43:17][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:43:17][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:43:17][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:43:17][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:43:17][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:43:18][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@effba03, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:43:18][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:43:18][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:43:18][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:43:18][INFO][retrieve]  1
+[37m[2021/03/08 22:43:18][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:43:18][INFO][retrieve]  0
+[37m[2021/03/08 22:43:18][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:43:18][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:43:18][INFO][buildResponse]  3130
+[33m[2021/03/08 22:43:19][WARNING][update]  /cart/update is called
+[37m[2021/03/08 22:43:19][INFO][update]  Quantity valid
+[37m[2021/03/08 22:43:19][INFO][update]  Movie_id valid
+[37m[2021/03/08 22:43:19][INFO][update]  SQL query...
+[37m[2021/03/08 22:43:19][INFO][buildResponse]  Response being built with Result: CART_UPDATED_SUCCESSFUL
+[37m[2021/03/08 22:43:19][INFO][buildResponse]  Shopping cart item updated successfully.
+[37m[2021/03/08 22:43:19][INFO][buildResponse]  3110
+[33m[2021/03/08 22:43:20][WARNING][retrieve]  /cart/retrieve is called
+[37m[2021/03/08 22:43:20][INFO][retrieve]  SQL Query
+[33m[2021/03/08 22:43:20][WARNING][retrieve]  com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, unit_price, discount, quantity, cart.movie_id
+
+FROM cart
+         join movie_price mp on cart.movie_id = mp.movie_id
+WHERE cart.email = 'apiGatewayTest@uci.edu'
+  AND cart.movie_id in (
+    SELECT movie_id
+    FROM cart
+    WHERE email = 'apiGatewayTest@uci.edu')
+ORDER BY cart.movie_id;
+[37m[2021/03/08 22:43:20][INFO][retrieve]  Build itemModels
+[37m[2021/03/08 22:43:20][INFO][retrieveThumbnail]  Send request to Movie Thumbnail
+[37m[2021/03/08 22:43:20][INFO][sendRequest]  Build uri: http://127.0.0.1:12347/api/movies
+[37m[2021/03/08 22:43:20][INFO][sendRequest]  Building client...
+[37m[2021/03/08 22:43:20][INFO][sendRequest]  Building WebTarget...
+[37m[2021/03/08 22:43:20][INFO][sendRequest]  Starting invocation builder...
+[37m[2021/03/08 22:43:20][INFO][sendRequest]  Sending request...
+[37m[2021/03/08 22:43:20][INFO][sendRequest]  Entity{entity=edu.uci.ics.jindongy.service.billing.models.Request.ThumbnailRequest@674fdd73, variant=Variant[mediaType=application/json, language=null, encoding=null], annotations=[]}
+[37m[2021/03/08 22:43:20][INFO][sendRequest]  Request sent.
+[37m[2021/03/08 22:43:20][INFO][sendRequest]  Received status 200
+[37m[2021/03/08 22:43:20][INFO][retrieveThumbnail]  Reading response from Thumbnail
+[37m[2021/03/08 22:43:20][INFO][retrieve]  1
+[37m[2021/03/08 22:43:20][INFO][setThumbnail]  Setting thumbnail
+[37m[2021/03/08 22:43:20][INFO][retrieve]  0
+[37m[2021/03/08 22:43:20][INFO][buildResponse]  Response being built with Result: CART_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:43:20][INFO][buildResponse]  Shopping cart retrieved successfully.
+[37m[2021/03/08 22:43:20][INFO][buildResponse]  3130
+[37m[2021/03/08 22:43:26][INFO][place]  Total amount $194.96
+[37m[2021/03/08 22:43:26][INFO][place]  Total amount $194.96
+[37m[2021/03/08 22:43:27][INFO][createOrder]  Order ID: 64J859844A938903E
+[37m[2021/03/08 22:43:27][INFO][lambda$createOrder$0]  self => GET:https://api.sandbox.paypal.com/v2/checkout/orders/64J859844A938903E
+[37m[2021/03/08 22:43:27][INFO][lambda$createOrder$0]  approve => GET:https://www.sandbox.paypal.com/checkoutnow?token=64J859844A938903E
+[37m[2021/03/08 22:43:27][INFO][lambda$createOrder$0]  update => PATCH:https://api.sandbox.paypal.com/v2/checkout/orders/64J859844A938903E
+[37m[2021/03/08 22:43:27][INFO][lambda$createOrder$0]  capture => POST:https://api.sandbox.paypal.com/v2/checkout/orders/64J859844A938903E/capture
+[33m[2021/03/08 22:43:27][WARNING][place]  com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO transaction(sale_id, token)
+VALUE (78, '64J859844A938903E')
+[37m[2021/03/08 22:43:27][INFO][buildResponse]  Response being built with Result: ORDER_PLACE_SUCCESSFUL
+[37m[2021/03/08 22:43:27][INFO][buildResponse]  Order placed successfully
+[37m[2021/03/08 22:43:27][INFO][buildResponse]  3400
+[37m[2021/03/08 22:43:27][INFO][createOrder]  Order ID: 16S72999A2785191R
+[37m[2021/03/08 22:43:27][INFO][lambda$createOrder$0]  self => GET:https://api.sandbox.paypal.com/v2/checkout/orders/16S72999A2785191R
+[37m[2021/03/08 22:43:27][INFO][lambda$createOrder$0]  approve => GET:https://www.sandbox.paypal.com/checkoutnow?token=16S72999A2785191R
+[37m[2021/03/08 22:43:27][INFO][lambda$createOrder$0]  update => PATCH:https://api.sandbox.paypal.com/v2/checkout/orders/16S72999A2785191R
+[37m[2021/03/08 22:43:27][INFO][lambda$createOrder$0]  capture => POST:https://api.sandbox.paypal.com/v2/checkout/orders/16S72999A2785191R/capture
+[33m[2021/03/08 22:43:27][WARNING][place]  com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO transaction(sale_id, token)
+VALUE (79, '16S72999A2785191R')
+[37m[2021/03/08 22:43:27][INFO][buildResponse]  Response being built with Result: ORDER_PLACE_SUCCESSFUL
+[37m[2021/03/08 22:43:27][INFO][buildResponse]  Order placed successfully
+[37m[2021/03/08 22:43:27][INFO][buildResponse]  3400
+[37m[2021/03/08 22:43:30][INFO][place]  Total amount $194.96
+[37m[2021/03/08 22:43:30][INFO][createOrder]  Order ID: 6NC85407NH852422M
+[37m[2021/03/08 22:43:30][INFO][lambda$createOrder$0]  self => GET:https://api.sandbox.paypal.com/v2/checkout/orders/6NC85407NH852422M
+[37m[2021/03/08 22:43:30][INFO][lambda$createOrder$0]  approve => GET:https://www.sandbox.paypal.com/checkoutnow?token=6NC85407NH852422M
+[37m[2021/03/08 22:43:30][INFO][lambda$createOrder$0]  update => PATCH:https://api.sandbox.paypal.com/v2/checkout/orders/6NC85407NH852422M
+[37m[2021/03/08 22:43:30][INFO][lambda$createOrder$0]  capture => POST:https://api.sandbox.paypal.com/v2/checkout/orders/6NC85407NH852422M/capture
+[33m[2021/03/08 22:43:30][WARNING][place]  com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO transaction(sale_id, token)
+VALUE (80, '6NC85407NH852422M')
+[37m[2021/03/08 22:43:30][INFO][buildResponse]  Response being built with Result: ORDER_PLACE_SUCCESSFUL
+[37m[2021/03/08 22:43:30][INFO][buildResponse]  Order placed successfully
+[37m[2021/03/08 22:43:30][INFO][buildResponse]  3400
+[37m[2021/03/08 22:43:55][INFO][complete]  token:64J859844A938903E
+[37m[2021/03/08 22:43:55][INFO][complete]  PayerID:HA4CVRW2R4J46
+[37m[2021/03/08 22:43:55][INFO][complete]  Token is valid
+[37m[2021/03/08 22:43:57][INFO][captureOrder]  Capture_ID:70522255HY0384936
+[37m[2021/03/08 22:43:57][INFO][lambda$captureOrder$1]  	self => GET:https://api.sandbox.paypal.com/v2/payments/captures/70522255HY0384936
+[37m[2021/03/08 22:43:57][INFO][lambda$captureOrder$1]  	refund => POST:https://api.sandbox.paypal.com/v2/payments/captures/70522255HY0384936/refund
+[37m[2021/03/08 22:43:57][INFO][lambda$captureOrder$1]  	up => GET:https://api.sandbox.paypal.com/v2/checkout/orders/64J859844A938903E
+[37m[2021/03/08 22:43:57][INFO][buildResponse]  Response being built with Result: ORDER_COMPLETED_SUCCESSFUL
+[37m[2021/03/08 22:43:57][INFO][buildResponse]  Order is completed successfully.
+[37m[2021/03/08 22:43:57][INFO][buildResponse]  3420
+[33m[2021/03/08 22:44:06][WARNING][retrieve]  /order/retrieve get called
+[33m[2021/03/08 22:44:06][WARNING][retrieve]  token:64J859844A938903E
+[37m[2021/03/08 22:44:06][INFO][getOrder]  Response Body:
+	{"update_time":"2021-03-09T06:43:56Z","create_time":"2021-03-09T06:43:27Z","purchase_units":[{"payee":{"email_address":"sb-mji7s5143247@business.example.com","merchant_id":"FRLAY7KC26S54"},"amount":{"value":"194.96","currency_code":"USD"},"reference_id":"default","shipping":{"address":{"country_code":"US","admin_area_1":"CA","address_line_1":"1 Main St","admin_area_2":"San Jose","postal_code":"95131"},"name":{"full_name":"John Doe"}},"payments":{"captures":[{"amount":{"value":"194.96","currency_code":"USD"},"seller_protection":{"dispute_categories":["ITEM_NOT_RECEIVED","UNAUTHORIZED_TRANSACTION"],"status":"ELIGIBLE"},"update_time":"2021-03-09T06:43:56Z","create_time":"2021-03-09T06:43:56Z","final_capture":true,"seller_receivable_breakdown":{"paypal_fee":{"value":"5.95","currency_code":"USD"},"gross_amount":{"value":"194.96","currency_code":"USD"},"net_amount":{"value":"189.01","currency_code":"USD"}},"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/payments/captures/70522255HY0384936"},{"method":"POST","rel":"refund","href":"https://api.sandbox.paypal.com/v2/payments/captures/70522255HY0384936/refund"},{"method":"GET","rel":"up","href":"https://api.sandbox.paypal.com/v2/checkout/orders/64J859844A938903E"}],"id":"70522255HY0384936","status":"COMPLETED"}]}}],"links":[{"method":"GET","rel":"self","href":"https://api.sandbox.paypal.com/v2/checkout/orders/64J859844A938903E"}],"id":"64J859844A938903E","intent":"CAPTURE","payer":{"address":{"country_code":"US"},"email_address":"sb-a7ukv5138675@personal.example.com","name":{"surname":"Doe","given_name":"John"},"payer_id":"HA4CVRW2R4J46"},"status":"COMPLETED"}
+[37m[2021/03/08 22:44:06][INFO][buildResponse]  Response being built with Result: ORDER_RETRIEVED_SUCCESSFUL
+[37m[2021/03/08 22:44:06][INFO][buildResponse]  Order retrieved successfully
+[37m[2021/03/08 22:44:06][INFO][buildResponse]  3410
