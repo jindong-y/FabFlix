@@ -1,7 +1,7 @@
 # FabFlix
 A Full-stack Movie E-commerce Web App allows customers to view movies, place them in a shopping cart, and checkout/pay with PayPal.
 ## Backend
-Restful API and mirco services.
+Restful API and mircro services.
 
 - IDM doc: https://docs.google.com/document/d/1x5nTL_us6MVj-0OjQ0a3votA2lC74pSnrDczBMNKkOU/edit?usp=sharing
 - Movie doc: https://docs.google.com/document/d/1sNr4v63vYxsqGjbboawOOto8-ObQenXKB7RvMr0DMCY/edit?usp=sharing
