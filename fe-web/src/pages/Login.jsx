@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Idm from "../services/Idm"
 import {NavLink} from "react-router-dom";
 import {Link} from "react-router-dom";
-import Search from "../pages/Search"
+import {useSession} from "../hooks/session";
 /*
   Using localStorage is similar to how we use
   dictionary.
@@ -31,9 +31,10 @@ const Login = (props) => {
     //     const Login = ({ history, location, match, yourVar }) => {
     console.log(props)
 
-    const {history, location, match,setIsLoggedIn}=props
+    const {history, location, match}=props
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+    const {setIsLoggedIn}=useSession();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -47,14 +48,16 @@ const Login = (props) => {
         const {resultCode, message, session_id}=response.data;
         console.log(response.data);
         if(resultCode===120){
-            setIsLoggedIn(true)
+            setIsLoggedIn(true);
 
             localStorage.set("session_id",session_id);
             localStorage.set("email",email)
             console.log(localStorage.get("email"))
             console.log(localStorage.get("session_id"))
 
-            history.push("/search");
+            history.push("/index");
+        }else{
+            alert(message);
         }
     }
 

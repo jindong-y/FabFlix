@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import {NavLink} from "react-router-dom";
-
+import {useSession} from '../hooks/session'
 /*
-    NavBar is used to place all of your NavLinks
+    MenuBar is used to place all of your NavLinks
     Each NavLink acts like a redirect button, but will
     tell the Router Switch to switch the page WITHOUT
     needing to refresh the page.
@@ -29,6 +29,11 @@ import {NavLink} from "react-router-dom";
 */
 const NavBar = (props) => {
     console.log(props)
+
+    const {isLoggedIn,setIsLoggedIn} = useSession();
+    const setNotLogin = ()=>{
+        setIsLoggedIn(false)
+    }
     const beforeLogin = (
         <>
             <NavLink className="nav-link" to="/login">
@@ -40,18 +45,24 @@ const NavBar = (props) => {
         </>);
     const afterLogin = (
         <>
-            <NavLink className="nav-link" to="/login" onClick={()=>props.setIsLoggedIn(false)}>
+            <NavLink className="nav-link" to="/login" onClick={setNotLogin}>
                 Logout
             </NavLink>
-            <NavLink className="nav-link" to="/search">
+            <NavLink className="nav-link" to="/index">
                 Search
+            </NavLink>
+            <NavLink className="nav-link" to="/index/order">
+                Order
+            </NavLink>
+            <NavLink className="nav-link" to="/index/cart">
+                Cart
             </NavLink>
         </>);
 
 
     return (
         <nav className="nav-bar">
-            {props?.isLoggedIn?afterLogin:beforeLogin}
+            {isLoggedIn?afterLogin:beforeLogin}
         </nav>
     );
 }

@@ -3,8 +3,9 @@ import {Route, Switch, BrowserRouter} from "react-router-dom";
 import ReactDOM from "react-dom";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import Search from "../pages/Search";
 import NavBar from "./NavBar";
+import {useSession} from "../hooks/session";
+import Index from "../pages/Index/Index";
 /*
  *  Here is where we can place all our Page
  *  Components. Inside of the switch you can list
@@ -56,23 +57,29 @@ import NavBar from "./NavBar";
  *  latter lets you also supply an object to be given to the new
  *  page that will be storage in location.state
  */
-const Content = ({isLoggedIn,setIsLoggedIn}) => {
+const Content = () => {
 
+    const {isLoggedIn}=useSession();
 
+    // Index:
+    //  search for movies
+    //  view shopping cart
+    //  view order history
     return (
         <React.Fragment>
             <div className="content">
                 <Switch>
-
-                    <Route path="/login"
-                           component={props => <Login {...{setIsLoggedIn, ...props}}/>}/>
-                    <Route path="/register"
-                           component={props => <Register {...props}/>}/>
-                    <Route path="/search">
-                        <Search {...{isLoggedIn,setIsLoggedIn}}/>
+                    <Route path="/login">
+                        {props => <Login {...props}/>}
+                    </Route>
+                    <Route path="/register">
+                        {props => <Register {...props}/>}
+                    </Route>
+                    <Route  path="/index">
+                        {isLoggedIn &&<Index/>}
                     </Route>
                     <Route path="/">
-                        {props => <Login {...{setIsLoggedIn, ...props}}/>}
+                        {props => <Login {...props}/>}
                     </Route>
                 </Switch>
             </div>

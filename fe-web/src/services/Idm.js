@@ -1,5 +1,6 @@
 import Socket from "./Socket";
-import { idmUrl, idmEPs } from "../config/config.json";
+import { baseURL, idmEPs } from "../config/config.json";
+import getReport from "./gateway";
 async function login(email, password) {
     if(!email||!password){
         throw "Please enter email and password";
@@ -10,12 +11,12 @@ async function login(email, password) {
     };
 
     const options = {
-        baseURL: idmUrl, // Base URL
-        url: idmEPs.loginEP, // Path of URL
+        baseURL: baseURL, // Base URL
+        url: idmEPs.login, // Path of URL
         data: payLoad // Data to send in Body
     }
 
-    return await Socket.POST(options);
+    return await getReport(await Socket.POST(options),"login");
 }
 
 
@@ -25,11 +26,11 @@ async function register(email, password){
         password: password
     }
     const options ={
-        baseURL: idmUrl,
-        url: idmEPs.registerEP,
+        baseURL: baseURL,
+        url: idmEPs.register,
         data: payload
     }
-    return await Socket.POST(options);
+    return await getReport(await Socket.POST(options),"register");
 
 }
 

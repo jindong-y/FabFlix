@@ -1,9 +1,9 @@
-import React, {useState} from "react";
+import React, {useState,useContext} from "react";
 
 import Content from "./Content";
 import NavBar from "./NavBar";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import {SessionProvider} from "../hooks/session";
 /*
   Remember when passing around variable and functions
 
@@ -33,13 +33,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // const [isLoggedIn, setIsLoggedIn]=useState(false);
 
+
+
 const App = () => {
-    const [isLoggedIn, setIsLoggedIn]=useState(false);
     return (
-        <div className="app">
-            <NavBar {...{isLoggedIn, setIsLoggedIn}}/>
-            <Content {...{isLoggedIn, setIsLoggedIn}}/>
-        </div>
+        <SessionProvider>
+            <div className="app">
+                <NavBar />
+                <Content />
+            </div>
+        </SessionProvider>
+
     );
 }
 
